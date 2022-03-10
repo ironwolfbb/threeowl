@@ -34,6 +34,7 @@
 */_*
 /_*
 /composer.*
+!/composer.lock
 /yandex_*.html
 
 # исключаем ВСЮ папку bitrix, но ниже настроим включение нужных папок
@@ -55,3 +56,4 @@
 /.idea
 *.zip
 *.log-raw
+/vendor
