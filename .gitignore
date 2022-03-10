@@ -52,5 +52,6 @@
 /dev
 /pma
 /upload
+/.idea
 *.zip
 *.log-raw
