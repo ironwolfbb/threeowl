@@ -57,3 +57,5 @@
 *.zip
 *.log-raw
 /vendor
+.DS_Store
+/frontend
