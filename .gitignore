@@ -60,3 +60,4 @@
 .DS_Store
 /frontend
 /.idea/
+/test.php
