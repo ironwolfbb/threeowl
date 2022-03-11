@@ -149,16 +149,26 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
                     </ul>
                 </div>
                 <div class="header-mibble-links">
-                    <div class="btn btn-orange art-place">
-                        <a href="#" class="btn btn-more art-place">
-                            Арт-пространство
-                        </a>
-                    </div>
-                    <div class="btn btn-orange game-zone">
-                        <a href="#" class="btn btn-more game-zone">
-                            Игровая зона
-                        </a>
-                    </div>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:menu",
+                        "header-big-menu",
+                        array(
+                            "ALLOW_MULTI_SELECT" => "N",
+                            "CHILD_MENU_TYPE" => "",
+                            "DELAY" => "N",
+                            "MAX_LEVEL" => "1",
+                            "MENU_CACHE_GET_VARS" => array(
+                            ),
+                            "MENU_CACHE_TIME" => "3600",
+                            "MENU_CACHE_TYPE" => "N",
+                            "MENU_CACHE_USE_GROUPS" => "Y",
+                            "ROOT_MENU_TYPE" => "bigmenu",
+                            "USE_EXT" => "N",
+                            "COMPONENT_TEMPLATE" => "header-big-menu"
+                        ),
+                        false
+                    );?>
+
                     <?$APPLICATION->IncludeComponent("bitrix:menu", "header-nav-menu", Array(
                         "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
                         "CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
