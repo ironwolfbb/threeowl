@@ -39,7 +39,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
         <div class="header-top">
             <div class="container">
                 <p>
-                    Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым.
+                    <?=sprint_options_get('GLOBAL_TOP_MSG')?>
                 </p>
             </div>
             <div class="close-btn close-banner">
