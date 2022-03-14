@@ -3,89 +3,34 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle('Главная');
 ?>
 
-<div class="main-slider">
-    <div class="container">
-        <div class="swiper-container mainSlider js-mainSlider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/main-banner.jpg');">
-                    <div class="swiper-title" >
-                        <h1>
-                            Развивающие игрушки
-                        </h1>
-                        <p>
-                            Большой ассортмент развивающих игрушек для детей и взрослых
-                        </p>
-                        <div class="btn btn-orange">
-                            <a href="#" class="btn btn-more">
-                                Подробнее
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/main-banner.jpg');">
-                    <div class="swiper-title" >
-                        <h1>
-                            Развивающие игрушки
-                        </h1>
-                        <p>
-                            Большой ассортмент развивающих игрушек для детей и взрослых
-                        </p>
-                        <div class="btn btn-orange">
-                            <a href="#" class="btn btn-more">
-                                Подробнее
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/main-banner.jpg');">
-                    <div class="swiper-title" >
-                        <h1>
-                            Развивающие игрушки
-                        </h1>
-                        <p>
-                            Большой ассортмент развивающих игрушек для детей и взрослых
-                        </p>
-                        <div class="btn btn-orange">
-                            <a href="#" class="btn btn-more">
-                                Подробнее
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/main-banner.jpg');">
-                    <div class="swiper-title" >
-                        <h1>
-                            Развивающие игрушки
-                        </h1>
-                        <p>
-                            Большой ассортмент развивающих игрушек для детей и взрослых
-                        </p>
-                        <div class="btn btn-orange">
-                            <a href="#" class="btn btn-more">
-                                Подробнее
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-arrow prev-main-slide prev-slide">
-                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="45" height="44.8462" rx="22.4231" fill="white" />
-                    <path d="M25 14.9487L19 22.4231L25 29.8974" stroke="#FFCF32" stroke-width="2" />
-                </svg>
-            </div>
-            <div class="slider-arrow next-main-slide next-slide">
-                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="45" height="45" rx="22.5" fill="white" />
-                    <path d="M20 15L26 22.5L20 30" stroke="#FFCF32" stroke-width="2" />
-                </svg>
-            </div>
-
-        </div>
-
-    </div>
-    <div class="swiper-pagination main-pagination"></div>
-</div>
+<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "main-slider", Array(
+    "ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
+    "CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+    "CACHE_GROUPS" => "Y",	// Учитывать права доступа
+    "CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+    "CACHE_TYPE" => "A",	// Тип кеширования
+    "COUNT_ELEMENTS" => "Y",	// Показывать количество элементов в разделе
+    "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",	// Показывать количество
+    "FILTER_NAME" => "sectionsFilter",	// Имя массива со значениями фильтра разделов
+    "IBLOCK_ID" => "1",	// Инфоблок
+    "IBLOCK_TYPE" => "catalog",	// Тип инфоблока
+    "SECTION_CODE" => "",	// Код раздела
+    "SECTION_FIELDS" => array(	// Поля разделов
+        0 => "",
+        1 => "",
+    ),
+    "SECTION_ID" => "",	// ID раздела
+    "SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+    "SECTION_USER_FIELDS" => array(	// Свойства разделов
+        0 => "",
+        1 => "",
+    ),
+    "SHOW_PARENT_NAME" => "Y",	// Показывать название раздела
+    "TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
+    "VIEW_MODE" => "LINE",	// Вид списка подразделов
+),
+    false
+);?>
 <div class="big-bg-block" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/waveBg.jpg');">
     <div class="important-sections standart-block">
         <div class="container">
