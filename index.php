@@ -160,66 +160,38 @@ $APPLICATION->SetTitle('Главная');
                 Популярные категории
             </h2>
         </div>
-        <div class="popular-categores-items">
-            <div class="popular-categories-item"  style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/korz.jpg');">
-                <h3>
-                    Рукоделие
-                </h3>
-                <a href="#">
-                    Вязание
-                </a>
-                <a href="#">
-                    Наборы для торсион-папье
-                </a>
-                <a href="#">
-                    Алмазная вышивка
-                </a>
-            </div>
-            <div class="popular-categories-item" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/poni.jpg');">
-                <h3>
-                    Для самых маленьких
-                </h3>
-                <a href="#">
-                    Игрушки для купания
-                </a>
-                <a href="#">
-                    Игрушки для развития
-                </a>
-                <a href="#">
-                    Интерактивные игрушки
-                </a>
-            </div>
-            <div class="popular-categories-item" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/poni.jpg');">
-                <h3>
-                    Для самых маленьких
-                </h3>
-                <a href="#">
-                    Игрушки для купания
-                </a>
-                <a href="#">
-                    Игрушки для развития
-                </a>
-                <a href="#">
-                    Интерактивные игрушки
-                </a>
-            </div>
-            <div class="popular-categories-item" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/korz.jpg');">
-                <h3>
-                    Рукоделие
-                </h3>
-                <a href="#">
-                    Вязание
-                </a>
-                <a href="#">
-                    Наборы для торсион-папье
-                </a>
-                <a href="#">
-                    Алмазная вышивка
-                </a>
-            </div>
-        </div>
+        <?$GLOBALS['PopularFilter'] = Array("UF_POPULAR"=>1);?>
+        <?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "popular-chapters", Array(
+	"COMPONENT_TEMPLATE" => ".default",
+		"IBLOCK_TYPE" => "catalog",	// Тип инфоблока
+		"IBLOCK_ID" => "1",	// Инфоблок
+		"SECTION_ID" => $_REQUEST["SECTION_ID"],	// ID раздела
+		"SECTION_CODE" => "",	// Код раздела
+		"COUNT_ELEMENTS" => "Y",	// Показывать количество элементов в разделе
+		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",	// Показывать количество
+		"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
+		"SECTION_FIELDS" => array(	// Поля разделов
+			0 => "UF_POPULAR",
+			1 => "",
+		),
+		"SECTION_USER_FIELDS" => array(	// Свойства разделов
+			0 => "UF_POPULAR",
+			1 => "",
+		),
+		"FILTER_NAME" => "PopularFilter",	// Имя массива со значениями фильтра разделов
+		"VIEW_MODE" => "LIST",	// Вид списка подразделов
+		"SHOW_PARENT_NAME" => "Y",	// Показывать название раздела
+		"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+		"CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+		"ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
+	),
+	false
+);?>
         <div class="btn btn-orange go-into-katalog">
-            <a href="#" class="btn btn-more go-into-katalog">
+            <a href="/catalog/" class="btn btn-more go-into-katalog">
                 Перейти в каталог
             </a>
         </div>
