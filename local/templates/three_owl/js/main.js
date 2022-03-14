@@ -93,9 +93,10 @@ const jsmainSlider = new Swiper('.js-mainSlider', {
       prevEl: '.prev-main-slide',
       nextEl: '.next-main-slide'
    },
-   pagination:{
+   pagination: {
       el: '.main-pagination',
-      type: 'bullets'
+      type: 'bullets',
+      clickable: true,
    },
    spaceBetween: 19,
    /*    pagination: {
@@ -106,7 +107,7 @@ const jsmainSlider = new Swiper('.js-mainSlider', {
       320: {
          spaceBetween: 0,
       },
-      768: {
+      575: {
          spaceBetween: 19
       }
    }
@@ -122,7 +123,8 @@ const jsFirstMiniSlider = new Swiper('.js-first-mini-slider', {
    spaceBetween: 30,
    pagination: {
       el: '.first-slider-pagination',
-      type: 'bullets'
+      type: 'bullets',
+      clickable: true,
    },
    breakpoints: {
       320: {
@@ -147,7 +149,8 @@ const jsSecondMiniSlider = new Swiper('.js-second-mini-slider', {
    },
    pagination: {
       el: '.second-slider-pagination',
-      type: 'bullets'
+      type: 'bullets',
+      clickable: true,
    },
    spaceBetween: 30,
    breakpoints: {
@@ -176,9 +179,9 @@ const jsRequestsSlider3 = new Swiper('.js-detail-photo-slider', {
    slidesToScroll: 1,
    slidesPerView: 5,
    spaceBetween: 30,
-   breakpoints:{
+   breakpoints: {
       320: {
-         spaceBetween:5,
+         spaceBetween: 5,
          slidesPerView: 4,
       },
       768: {
@@ -240,7 +243,6 @@ if (sliderBlock2) {
       slidesToScroll: 1,
       spaceBetween: 25,
       direction: 'vertical',
-      mousewheel: true,
       loop: true,
       navigation: {
          prevEl: ".small-prev",
@@ -364,9 +366,13 @@ function initRatings () {
     }
   }
 }
+let cont = document.querySelector('.header-middle .container');
 document.addEventListener('click', function (e) {
     if (e.target.closest('.burger') || e.target.classList.contains('burger')) {
         document.querySelector('.header-mibble-links').classList.toggle('active')
+        document.querySelector('.body').classList.toggle('noScroll')
+        document.querySelector('.search').classList.remove('active')
+        document.querySelector('.burger').classList.toggle('active')
     }
     if (e.target.closest('.katalog-btn') || e.target.classList.contains('katalog-btn')) {
         document.querySelector('.header-bottom-links').classList.toggle('active')
@@ -378,10 +384,34 @@ document.addEventListener('click', function (e) {
         document.querySelector('.header-top').style.display = 'none'
     }
     if (e.target.closest('.search-input') || e.target.classList.contains('search-img')) {
+        if (window.screen.width > 575) {
         document.querySelector('.search').classList.add('active')
+        document.querySelector('.body').classList.toggle('noScroll')
+        document.querySelector('.header-mibble-links').classList.remove('active')
+        document.querySelector('.burger').classList.remove('active')
+        }
+        else {
+        document.querySelector('.search').classList.add('active')
+        document.querySelector('.body').classList.toggle('noScroll')
+        cont.classList.toggle('container')
+        document.querySelector('.header-mibble-links').classList.remove('active')
+        document.querySelector('.burger').classList.remove('active')
+            return
+        }
     }
     if (e.target.closest('.close-search')) {
-        document.querySelector('.search').classList.remove('active')
+        if (window.screen.width > 575) {
+            document.querySelector('.search').classList.remove('active')
+            document.querySelector('.body').classList.remove('noScroll')
+            document.querySelector('.burger').classList.remove('active')
+        }
+        else {
+            document.querySelector('.search').classList.remove('active')
+            document.querySelector('.body').classList.remove('noScroll')
+            document.querySelector('.burger').classList.remove('active')
+            cont.classList.toggle('container')
+            return
+        }
     }
 
     if (e.target.closest('.catalog-item')) {
@@ -407,6 +437,9 @@ document.addEventListener('click', function (e) {
 
     if (e.target.closest('.kat-btn')) {
         document.querySelector('.katalog-aside').classList.toggle('active')
+    }
+    if (e.target.closest('.agreement')) {
+        document.querySelector('.agreement').classList.toggle('clicked')
     }
 })
 

@@ -5,9 +5,10 @@ const jsmainSlider = new Swiper('.js-mainSlider', {
       prevEl: '.prev-main-slide',
       nextEl: '.next-main-slide'
    },
-   pagination:{
+   pagination: {
       el: '.main-pagination',
-      type: 'bullets'
+      type: 'bullets',
+      clickable: true,
    },
    spaceBetween: 19,
    /*    pagination: {
@@ -18,7 +19,7 @@ const jsmainSlider = new Swiper('.js-mainSlider', {
       320: {
          spaceBetween: 0,
       },
-      768: {
+      575: {
          spaceBetween: 19
       }
    }
@@ -34,7 +35,8 @@ const jsFirstMiniSlider = new Swiper('.js-first-mini-slider', {
    spaceBetween: 30,
    pagination: {
       el: '.first-slider-pagination',
-      type: 'bullets'
+      type: 'bullets',
+      clickable: true,
    },
    breakpoints: {
       320: {
@@ -59,7 +61,8 @@ const jsSecondMiniSlider = new Swiper('.js-second-mini-slider', {
    },
    pagination: {
       el: '.second-slider-pagination',
-      type: 'bullets'
+      type: 'bullets',
+      clickable: true,
    },
    spaceBetween: 30,
    breakpoints: {
@@ -88,9 +91,9 @@ const jsRequestsSlider3 = new Swiper('.js-detail-photo-slider', {
    slidesToScroll: 1,
    slidesPerView: 5,
    spaceBetween: 30,
-   breakpoints:{
+   breakpoints: {
       320: {
-         spaceBetween:5,
+         spaceBetween: 5,
          slidesPerView: 4,
       },
       768: {
@@ -152,7 +155,6 @@ if (sliderBlock2) {
       slidesToScroll: 1,
       spaceBetween: 25,
       direction: 'vertical',
-      mousewheel: true,
       loop: true,
       navigation: {
          prevEl: ".small-prev",
