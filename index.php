@@ -39,104 +39,40 @@ $APPLICATION->SetTitle('Главная');
                     Важные разделы
                 </h2>
             </div>
-            <div class="js-first-mini-slider smaller-slider swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/dog.jpg');">
-                        <a href="#"></a>
-                        <h3>
-                            Гравюра
-                        </h3>
-                        <p>
-                            Развиваем детей
-                            и снимаем стресс
-                        </p>
-                    </div>
-                    <div class="swiper-slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/fox.jpg');">
-                        <a href="#"></a>
-                        <h3>
-                            Аппликация
-                        </h3>
-                        <p>
-                            Развиваем детей
-                            и снимаем стресс
-                        </p>
-                    </div>
-                    <div class="swiper-slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/dog.jpg');">
-                        <a href="#"></a>
-                        <h3>
-                            Гравюра
-                        </h3>
-                        <p>
-                            Развиваем детей
-                            и снимаем стресс
-                        </p>
-                    </div>
-                    <div class="swiper-slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/fox.jpg');">
-                        <a href="#"></a>
-                        <h3>
-                            Аппликация
-                        </h3>
-                        <p>
-                            Развиваем детей
-                            и снимаем стресс
-                        </p>
-                    </div>
-                    <div class="swiper-slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/dog.jpg');">
-                        <a href="#"></a>
-                        <h3>
-                            Гравюра
-                        </h3>
-                        <p>
-                            Развиваем детей
-                            и снимаем стресс
-                        </p>
-                    </div>
-                    <div class="swiper-slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/fox.jpg');">
-                        <a href="#"></a>
-                        <h3>
-                            Аппликация
-                        </h3>
-                        <p>
-                            Развиваем детей
-                            и снимаем стресс
-                        </p>
-                    </div>
-                    <div class="swiper-slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/dog.jpg');">
-                        <a href="#"></a>
-                        <h3>
-                            Гравюра
-                        </h3>
-                        <p>
-                            Развиваем детей
-                            и снимаем стресс
-                        </p>
-                    </div>
-                    <div class="swiper-slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/fox.jpg');">
-                        <a href="#"></a>
-                        <h3>
-                            Аппликация
-                        </h3>
-                        <p>
-                            Развиваем детей
-                            и снимаем стресс
-                        </p>
-                    </div>
-                </div>
-
-                <div class="slider-arrow prev-mini-slide prev-slide">
-                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="45" height="44.8462" rx="22.4231" fill="white" />
-                        <path d="M25 14.9487L19 22.4231L25 29.8974" stroke="#FFCF32" stroke-width="2" />
-                    </svg>
-                </div>
-                <div class="slider-arrow next-mini-slide next-slide">
-                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="45" height="45" rx="22.5" fill="white" />
-                        <path d="M20 15L26 22.5L20 30" stroke="#FFCF32" stroke-width="2" />
-                    </svg>
-                </div>
-                <div class="swiper-pagination first-slider-pagination"></div>
-            </div>
+            <?$GLOBALS['PriorityFilter'] = Array("DEPTH_LEVEL" => 2, 'UF_IS_PRIORITY'=>1);?>
+            <?$APPLICATION->IncludeComponent(
+	"bitrix:catalog.section.list", 
+	"priority-chapters-slider", 
+	array(
+		"COMPONENT_TEMPLATE" => "priority-chapters-slider",
+		"IBLOCK_TYPE" => "catalog",
+		"IBLOCK_ID" => "1",
+		"SECTION_ID" => "",
+		"SECTION_CODE" => "",
+		"COUNT_ELEMENTS" => "Y",
+		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+		"TOP_DEPTH" => "2",
+		"SECTION_FIELDS" => array(
+            1 => "UF_IS_PRIORITY",
+            2 => "UF_PRIORITY_IMAGE",
+            3 => "DESCRIPTION",
+		),
+		"SECTION_USER_FIELDS" => array(
+            1 => "",
+		),
+		"USE_FILTER" => "Y",
+		"FILTER_NAME" => "PriorityFilter",
+		"VIEW_MODE" => "LIST",
+		"SHOW_PARENT_NAME" => "Y",
+		"SECTION_URL" => "",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "36000000",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_FILTER" => "N",
+		"ADD_SECTIONS_CHAIN" => "Y"
+	),
+	false
+);?>
 
         </div>
     </div>
