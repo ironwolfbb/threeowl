@@ -28,7 +28,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title><?$APPLICATION->ShowTitle(false)?></title>
 
 </head>
 <body>
