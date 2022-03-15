@@ -76,4 +76,5 @@ $APPLICATION->SetTitle("Title");
 	false
 );?>
 </div>
+</div>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
