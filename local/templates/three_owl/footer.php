@@ -154,41 +154,35 @@
                 ),
                     false
                 );?>
-                <div class="footer-links-col">
-                    <a href="#">
-                        Хиты/Новинки
-                    </a>
-                    <a href="#">
-                        Детское развитие
-                    </a>
-                    <a href="#">
-                        Настольные игры
-                        и пазлы
-                    </a>
-                </div>
-                <div class="footer-links-col">
-                    <a href="#">
-                        Мозайка
-                    </a>
-                    <a href="#">
-                        Картины по номерам
-                    </a>
-                    <a href="#">
-                        Познавательные
-                        наборы
-                    </a>
-                </div>
-                <div class="footer-links-col">
-                    <a href="#">
-                        Рисование
-                    </a>
-                    <a href="#">
-                        Лепка
-                    </a>
-                    <a href="#">
-                        Рукоделие
-                    </a>
-                </div>
+                <?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "footer-chapters-list", Array(
+                    "COMPONENT_TEMPLATE" => ".default",
+                    "IBLOCK_TYPE" => "catalog",	// Тип инфоблока
+                    "IBLOCK_ID" => "1",	// Инфоблок
+                    "SECTION_ID" => $_REQUEST["SECTION_ID"],	// ID раздела
+                    "SECTION_CODE" => "",	// Код раздела
+                    "COUNT_ELEMENTS" => "Y",	// Показывать количество элементов в разделе
+                    "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",	// Показывать количество
+                    "TOP_DEPTH" => "1",	// Максимальная отображаемая глубина разделов
+                    "SECTION_FIELDS" => array(	// Поля разделов
+                        0 => "",
+                        1 => "",
+                    ),
+                    "SECTION_USER_FIELDS" => array(	// Свойства разделов
+                        0 => "",
+                        1 => "",
+                    ),
+                    "FILTER_NAME" => "sectionsFilter",	// Имя массива со значениями фильтра разделов
+                    "VIEW_MODE" => "TEXT",	// Вид списка подразделов
+                    "SHOW_PARENT_NAME" => "Y",	// Показывать название раздела
+                    "SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+                    "CACHE_TYPE" => "A",	// Тип кеширования
+                    "CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+                    "CACHE_GROUPS" => "Y",	// Учитывать права доступа
+                    "CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+                    "ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
+                ),
+                    false
+                );?>
             </div>
             <div class="footer-last-col">
                 <a href="#">
