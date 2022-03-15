@@ -216,4 +216,11 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
             false
         );?>
 </header>
-
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-content">
+            <a href="#">Три совы</a>
+            <a href="#">О бренде</a>
+        </div>
+    </div>
+</div>
