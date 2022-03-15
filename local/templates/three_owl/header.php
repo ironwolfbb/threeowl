@@ -216,11 +216,10 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
             false
         );?>
 </header>
-<div class="breadcrumbs">
-    <div class="container">
-        <div class="breadcrumbs-content">
-            <a href="#">Три совы</a>
-            <a href="#">О бренде</a>
-        </div>
-    </div>
-</div>
+<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breakcrumb", Array(
+    "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+    "SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+    "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+),
+    false
+);?>
