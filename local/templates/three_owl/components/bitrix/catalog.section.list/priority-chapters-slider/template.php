@@ -35,6 +35,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
             ?>
             <div class="swiper-slide" style="background-image: url('<?=CFile::GetPath($arSection['UF_PRIORITY_IMAGE'])?>');">
                 <a href="<? echo $arSection['SECTION_PAGE_URL']; ?>"></a>
+                <div class="slide-bg"></div>
                 <h3>
                     <? echo $arSection['NAME']; ?>
                 </h3>

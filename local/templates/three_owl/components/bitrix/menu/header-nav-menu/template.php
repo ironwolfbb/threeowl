@@ -35,9 +35,9 @@ foreach($arResult as $arItem):
 		continue;
 ?>
 	<?if($arItem["SELECTED"]):?>
-		<a href="<?=$arItem["LINK"]?>" class="selected"><?=$arItem["TEXT"]?></a>
+		<a href="<?=$arItem["LINK"]?>" class="currentPage"><?=$arItem["TEXT"]?></a>
 	<?else:?>
-    <a href="<?=$arItem["LINK"]?>" class="selected"><?=$arItem["TEXT"]?></a>
+    <a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
 	<?endif?>
 	
 <?endforeach?>

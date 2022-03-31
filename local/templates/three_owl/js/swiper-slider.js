@@ -24,6 +24,27 @@ const jsmainSlider = new Swiper('.js-mainSlider', {
       }
    }
 })
+const jsmainSlider54 = new Swiper('.js-pop-slider', {
+   slidesToScroll: 1,
+   slidesPerView: 1,
+   navigation: {
+      prevEl: '.prev-main-slide',
+      nextEl: '.next-main-slide'
+   },
+   spaceBetween: 19,
+   /*    pagination: {
+         el: '.swiper-pagination',
+         type: '',
+      }, */
+   breakpoints: {
+      320: {
+         spaceBetween: 0,
+      },
+      575: {
+         spaceBetween: 19
+      }
+   }
+})
 
 const jsFirstMiniSlider = new Swiper('.js-first-mini-slider', {
    slidesToScroll: 1,
@@ -42,13 +63,21 @@ const jsFirstMiniSlider = new Swiper('.js-first-mini-slider', {
       320: {
          slidesPerView: 1,
       },
-      426: {
+      525: {
          slidesPerView: 2,
          spaceBetween: 60,
       },
+      800: {
+         slidesPerView: 3,
+         spaceBetween: 50,
+      },
       998: {
          slidesPerView: 4,
-         spaceBetween: 30,
+         spaceBetween: 10,
+      },
+      1024: {
+         slidesPerView: 4,
+         spaceBetween: 10,
       }
    }
 })
@@ -93,8 +122,12 @@ const jsRequestsSlider3 = new Swiper('.js-detail-photo-slider', {
    spaceBetween: 30,
    breakpoints: {
       320: {
-         spaceBetween: 5,
+         spaceBetween: 10,
          slidesPerView: 4,
+      },
+      576: {
+         spaceBetween: 5,
+         slidesPerView: 5,
       },
       768: {
          spaceBetween: 30,

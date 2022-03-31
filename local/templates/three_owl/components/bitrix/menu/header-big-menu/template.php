@@ -12,7 +12,6 @@ foreach($arResult as $arItem):
             <?=$arItem["TEXT"]?>
         </a>
     </div>
-	
 <?endforeach?>
 
 <?endif?>

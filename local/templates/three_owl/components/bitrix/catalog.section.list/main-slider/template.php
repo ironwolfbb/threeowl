@@ -58,14 +58,14 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
                 </div>
                 <div class="slider-arrow prev-main-slide prev-slide">
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="45" height="44.8462" rx="22.4231" fill="white"/>
-                        <path d="M25 14.9487L19 22.4231L25 29.8974" stroke="#FFCF32" stroke-width="2"/>
+                        <rect width="45" height="44.8462" rx="22.4231" fill="white" />
+                        <path d="M25 14.9487L19 22.4231L25 29.8974" stroke="#FFCF32" stroke-width="2" />
                     </svg>
                 </div>
                 <div class="slider-arrow next-main-slide next-slide">
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="45" height="45" rx="22.5" fill="white"/>
-                        <path d="M20 15L26 22.5L20 30" stroke="#FFCF32" stroke-width="2"/>
+                        <rect width="45" height="45" rx="22.5" fill="white" />
+                        <path d="M20 15L26 22.5L20 30" stroke="#FFCF32" stroke-width="2" />
                     </svg>
                 </div>
             </div>

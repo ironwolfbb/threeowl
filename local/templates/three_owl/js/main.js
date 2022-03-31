@@ -112,6 +112,27 @@ const jsmainSlider = new Swiper('.js-mainSlider', {
       }
    }
 })
+const jsmainSlider54 = new Swiper('.js-pop-slider', {
+   slidesToScroll: 1,
+   slidesPerView: 1,
+   navigation: {
+      prevEl: '.prev-main-slide',
+      nextEl: '.next-main-slide'
+   },
+   spaceBetween: 19,
+   /*    pagination: {
+         el: '.swiper-pagination',
+         type: '',
+      }, */
+   breakpoints: {
+      320: {
+         spaceBetween: 0,
+      },
+      575: {
+         spaceBetween: 19
+      }
+   }
+})
 
 const jsFirstMiniSlider = new Swiper('.js-first-mini-slider', {
    slidesToScroll: 1,
@@ -130,13 +151,21 @@ const jsFirstMiniSlider = new Swiper('.js-first-mini-slider', {
       320: {
          slidesPerView: 1,
       },
-      426: {
+      525: {
          slidesPerView: 2,
          spaceBetween: 60,
       },
+      800: {
+         slidesPerView: 3,
+         spaceBetween: 50,
+      },
       998: {
          slidesPerView: 4,
-         spaceBetween: 30,
+         spaceBetween: 10,
+      },
+      1024: {
+         slidesPerView: 4,
+         spaceBetween: 10,
       }
    }
 })
@@ -181,8 +210,12 @@ const jsRequestsSlider3 = new Swiper('.js-detail-photo-slider', {
    spaceBetween: 30,
    breakpoints: {
       320: {
-         spaceBetween: 5,
+         spaceBetween: 10,
          slidesPerView: 4,
+      },
+      576: {
+         spaceBetween: 5,
+         slidesPerView: 5,
       },
       768: {
          spaceBetween: 30,
@@ -372,7 +405,18 @@ document.addEventListener('click', function (e) {
         document.querySelector('.header-mibble-links').classList.toggle('active')
         document.querySelector('.body').classList.toggle('noScroll')
         document.querySelector('.search').classList.remove('active')
+        document.querySelector('.header-bottom-links').classList.remove('active')
         document.querySelector('.burger').classList.toggle('active')
+
+    }
+
+    if (e.target.closest('.js-detail-photo-slider .swiper-slide')) {
+        document.querySelector('.popup-detail-slider-block').classList.toggle('active')
+        document.querySelector('.body').classList.toggle('noScroll')
+    }
+    if (e.target.closest('.popup-slider-close-btn')) {
+        document.querySelector('.popup-detail-slider-block').classList.toggle('active')
+        document.querySelector('.body').classList.toggle('noScroll')
     }
     if (e.target.closest('.katalog-btn') || e.target.classList.contains('katalog-btn')) {
         document.querySelector('.header-bottom-links').classList.toggle('active')
@@ -385,17 +429,17 @@ document.addEventListener('click', function (e) {
     }
     if (e.target.closest('.search-input') || e.target.classList.contains('search-img')) {
         if (window.screen.width > 575) {
-        document.querySelector('.search').classList.add('active')
-        document.querySelector('.body').classList.toggle('noScroll')
-        document.querySelector('.header-mibble-links').classList.remove('active')
-        document.querySelector('.burger').classList.remove('active')
+            document.querySelector('.search').classList.add('active')
+            document.querySelector('.body').classList.toggle('noScroll')
+            document.querySelector('.header-mibble-links').classList.remove('active')
+            document.querySelector('.burger').classList.remove('active')
         }
         else {
-        document.querySelector('.search').classList.add('active')
-        document.querySelector('.body').classList.toggle('noScroll')
-        cont.classList.toggle('container')
-        document.querySelector('.header-mibble-links').classList.remove('active')
-        document.querySelector('.burger').classList.remove('active')
+            document.querySelector('.search').classList.add('active')
+            document.querySelector('.body').classList.toggle('noScroll')
+            cont.classList.toggle('container')
+            document.querySelector('.header-mibble-links').classList.remove('active')
+            document.querySelector('.burger').classList.remove('active')
             return
         }
     }
@@ -420,8 +464,9 @@ document.addEventListener('click', function (e) {
 
     if (e.target.closest('.filter-checbox')) {
         e.target.closest('.filter-checbox').classList.toggle('active')
+
     }
-    
+
     if (e.target.closest('.send-feedback-btn')) {
         document.querySelector('.feedback-section').classList.toggle('active')
     }
@@ -429,10 +474,18 @@ document.addEventListener('click', function (e) {
     if (e.target.closest('.filter-btn')) {
         document.querySelector('.filter ul').classList.toggle('active')
         document.querySelector('.filter button').classList.toggle('active')
+        e.target.closest('.filter').classList.toggle('active')
     }
 
-    if (e.target.closest(".first" )) {
+    if (e.target.closest(".first")) {
         document.querySelector('.sort').classList.toggle('active')
+    }
+
+    if (e.target.closest(".bottom-aside")) {
+        document.querySelector('.bottom-aside').classList.toggle('active')
+    }
+    if (e.target.closest(".rubrik")) {
+        document.querySelector('.rubrik').classList.toggle('active')
     }
 
     if (e.target.closest('.kat-btn')) {
@@ -441,6 +494,26 @@ document.addEventListener('click', function (e) {
     if (e.target.closest('.agreement')) {
         document.querySelector('.agreement').classList.toggle('clicked')
     }
+    if (e.target.closest('.btn-art')) {
+        document.querySelector('.order-popup').classList.toggle('active')
+        document.querySelector('.body').classList.toggle('noScroll')
+    }
+    if (e.target.closest('.order-close-popup-btn')) {
+        document.querySelector('.order-popup').classList.toggle('active')
+        document.querySelector('.body').classList.toggle('noScroll')
+    }
+    if (e.target.closest('.close-modal')) {
+        document.querySelector('.popup-detail-modal').classList.toggle('active')
+        document.querySelector('.body').classList.toggle('noScroll')
+    }
+    if (e.target.closest('.exposition')) {
+        document.querySelector('.popup-detail-modal').classList.toggle('active')
+        document.querySelector('.body').classList.toggle('noScroll')
+    }
+    if (e.target.closest('.openList')) {
+        document.querySelector('.listUL').classList.toggle('active')
+    }
+
 })
 
 
