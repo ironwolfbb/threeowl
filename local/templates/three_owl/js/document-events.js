@@ -60,6 +60,10 @@ document.addEventListener('click', function (e) {
     if (e.target.closest('.catalog-item')) {
         e.target.closest('.catalog-item').classList.toggle('active')
     }
+    if (e.target.closest('.big-feedback-el')) {
+        e.target.closest('.big-feedback-el').classList.toggle('open')
+        document.querySelector('.big-feedback').classList.toggle('full')
+    }
 
     if (e.target.closest('.filter-checbox')) {
         e.target.closest('.filter-checbox').classList.toggle('active')

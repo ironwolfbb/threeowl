@@ -203,6 +203,11 @@ const jsRequestsSlider2 = new Swiper('.js-bigest-detail-slider', {
       prevEl: ".small-prev",
       nextEl: ".small-next",
    },
+   pagination: {
+      el: '.swiper-paginationn',
+      clickable: true,
+      bulletClass: 'swiper-slide'
+   }
 })
 const jsRequestsSlider3 = new Swiper('.js-detail-photo-slider', {
    slidesToScroll: 1,
@@ -272,11 +277,10 @@ if (sliderBlock) {
 let sliderBlock2 = document.querySelector('.js-smallest-detail-slider')
 if (sliderBlock2) {
    let jsWeHelpSlider = new Swiper('.js-smallest-detail-slider', {
-      slidesPerView: 4,
+      slidesPerView: 5,
       slidesToScroll: 1,
-      spaceBetween: 25,
+      spaceBetween: 32,
       direction: 'vertical',
-      loop: true,
       navigation: {
          prevEl: ".small-prev",
          nextEl: ".small-next",
@@ -285,17 +289,15 @@ if (sliderBlock2) {
          320: {
             slidesPerView: 3,
             direction: 'horizontal',
+            spaceBetween: 10,
          },
          575: {
             slidesPerView: 3,
             direction: 'horizontal',
-         },
-         998: {
-            slidesPerView: 3,
-            direction: 'horizontal',
+            spaceBetween: 10,
          },
          1141: {
-            slidesPerView: 4,
+            slidesPerView: 5,
             direction: 'vertical',
          },
       }
@@ -460,6 +462,10 @@ document.addEventListener('click', function (e) {
 
     if (e.target.closest('.catalog-item')) {
         e.target.closest('.catalog-item').classList.toggle('active')
+    }
+    if (e.target.closest('.big-feedback-el')) {
+        e.target.closest('.big-feedback-el').classList.toggle('open')
+        document.querySelector('.big-feedback').classList.toggle('full')
     }
 
     if (e.target.closest('.filter-checbox')) {
