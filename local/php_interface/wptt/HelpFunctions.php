@@ -68,7 +68,14 @@ class HelpFunctions{
             return $banner;
 
         }
+    }
 
+    public static function getSectionById($id){
+        if(\CModule::IncludeModule("iblock")){
+            $res = \CIBlockSection::GetByID($id);
+            if($ar_res = $res->GetNext())
+                return $ar_res;
+        }
 
     }
 }

@@ -34,7 +34,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
         if (false === $arSection['PICTURE']) $arSection['PICTURE'] = array('SRC' => $arCurView['EMPTY_IMG'], 'ALT' => ('' != $arSection["IPROPERTY_VALUES"]["SECTION_PICTURE_FILE_ALT"] ? $arSection["IPROPERTY_VALUES"]["SECTION_PICTURE_FILE_ALT"] : $arSection["NAME"]), 'TITLE' => ('' != $arSection["IPROPERTY_VALUES"]["SECTION_PICTURE_FILE_TITLE"] ? $arSection["IPROPERTY_VALUES"]["SECTION_PICTURE_FILE_TITLE"] : $arSection["NAME"]));
         ?>
         <? if ($arSection['DEPTH_LEVEL'] == 1) { ?>
-            <div class="popular-categories-item" style="background-image: url('../../img/korz.jpg');">
+            <div class="popular-categories-item" style="background-image: url(<?=$arSection['POPULAR_IMAGE']?>);">
             <h3>
                 <? echo $arSection['NAME']; ?>
             </h3>

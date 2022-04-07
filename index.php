@@ -65,7 +65,7 @@ $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
             "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",    // Показывать количество
             "TOP_DEPTH" => "2",    // Максимальная отображаемая глубина разделов
             "SECTION_FIELDS" => array(    // Поля разделов
-                0 => "UF_POPULAR", 1 => "",), "SECTION_USER_FIELDS" => array(    // Свойства разделов
+                0 => "UF_POPULAR", 1 => "UF_POPULAR_IMAGE",), "SECTION_USER_FIELDS" => array(    // Свойства разделов
                 0 => "UF_POPULAR", 1 => "",), "FILTER_NAME" => "PopularFilter",    // Имя массива со значениями фильтра разделов
             "VIEW_MODE" => "LIST",    // Вид списка подразделов
             "SHOW_PARENT_NAME" => "Y",    // Показывать название раздела

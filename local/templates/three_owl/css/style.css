@@ -2,7 +2,7 @@
 @font-face {
   font-family: 'Circe';
   font-style: normal;
-  src: url("../fonts/Circe/Circe.woff") format("woff"), url("../fonts/Circe/Circe.woff2") format("woff2"); }
+  src: url("../fonts/Circe/circe.woff") format("woff"), url("../fonts/Circe/circe.woff2") format("woff2"); }
 
 @font-face {
   font-family: 'Pribambas';
@@ -5143,6 +5143,9 @@ h1 {
     font-size: 1rem;
     line-height: 125%;
     color: #000000; }
+.filter-block .sort a.active {
+  color: #03a700;
+}
     @media screen and (max-width: 575px) {
       .filter-block .sort a {
         display: block; } }

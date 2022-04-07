@@ -61,3 +61,4 @@
 /frontend
 /.idea/
 /test.php
+/nginx.conf
