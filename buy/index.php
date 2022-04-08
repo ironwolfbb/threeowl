@@ -34,7 +34,7 @@ $APPLICATION->SetTitle("Title");
                 "PRODUCT_PROPS_VARIABLE" => "prop",    // Название переменной, в которой передаются характеристики товара
                 "PRODUCT_QUANTITY_VARIABLE" => "quantity",    // Название переменной, в которой передается количество товара
                 "PROPERTY_CODE" => array(    // Свойства
-                    0 => "", 1 => "",), "SECTION_COUNT" => "20",    // Максимальное количество выводимых разделов
+                    0 => "LINK", 1 => "",), "SECTION_COUNT" => "20",    // Максимальное количество выводимых разделов
                 "SECTION_FIELDS" => array(    // Поля разделов
                     0 => "", 1 => "",), "SECTION_ID_VARIABLE" => "SECTION_ID",    // Название переменной, в которой передается код группы
                 "SECTION_SORT_FIELD" => "sort",    // По какому полю сортируем разделы
