@@ -92,6 +92,7 @@ $section = $arParams['section'];
                 "SORT_ORDER1" => $sortOrder,    // Направление для первой сортировки новостей
                 "SORT_ORDER2" => "ASC",    // Направление для второй сортировки новостей
                 "STRICT_SECTION_CHECK" => "N",    // Строгая проверка раздела для показа списка
+                "SECTION_POSTS" => $section['UF_POSTS_REL'],
             ), false); ?>
         </div>
     </div>

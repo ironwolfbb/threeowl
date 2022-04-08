@@ -72,10 +72,12 @@ class HelpFunctions{
 
     public static function getSectionById($id){
         if(\CModule::IncludeModule("iblock")){
-            $res = \CIBlockSection::GetByID($id);
-            if($ar_res = $res->GetNext())
-                return $ar_res;
+            $arSelect = array("ID","NAME", 'UF_POSTS_REL', 'DEPTH_LEVEL');
+            $arFilter = array("IBLOCK_ID"=>self::getIBlockIdByCode('products'),'ID'=>$id);
+            $obSections = \CIBlockSection::GetList(array(), $arFilter, false, $arSelect);
+            $arResult = $obSections->GetNext();
+            return $arResult;
         }
-
     }
+
 }
