@@ -22,7 +22,7 @@ $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELET
 $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_CONFIRM'));
 ?>
 
-<div class="rubrik aside standart-block katalog-aside">
+<div class="rubrik aside standart-block katalog-aside <?if (substr_count($APPLICATION->GetCurPage(), $arSection["SECTION_PAGE_URL"]) == 0):?> active <?endif;?>">
     <aside>
         <h3 style="text-transform:capitalize;">Рубрика</h3>
         <div class="katalog-block">
