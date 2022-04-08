@@ -26,7 +26,7 @@ $this->setFrameMode(true);
         $this->AddEditAction($arElement['ID'], $arElement['EDIT_LINK'], CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_EDIT"));
         $this->AddDeleteAction($arElement['ID'], $arElement['DELETE_LINK'], CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BCST_ELEMENT_DELETE_CONFIRM')));
         ?>
-        <a href="<?=$arElement["DETAIL_PAGE_URL"]?>">
+        <a href="<?=$arElement["PROPERTIES"]['LINK']['VALUE']?>" target="_blank">
             <img src="<?=$arElement["PREVIEW_PICTURE"]["SRC"]?>">
         </a>
     <?endforeach;?>
