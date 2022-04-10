@@ -44,5 +44,4 @@ return (new Builder)
         'TITLE'   => 'Почта',
         'DEFAULT' => '',
         'WIDTH'   => '1000',
-    ])
-    ;
+    ]);

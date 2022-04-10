@@ -288,6 +288,7 @@ $this->setFrameMode(true);
             Фото и видео покупателей
         </p>
     </div>
+<!--    TODO: тут нужно сделать вывод свойства REVIEWS_PHOTOS, сделать проверку на тип файла(есть функция в битриксе) -->
     <div class="small-container">
         <div class="detail-photo-slider js-detail-photo-slider swiper-container">
             <div class="swiper-wrapper">
