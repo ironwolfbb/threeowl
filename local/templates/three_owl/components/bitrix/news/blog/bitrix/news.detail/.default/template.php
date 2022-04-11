@@ -12,7 +12,8 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<? //print_r($arResult);?>
+<?// print_r($arResult);?>
+<?echo $_SERVER[HTTP_HOST] . $_SERVER[REQUEST_URI]?>
 <div class="article-section">
     <div class="container">
         <div class="standart-block article-stand-block">
@@ -51,7 +52,7 @@ $this->setFrameMode(true);
                         Поделиться:
                     </p>
                     <div class="social-link">
-                        <a href="#" class="facebook">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://<?=$_SERVER[HTTP_HOST] . $_SERVER[REQUEST_URI]?>" target="_blank" class="facebook">
                             <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="17.5" cy="17.5" r="17" stroke="#686868"/>
@@ -148,7 +149,7 @@ $this->setFrameMode(true);
                                 </defs>
                             </svg>
                         </a>
-                        <a href="#" class="vk">
+                        <a href="https://vk.com/share.php?url=https://<?=$_SERVER[HTTP_HOST] . $_SERVER[REQUEST_URI]?>" target="_blank" class="vk">
                             <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="17.5" cy="17.5" r="17" stroke="#686868"/>
