@@ -39,7 +39,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                     </p>
                 </div>
                 <div class="btn btn-orange">
-                    <input class="btn btn-more" type="submit" name="web_form_submit" value="<?= $arResult["arForm"]["BUTTON"] ?>">
+                    <button class="btn btn-more" type="submit" name="web_form_submit" value="<?= $arResult["arForm"]["BUTTON"] ?>">Отправить</button>
                 </div>
                 <?= $arResult["FORM_FOOTER"] ?>
     </div>

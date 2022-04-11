@@ -14,7 +14,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
             <?= $arResult["QUESTIONS"]['email_field_blog']['HTML_CODE'] ?>
         </label>
         <div class="btn btn-orange submit-btn">
-            <input type="submit" class="btn btn-more submit-btn" name="web_form_submit" value="<?= $arResult["arForm"]["BUTTON"]?>">
+            <button type="submit" class="btn btn-more submit-btn" name="web_form_submit" value="<?= $arResult["arForm"]["BUTTON"]?>">Отправить</button>
         </div>
     <?= $arResult["FORM_FOOTER"] ?>
 <? endif; ?>
