@@ -89,6 +89,7 @@ document.addEventListener('click', function (e) {
 const jsmainSlider = new Swiper('.js-mainSlider', {
    slidesToScroll: 1,
    slidesPerView: 1,
+   loop: true,
    navigation: {
       prevEl: '.prev-main-slide',
       nextEl: '.next-main-slide'
@@ -435,6 +436,7 @@ document.addEventListener('click', function (e) {
             document.querySelector('.body').classList.toggle('noScroll')
             document.querySelector('.header-mibble-links').classList.remove('active')
             document.querySelector('.burger').classList.remove('active')
+            document.querySelector('.header-bottom-links').classList.remove('active')
         }
         else {
             document.querySelector('.search').classList.add('active')
@@ -442,6 +444,7 @@ document.addEventListener('click', function (e) {
             cont.classList.toggle('container')
             document.querySelector('.header-mibble-links').classList.remove('active')
             document.querySelector('.burger').classList.remove('active')
+            document.querySelector('.header-bottom-links').classList.remove('active')
             return
         }
     }
@@ -499,6 +502,7 @@ document.addEventListener('click', function (e) {
     }
     if (e.target.closest('.agreement')) {
         document.querySelector('.agreement').classList.toggle('clicked')
+        document.getElementById('8').checked = document.querySelector('.agreement').classList.contains('clicked') ? true : false;
     }
     if (e.target.closest('.btn-art')) {
         document.querySelector('.order-popup').classList.toggle('active')

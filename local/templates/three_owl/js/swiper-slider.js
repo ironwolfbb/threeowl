@@ -1,6 +1,7 @@
 const jsmainSlider = new Swiper('.js-mainSlider', {
    slidesToScroll: 1,
    slidesPerView: 1,
+   loop: true,
    navigation: {
       prevEl: '.prev-main-slide',
       nextEl: '.next-main-slide'

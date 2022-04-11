@@ -23,7 +23,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
     <?$GLOBALS['catalogBannerFilter'] = array('PROPERTY_SECTION_REL'=>$arParams['SECTION_ID'])?>
     <?$APPLICATION->IncludeComponent("bitrix:news.list", "ad-banner-catalog", Array(
         "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
-        "ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
+        "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
         "AJAX_MODE" => "N",	// Включить режим AJAX
         "AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
         "AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
@@ -49,7 +49,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
         "HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
         "IBLOCK_ID" => "8",	// Код информационного блока
         "IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
-        "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",	// Включать инфоблок в цепочку навигации
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",	// Включать инфоблок в цепочку навигации
         "INCLUDE_SUBSECTIONS" => "Y",	// Показывать элементы подразделов раздела
         "MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
         "NEWS_COUNT" => "1",	// Количество новостей на странице

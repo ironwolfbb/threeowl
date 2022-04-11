@@ -94,7 +94,7 @@ $this->setFrameMode(true);
                 "SET_META_KEYWORDS" => "Y",
                 "SET_META_DESCRIPTION" => "Y",
                 "SET_LAST_MODIFIED" => "N",
-                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                 "ADD_SECTIONS_CHAIN" => "Y",
                 "HIDE_LINK_WHEN_NO_DETAIL" => "N",
                 "PARENT_SECTION" => "",
