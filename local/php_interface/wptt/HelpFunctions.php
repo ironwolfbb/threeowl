@@ -59,7 +59,6 @@ class HelpFunctions{
             if ($ob = $res->GetNextElement()) {
                 $bannerFields = $ob->GetFields();
                 $bannerImage =  \CFile::GetPath($bannerFields['PREVIEW_PICTURE']) ;
-//                $bannerImage = addslashes('/upload/azaza.hps');
             }
             else{
                 return '<p>Баннер с заданным ID не найден</p>';
