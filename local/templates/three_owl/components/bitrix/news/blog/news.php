@@ -126,7 +126,6 @@ $this->setFrameMode(true);
 				</div>
 			</aside>
 			<div class="blog-content-items our-block">
-				<div class="our-block-items flex-block">
                     <?$APPLICATION->IncludeComponent(
                         "bitrix:news.list",
                         "",
@@ -180,12 +179,6 @@ $this->setFrameMode(true);
                         ),
                         $component
                     );?>
-				</div>
-				<div class="btn btn-orange">
-					<a href="#" class="btn btn-more">
-						Показать еще
-					</a>
-				</div>
 			</div>
 		</div>
 	</div>

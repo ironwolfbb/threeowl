@@ -32,6 +32,7 @@ document.addEventListener('click', function (e) {
             document.querySelector('.body').classList.toggle('noScroll')
             document.querySelector('.header-mibble-links').classList.remove('active')
             document.querySelector('.burger').classList.remove('active')
+            document.querySelector('.header-bottom-links').classList.remove('active')
         }
         else {
             document.querySelector('.search').classList.add('active')
@@ -39,6 +40,7 @@ document.addEventListener('click', function (e) {
             cont.classList.toggle('container')
             document.querySelector('.header-mibble-links').classList.remove('active')
             document.querySelector('.burger').classList.remove('active')
+            document.querySelector('.header-bottom-links').classList.remove('active')
             return
         }
     }

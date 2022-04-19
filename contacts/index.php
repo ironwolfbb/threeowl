@@ -181,28 +181,28 @@ $APPLICATION->SetTitle("Title");
                     </div>
                 </div>
                 <?$APPLICATION->IncludeComponent(
-                    "bitrix:form.result.new",
-                    "feedback_form",
-                    array(
-                        "CACHE_TIME" => "3600",
-                        "CACHE_TYPE" => "A",
-                        "CHAIN_ITEM_LINK" => "",
-                        "CHAIN_ITEM_TEXT" => "",
-                        "EDIT_URL" => "result_edit.php",
-                        "IGNORE_CUSTOM_TEMPLATE" => "Y",
-                        "LIST_URL" => "result_list.php",
-                        "SEF_MODE" => "N",
-                        "SUCCESS_URL" => "",
-                        "USE_EXTENDED_ERRORS" => "N",
-                        "WEB_FORM_ID" => "4",
-                        "COMPONENT_TEMPLATE" => "feedback_form",
-                        "VARIABLE_ALIASES" => array(
-                            "WEB_FORM_ID" => "WEB_FORM_ID",
-                            "RESULT_ID" => "RESULT_ID",
-                        )
-                    ),
-                    false
-                );?>
+	"bitrix:form.result.new", 
+	"feedback_form", 
+	array(
+		"CACHE_TIME" => "3600",
+		"CACHE_TYPE" => "A",
+		"CHAIN_ITEM_LINK" => "",
+		"CHAIN_ITEM_TEXT" => "",
+		"EDIT_URL" => "",
+		"IGNORE_CUSTOM_TEMPLATE" => "Y",
+		"LIST_URL" => "",
+		"SEF_MODE" => "N",
+		"SUCCESS_URL" => "",
+		"USE_EXTENDED_ERRORS" => "N",
+		"WEB_FORM_ID" => "4",
+		"COMPONENT_TEMPLATE" => "feedback_form",
+		"VARIABLE_ALIASES" => array(
+			"WEB_FORM_ID" => "WEB_FORM_ID",
+			"RESULT_ID" => "RESULT_ID",
+		)
+	),
+	false
+);?>
             </div>
         </div>
     </div>
