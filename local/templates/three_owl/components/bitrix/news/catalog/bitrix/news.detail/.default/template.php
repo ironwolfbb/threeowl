@@ -86,7 +86,7 @@ $this->setFrameMode(true);
                         </div>
                         <div class="swiper-slide">
                             <video src="" style="display: none;"></video>
-                            <img src="../../img/videoImg.jpg" alt="">
+                            <img style="display: none" src="../../img/videoImg.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -268,17 +268,7 @@ $this->setFrameMode(true);
         </div>
     </div>
 </div>
-<script>
-    setTimeout
-    document.ready(function(){
-        if(document.querySelector(".swiper-paginationn")){
-            let swiperPaginations = document.querySelectorAll('.swiper-paginationn span');
-            swiperPaginations.foreach(function(item){
-                item.style.background = "url('<?echo $photo;?>')"
-            })
-        }
-    })
-</script>
+
 
 
 

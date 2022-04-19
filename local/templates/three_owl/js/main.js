@@ -522,4 +522,16 @@ document.addEventListener('click', function (e) {
 
 })
 
+let sliderImgs = document.querySelectorAll('.bigest-detail-slider img');
+let smallestSlides = document.querySelectorAll('.js-smallest-detail-slider .swiper-slide')
+let imgsSrc = [];
+if (sliderImgs.length) {
+    sliderImgs.forEach(function (item) {
+        imgsSrc.push(item.src)
+    })
+    smallestSlides.forEach(function (item, index) {
+        item.style.backgroundImage = `url(${imgsSrc[index]})`
+        console.log(item.style)
+    })
+}
 
