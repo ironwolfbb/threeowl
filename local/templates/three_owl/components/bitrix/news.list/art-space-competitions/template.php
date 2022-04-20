@@ -163,6 +163,17 @@ $this->setFrameMode(true);
 
 </div>
 
+<?
+if ($arResult['NAV_STRING'] != null) {
+    ?>
+    <div class="btn btn-orange art-btn">
+        <a href="#" class="btn btn-more art-btn">
+            Показать еще
+        </a>
+    </div>
+<?
+}
+?>
 <script>
 
 </script>

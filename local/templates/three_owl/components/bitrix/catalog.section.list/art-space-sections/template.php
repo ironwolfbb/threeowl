@@ -26,7 +26,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
         $this->AddEditAction($arSection['ID'], $arSection['EDIT_LINK'], $strSectionEdit);
         $this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
         ?>
-        <a  data-section-code="<?=$arSection['CODE']?>"  data-iblock-code="<?=HelpFunctions::getIblockCodeById($arParams['IBLOCK_ID'])?>" id="<? echo $this->GetEditAreaId($arSection['ID']); ?>">
+        <a  data-section-id="<?=$arSection['ID']?>"  data-iblock-code="<?=HelpFunctions::getIblockCodeById($arParams['IBLOCK_ID'])?>" id="<? echo $this->GetEditAreaId($arSection['ID']); ?>">
             <? echo $arSection['NAME']; ?>
         </a>
         <?

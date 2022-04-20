@@ -116,124 +116,11 @@ $APPLICATION->SetTitle("Title");
                                     Действующие конкурсы
                                 </h2>
                             </div>
-                            <? $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "art-space-sections", array(
-                                "ADD_SECTIONS_CHAIN" => "Y",    // Включать раздел в цепочку навигации
-                                "CACHE_FILTER" => "N",    // Кешировать при установленном фильтре
-                                "CACHE_GROUPS" => "Y",    // Учитывать права доступа
-                                "CACHE_TIME" => "36000000",    // Время кеширования (сек.)
-                                "CACHE_TYPE" => "A",    // Тип кеширования
-                                "COUNT_ELEMENTS" => "Y",    // Показывать количество элементов в разделе
-                                "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",    // Показывать количество
-                                "FILTER_NAME" => "sectionsFilter",    // Имя массива со значениями фильтра разделов
-                                "IBLOCK_ID" => "10",    // Инфоблок
-                                "IBLOCK_TYPE" => "art_space",    // Тип инфоблока
-                                "SECTION_CODE" => "",    // Код раздела
-                                "SECTION_FIELDS" => array(    // Поля разделов
-                                    0 => "",
-                                    1 => "",
-                                ),
-                                "SECTION_ID" => $_REQUEST["SECTION_ID"],    // ID раздела
-                                "SECTION_URL" => "",    // URL, ведущий на страницу с содержимым раздела
-                                "SECTION_USER_FIELDS" => array(    // Свойства разделов
-                                    0 => "",
-                                    1 => "",
-                                ),
-                                "SHOW_PARENT_NAME" => "Y",    // Показывать название раздела
-                                "TOP_DEPTH" => "2",    // Максимальная отображаемая глубина разделов
-                                "VIEW_MODE" => "LINE",    // Вид списка подразделов
-                                "DIV_CODE" => "permanentExpos"
-                            ),
-                                false
-                            ); ?>
-                        </div>
-                        <? $APPLICATION->IncludeComponent(
-                            "bitrix:news.list",
-                            "art-space-competitions",
-                            array(
-                                "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                                "ADD_SECTIONS_CHAIN" => "Y",
-                                "AJAX_MODE" => "N",
-                                "AJAX_OPTION_ADDITIONAL" => "",
-                                "AJAX_OPTION_HISTORY" => "N",
-                                "AJAX_OPTION_JUMP" => "N",
-                                "AJAX_OPTION_STYLE" => "Y",
-                                "CACHE_FILTER" => "N",
-                                "CACHE_GROUPS" => "Y",
-                                "CACHE_TIME" => "36000000",
-                                "CACHE_TYPE" => "A",
-                                "CHECK_DATES" => "Y",
-                                "DETAIL_URL" => "",
-                                "DISPLAY_BOTTOM_PAGER" => "Y",
-                                "DISPLAY_DATE" => "Y",
-                                "DISPLAY_NAME" => "Y",
-                                "DISPLAY_PICTURE" => "Y",
-                                "DISPLAY_PREVIEW_TEXT" => "Y",
-                                "DISPLAY_TOP_PAGER" => "N",
-                                "FIELD_CODE" => array(
-                                    0 => "",
-                                    1 => "",
-                                ),
-                                "FILTER_NAME" => "",
-                                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                                "IBLOCK_ID" => "10",
-                                "IBLOCK_TYPE" => "art_space",
-                                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-                                "INCLUDE_SUBSECTIONS" => "Y",
-                                "MESSAGE_404" => "",
-                                "NEWS_COUNT" => "2",
-                                "PAGER_BASE_LINK_ENABLE" => "N",
-                                "PAGER_DESC_NUMBERING" => "N",
-                                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-                                "PAGER_SHOW_ALL" => "N",
-                                "PAGER_SHOW_ALWAYS" => "N",
-                                "PAGER_TEMPLATE" => ".default",
-                                "PAGER_TITLE" => "Новости",
-                                "PARENT_SECTION" => "",
-                                "PARENT_SECTION_CODE" => "",
-                                "PREVIEW_TRUNCATE_LEN" => "",
-                                "PROPERTY_CODE" => array(
-                                    0 => "LIKES",
-                                    1 => "",
-                                ),
-                                "SET_BROWSER_TITLE" => "Y",
-                                "SET_LAST_MODIFIED" => "N",
-                                "SET_META_DESCRIPTION" => "Y",
-                                "SET_META_KEYWORDS" => "Y",
-                                "SET_STATUS_404" => "N",
-                                "SET_TITLE" => "Y",
-                                "SHOW_404" => "N",
-                                "SORT_BY1" => "ACTIVE_FROM",
-                                "SORT_BY2" => "SORT",
-                                "SORT_ORDER1" => "DESC",
-                                "SORT_ORDER2" => "ASC",
-                                "STRICT_SECTION_CHECK" => "N",
-                                "COMPONENT_TEMPLATE" => "art-space-competitions"
-                            ),
-                            false
-                        ); ?>
-                        <div class="btn btn-orange art-btn">
-                            <a href="#" class="btn btn-more art-btn">
-                                Показать еще
-                            </a>
-                        </div>
-                    </div>
-                    <div class="article-section standart-block" id="permanentExpos">
-                        <div class="article-header">
-                            <div class="article-page-title">
-                                <h2>
-                                    Постоянная экспозиция
-                                </h2>
-                            </div>
-                            <div class="article-info">
-                                <p>
-                                    В постоянную экспозицию попадают работы, набравшие большее количество лайков
-                                </p>
-                            </div>
                             <? $APPLICATION->IncludeComponent(
                                 "bitrix:catalog.section.list",
                                 "art-space-sections",
                                 array(
-                                    "ADD_SECTIONS_CHAIN" => "Y",
+                                    "ADD_SECTIONS_CHAIN" => "N",
                                     "CACHE_FILTER" => "N",
                                     "CACHE_GROUPS" => "Y",
                                     "CACHE_TIME" => "36000000",
@@ -241,14 +128,14 @@ $APPLICATION->SetTitle("Title");
                                     "COUNT_ELEMENTS" => "Y",
                                     "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
                                     "FILTER_NAME" => "sectionsFilter",
-                                    "IBLOCK_ID" => "11",
+                                    "IBLOCK_ID" => "12",
                                     "IBLOCK_TYPE" => "art_space",
-                                    "SECTION_CODE" => "",
+                                    "SECTION_CODE" => "active-competitions",
                                     "SECTION_FIELDS" => array(
                                         0 => "",
                                         1 => "",
                                     ),
-                                    "SECTION_ID" => $_REQUEST["SECTION_ID"],
+                                    "SECTION_ID" => "",
                                     "SECTION_URL" => "",
                                     "SECTION_USER_FIELDS" => array(
                                         0 => "",
@@ -268,7 +155,7 @@ $APPLICATION->SetTitle("Title");
                             "art-space-competitions",
                             array(
                                 "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                                "ADD_SECTIONS_CHAIN" => "Y",
+                                "ADD_SECTIONS_CHAIN" => "N",
                                 "AJAX_MODE" => "N",
                                 "AJAX_OPTION_ADDITIONAL" => "",
                                 "AJAX_OPTION_HISTORY" => "N",
@@ -292,12 +179,12 @@ $APPLICATION->SetTitle("Title");
                                 ),
                                 "FILTER_NAME" => "",
                                 "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                                "IBLOCK_ID" => "11",
+                                "IBLOCK_ID" => "12",
                                 "IBLOCK_TYPE" => "art_space",
-                                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+                                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                                 "INCLUDE_SUBSECTIONS" => "Y",
                                 "MESSAGE_404" => "",
-                                "NEWS_COUNT" => "2",
+                                "NEWS_COUNT" => "9",
                                 "PAGER_BASE_LINK_ENABLE" => "N",
                                 "PAGER_DESC_NUMBERING" => "N",
                                 "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -306,7 +193,7 @@ $APPLICATION->SetTitle("Title");
                                 "PAGER_TEMPLATE" => ".default",
                                 "PAGER_TITLE" => "Новости",
                                 "PARENT_SECTION" => "",
-                                "PARENT_SECTION_CODE" => "",
+                                "PARENT_SECTION_CODE" => "active-competitions",
                                 "PREVIEW_TRUNCATE_LEN" => "",
                                 "PROPERTY_CODE" => array(
                                     0 => "LIKES",
@@ -328,11 +215,118 @@ $APPLICATION->SetTitle("Title");
                             ),
                             false
                         ); ?>
-                        <div class="btn btn-orange art-btn">
-                            <a href="#" class="btn btn-more art-btn">
-                                Показать еще
-                            </a>
+                    </div>
+                    <div class="article-section standart-block" id="permanentExpos">
+                        <div class="article-header">
+                            <div class="article-page-title">
+                                <h2>
+                                    Постоянная экспозиция
+                                </h2>
+                            </div>
+                            <div class="article-info">
+                                <p>
+                                    В постоянную экспозицию попадают работы, набравшие большее количество лайков
+                                </p>
+                            </div>
+                            <? $APPLICATION->IncludeComponent(
+                                "bitrix:catalog.section.list",
+                                "art-space-sections",
+                                array(
+                                    "ADD_SECTIONS_CHAIN" => "N",
+                                    "CACHE_FILTER" => "N",
+                                    "CACHE_GROUPS" => "Y",
+                                    "CACHE_TIME" => "36000000",
+                                    "CACHE_TYPE" => "A",
+                                    "COUNT_ELEMENTS" => "Y",
+                                    "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+                                    "FILTER_NAME" => "sectionsFilter",
+                                    "IBLOCK_ID" => "12",
+                                    "IBLOCK_TYPE" => "art_space",
+                                    "SECTION_CODE" => "permanent-exhibition",
+                                    "SECTION_FIELDS" => array(
+                                        0 => "",
+                                        1 => "",
+                                    ),
+                                    "SECTION_ID" => "",
+                                    "SECTION_URL" => "",
+                                    "SECTION_USER_FIELDS" => array(
+                                        0 => "",
+                                        1 => "",
+                                    ),
+                                    "SHOW_PARENT_NAME" => "Y",
+                                    "TOP_DEPTH" => "2",
+                                    "VIEW_MODE" => "LINE",
+                                    "DIV_CODE" => "permanentExpos",
+                                    "COMPONENT_TEMPLATE" => "art-space-sections"
+                                ),
+                                false
+                            ); ?>
                         </div>
+                        <? $APPLICATION->IncludeComponent(
+                            "bitrix:news.list",
+                            "art-space-competitions",
+                            array(
+                                "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                                "ADD_SECTIONS_CHAIN" => "N",
+                                "AJAX_MODE" => "N",
+                                "AJAX_OPTION_ADDITIONAL" => "",
+                                "AJAX_OPTION_HISTORY" => "N",
+                                "AJAX_OPTION_JUMP" => "N",
+                                "AJAX_OPTION_STYLE" => "Y",
+                                "CACHE_FILTER" => "N",
+                                "CACHE_GROUPS" => "Y",
+                                "CACHE_TIME" => "36000000",
+                                "CACHE_TYPE" => "A",
+                                "CHECK_DATES" => "Y",
+                                "DETAIL_URL" => "",
+                                "DISPLAY_BOTTOM_PAGER" => "Y",
+                                "DISPLAY_DATE" => "Y",
+                                "DISPLAY_NAME" => "Y",
+                                "DISPLAY_PICTURE" => "Y",
+                                "DISPLAY_PREVIEW_TEXT" => "Y",
+                                "DISPLAY_TOP_PAGER" => "N",
+                                "FIELD_CODE" => array(
+                                    0 => "",
+                                    1 => "",
+                                ),
+                                "FILTER_NAME" => "",
+                                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                                "IBLOCK_ID" => "12",
+                                "IBLOCK_TYPE" => "art_space",
+                                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                                "INCLUDE_SUBSECTIONS" => "Y",
+                                "MESSAGE_404" => "",
+                                "NEWS_COUNT" => "9",
+                                "PAGER_BASE_LINK_ENABLE" => "N",
+                                "PAGER_DESC_NUMBERING" => "N",
+                                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                                "PAGER_SHOW_ALL" => "N",
+                                "PAGER_SHOW_ALWAYS" => "N",
+                                "PAGER_TEMPLATE" => ".default",
+                                "PAGER_TITLE" => "Новости",
+                                "PARENT_SECTION" => "",
+                                "PARENT_SECTION_CODE" => "permanent-exhibition",
+                                "PREVIEW_TRUNCATE_LEN" => "",
+                                "PROPERTY_CODE" => array(
+                                    0 => "LIKES",
+                                    1 => "",
+                                ),
+                                "SET_BROWSER_TITLE" => "Y",
+                                "SET_LAST_MODIFIED" => "N",
+                                "SET_META_DESCRIPTION" => "Y",
+                                "SET_META_KEYWORDS" => "Y",
+                                "SET_STATUS_404" => "N",
+                                "SET_TITLE" => "Y",
+                                "SHOW_404" => "N",
+                                "SORT_BY1" => "ACTIVE_FROM",
+                                "SORT_BY2" => "SORT",
+                                "SORT_ORDER1" => "DESC",
+                                "SORT_ORDER2" => "ASC",
+                                "STRICT_SECTION_CHECK" => "N",
+                                "COMPONENT_TEMPLATE" => "art-space-competitions"
+                            ),
+                            false
+                        ); ?>
                     </div>
                     <div class="article-section standart-block" id="exposWinners">
                         <div class="article-header">

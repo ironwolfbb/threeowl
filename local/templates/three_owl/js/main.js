@@ -713,11 +713,11 @@ function change_section(el) {
       }
    });
    el.target.classList.add('active')
-   section_code = el.target.dataset.sectionCode;
+   section_id = el.target.dataset.sectionId;
    iblock_code = el.target.dataset.iblockCode;
    articles_div = section_div.querySelectorAll('.art-grid-block')[0];
    articles_div.innerHTML = ''
-   url = `ajax.php?IBLOCK_CODE=${iblock_code}&SECTION_CODE=${section_code}`
+   url = `ajax.php?IBLOCK_CODE=${iblock_code}&SECTION_ID=${section_id}`
    $.ajax({
       url: url,         /* Куда пойдет запрос */
       method: 'get',             /* Метод передачи (post или get) */
