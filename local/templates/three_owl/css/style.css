@@ -7144,7 +7144,8 @@ h1 {
     background: #cbedff;
   }
   .art-space-block .articles-hashtags a:hover {
-    background: #cbedff; }
+    background: #cbedff; 
+  cursor: pointer;}
   @media screen and (max-width: 575px) {
     .art-space-block .articles-hashtags a {
       white-space: nowrap; } }

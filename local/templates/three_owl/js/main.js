@@ -703,6 +703,58 @@ function create_article_div(likes, preview_image, author_name, author_image, vk_
 
 }
 
+function load_more(el){
+   console.log('pag')
+
+   section_div = el.target.parentElement.parentElement
+   max_divs = el.target.dataset.maxCount;
+   section_id = el.target.dataset.sectionId;
+   iblock_code = el.target.dataset.iblockCode;
+   articles_div = section_div.querySelectorAll('.art-grid-block')[0];
+   div_count = articles_div.querySelectorAll('.exposition').length
+   page = div_count/9+1
+   url = `ajax.php?IBLOCK_CODE=${iblock_code}&SECTION_ID=${section_id}&iNumPage=${page}&nPageSize=9`
+
+   $.ajax({
+      url: url,         /* Куда пойдет запрос */
+      method: 'get',             /* Метод передачи (post или get) */
+      dataType: 'json',          /* Тип данных в ответе (xml, json, script, html). */
+      success: function(data){  
+         data.LIST.forEach(element => {
+            
+            article_div = create_article_div(
+               element['LIKES'],
+               element['PREVIEW_IMAGE'],
+               element['AUTHOR'],
+               element['AUTHOR_IMAGE'],
+               element['VK_LINK'],
+               element['INST_LINK'],
+               element['FACEBOOK_LINK'],
+            )
+            articles_div.appendChild(article_div)
+         });
+         if(data.LIST.length < data.TOTAL){
+            load_more_div = document.createElement('div')
+            load_more_div.classList = 'btn btn-orange art-btn'
+            load_more_a = document.createElement('a')
+            load_more_a.classList = 'btn btn-more art-btn'
+            load_more_a.innerHTML = 'Показать ещё'
+            load_more_a.dataset.sectionId = section_id
+            load_more_a.dataset.iblock_code = iblock_code
+            load_more_a.dataset.maxCount = data.TOTAL
+            load_more_a.addEventListener('click', load_more)
+            load_more_div.appendChild(load_more_a)
+            section_div.removeChild(section_div.querySelector('.btn.btn-orange.art-btn'))
+            section_div.appendChild(load_more_div)
+         }
+         else{
+            section_div.removeChild(section_div.querySelector('.btn.btn-orange.art-btn'))
+         }
+      }
+   });
+
+}
+
 function change_section(el) {
 
    section_div = el.target.parentElement.parentElement.parentElement
@@ -716,14 +768,16 @@ function change_section(el) {
    section_id = el.target.dataset.sectionId;
    iblock_code = el.target.dataset.iblockCode;
    articles_div = section_div.querySelectorAll('.art-grid-block')[0];
-   articles_div.innerHTML = ''
    url = `ajax.php?IBLOCK_CODE=${iblock_code}&SECTION_ID=${section_id}`
+
    $.ajax({
       url: url,         /* Куда пойдет запрос */
       method: 'get',             /* Метод передачи (post или get) */
       dataType: 'json',          /* Тип данных в ответе (xml, json, script, html). */
-      success: function(data){   /* функция которая будет выполнена после успешного запроса.  */
-         data.forEach(element => {
+      success: function(data){  
+         articles_div.innerHTML = '' /* функция которая будет выполнена после успешного запроса.  */
+         data.LIST.forEach(element => {
+            
             article_div = create_article_div(
                element['LIKES'],
                element['PREVIEW_IMAGE'],
@@ -735,6 +789,26 @@ function change_section(el) {
             )
             articles_div.appendChild(article_div)
          });
+         if(data.LIST.length < data.TOTAL){
+            load_more_div = document.createElement('div')
+            load_more_div.classList = 'btn btn-orange art-btn'
+            load_more_a = document.createElement('a')
+            load_more_a.classList = 'btn btn-more art-btn'
+            load_more_a.innerHTML = 'Показать ещё'
+            load_more_a.dataset.sectionId = section_id
+            load_more_a.dataset.iblockCode = iblock_code
+            load_more_a.addEventListener('click', load_more)
+            load_more_div.appendChild(load_more_a)
+            if(section_div.getElementsByClassName('btn btn-orange art-btn').length>0){
+               section_div.removeChild(section_div.querySelector('.btn.btn-orange.art-btn'))
+            }
+            section_div.appendChild(load_more_div)
+         }
+         else{
+            if(section_div.getElementsByClassName('btn btn-orange art-btn').length>0){
+               section_div.removeChild(section_div.querySelector('.btn.btn-orange.art-btn'))
+            }
+         }
       }
    });
 }
@@ -743,4 +817,9 @@ let articleHashtags = document.querySelectorAll('.articles-hashtags a')
 
 articleHashtags.forEach(element => {
    element.addEventListener('click', change_section)
+});
+
+let mores = document.querySelectorAll('.btn.btn-more.art-btn')
+mores.forEach(element => {
+   element.addEventListener('click', load_more)
 });
