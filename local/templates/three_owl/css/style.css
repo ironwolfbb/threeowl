@@ -7140,6 +7140,9 @@ h1 {
   font-size: 1.125rem;
   line-height: 122%;
   color: #000000; }
+  .art-space-block .articles-hashtags .active{
+    background: #cbedff;
+  }
   .art-space-block .articles-hashtags a:hover {
     background: #cbedff; }
   @media screen and (max-width: 575px) {

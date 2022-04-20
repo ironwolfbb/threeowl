@@ -43,6 +43,25 @@ class HelpFunctions{
         return $return['ID'];
     }
 
+    public static function getIblockCodeById($id)
+    {
+        if (Loader::includeModule('iblock')) {
+
+            $iB = IblockTable::getList([
+                'select' => ['CODE'],
+                'filter' => ['ID' => $id],
+                'limit' => '1',
+                'cache' => ['ttl' => 3600],
+            ]);
+            $return = $iB->fetch();
+            if (!$return) {
+                throw new \Exception('IBlock with id"' . $id . '" not found');
+            }
+        }
+
+        return $return['CODE'];
+    }
+
     /**
      * Возвращает html код рекламного баннера в блоге
      * @param $id - айди элемента инфоблока Баннер
