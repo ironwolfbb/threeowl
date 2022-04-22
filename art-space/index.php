@@ -146,7 +146,7 @@ $APPLICATION->SetTitle("Title");
                                     "VIEW_MODE" => "LINE",
                                     "DIV_CODE" => "permanentExpos",
                                     "COMPONENT_TEMPLATE" => "art-space-sections",
-                                    "SECTION_TYPE"=>'competitions'
+                                    "SECTION_TYPE" => 'competitions'
                                 ),
                                 false
                             ); ?>
@@ -259,7 +259,7 @@ $APPLICATION->SetTitle("Title");
                                     "VIEW_MODE" => "LINE",
                                     "DIV_CODE" => "permanentExpos",
                                     "COMPONENT_TEMPLATE" => "art-space-sections",
-                                    "SECTION_TYPE"=>'competitions'
+                                    "SECTION_TYPE" => 'competitions'
                                 ),
                                 false
                             ); ?>
@@ -415,68 +415,68 @@ $APPLICATION->SetTitle("Title");
                                 </h3>
                             </div>
                         </div>
-                        <?$APPLICATION->IncludeComponent("bitrix:news.list", "art-space-cources", Array(
-                            "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
-                            "ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
-                            "AJAX_MODE" => "N",	// Включить режим AJAX
-                            "AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
-                            "AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
-                            "AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
-                            "AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
-                            "CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
-                            "CACHE_GROUPS" => "Y",	// Учитывать права доступа
-                            "CACHE_TIME" => "36000000",	// Время кеширования (сек.)
-                            "CACHE_TYPE" => "A",	// Тип кеширования
-                            "CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
-                            "DETAIL_URL" => "",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
-                            "DISPLAY_BOTTOM_PAGER" => "Y",	// Выводить под списком
-                            "DISPLAY_DATE" => "Y",	// Выводить дату элемента
-                            "DISPLAY_NAME" => "Y",	// Выводить название элемента
-                            "DISPLAY_PICTURE" => "Y",	// Выводить изображение для анонса
-                            "DISPLAY_PREVIEW_TEXT" => "Y",	// Выводить текст анонса
-                            "DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
-                            "FIELD_CODE" => array(	// Поля
+                        <? $APPLICATION->IncludeComponent("bitrix:news.list", "art-space-cources", array(
+                            "ACTIVE_DATE_FORMAT" => "d.m.Y",    // Формат показа даты
+                            "ADD_SECTIONS_CHAIN" => "Y",    // Включать раздел в цепочку навигации
+                            "AJAX_MODE" => "N",    // Включить режим AJAX
+                            "AJAX_OPTION_ADDITIONAL" => "",    // Дополнительный идентификатор
+                            "AJAX_OPTION_HISTORY" => "N",    // Включить эмуляцию навигации браузера
+                            "AJAX_OPTION_JUMP" => "N",    // Включить прокрутку к началу компонента
+                            "AJAX_OPTION_STYLE" => "Y",    // Включить подгрузку стилей
+                            "CACHE_FILTER" => "N",    // Кешировать при установленном фильтре
+                            "CACHE_GROUPS" => "Y",    // Учитывать права доступа
+                            "CACHE_TIME" => "36000000",    // Время кеширования (сек.)
+                            "CACHE_TYPE" => "A",    // Тип кеширования
+                            "CHECK_DATES" => "Y",    // Показывать только активные на данный момент элементы
+                            "DETAIL_URL" => "",    // URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+                            "DISPLAY_BOTTOM_PAGER" => "Y",    // Выводить под списком
+                            "DISPLAY_DATE" => "Y",    // Выводить дату элемента
+                            "DISPLAY_NAME" => "Y",    // Выводить название элемента
+                            "DISPLAY_PICTURE" => "Y",    // Выводить изображение для анонса
+                            "DISPLAY_PREVIEW_TEXT" => "Y",    // Выводить текст анонса
+                            "DISPLAY_TOP_PAGER" => "N",    // Выводить над списком
+                            "FIELD_CODE" => array(    // Поля
                                 0 => "",
                                 1 => "",
                             ),
-                            "FILTER_NAME" => "",	// Фильтр
-                            "HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
-                            "IBLOCK_ID" => "13",	// Код информационного блока
-                            "IBLOCK_TYPE" => "art_space",	// Тип информационного блока (используется только для проверки)
-                            "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",	// Включать инфоблок в цепочку навигации
-                            "INCLUDE_SUBSECTIONS" => "Y",	// Показывать элементы подразделов раздела
-                            "MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
-                            "NEWS_COUNT" => "9",	// Количество новостей на странице
-                            "PAGER_BASE_LINK_ENABLE" => "N",	// Включить обработку ссылок
-                            "PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
-                            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
-                            "PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
-                            "PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
-                            "PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
-                            "PAGER_TITLE" => "Новости",	// Название категорий
-                            "PARENT_SECTION" => "",	// ID раздела
-                            "PARENT_SECTION_CODE" => "popular",	// Код раздела
-                            "PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
-                            "PROPERTY_CODE" => array(	// Свойства
+                            "FILTER_NAME" => "",    // Фильтр
+                            "HIDE_LINK_WHEN_NO_DETAIL" => "N",    // Скрывать ссылку, если нет детального описания
+                            "IBLOCK_ID" => "13",    // Код информационного блока
+                            "IBLOCK_TYPE" => "art_space",    // Тип информационного блока (используется только для проверки)
+                            "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",    // Включать инфоблок в цепочку навигации
+                            "INCLUDE_SUBSECTIONS" => "Y",    // Показывать элементы подразделов раздела
+                            "MESSAGE_404" => "",    // Сообщение для показа (по умолчанию из компонента)
+                            "NEWS_COUNT" => "9",    // Количество новостей на странице
+                            "PAGER_BASE_LINK_ENABLE" => "N",    // Включить обработку ссылок
+                            "PAGER_DESC_NUMBERING" => "N",    // Использовать обратную навигацию
+                            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",    // Время кеширования страниц для обратной навигации
+                            "PAGER_SHOW_ALL" => "N",    // Показывать ссылку "Все"
+                            "PAGER_SHOW_ALWAYS" => "N",    // Выводить всегда
+                            "PAGER_TEMPLATE" => ".default",    // Шаблон постраничной навигации
+                            "PAGER_TITLE" => "Новости",    // Название категорий
+                            "PARENT_SECTION" => "",    // ID раздела
+                            "PARENT_SECTION_CODE" => "popular",    // Код раздела
+                            "PREVIEW_TRUNCATE_LEN" => "",    // Максимальная длина анонса для вывода (только для типа текст)
+                            "PROPERTY_CODE" => array(    // Свойства
                                 0 => "LINK",
                                 1 => "DATE_START",
                             ),
-                            "SET_BROWSER_TITLE" => "Y",	// Устанавливать заголовок окна браузера
-                            "SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
-                            "SET_META_DESCRIPTION" => "Y",	// Устанавливать описание страницы
-                            "SET_META_KEYWORDS" => "Y",	// Устанавливать ключевые слова страницы
-                            "SET_STATUS_404" => "N",	// Устанавливать статус 404
-                            "SET_TITLE" => "Y",	// Устанавливать заголовок страницы
-                            "SHOW_404" => "N",	// Показ специальной страницы
-                            "SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
-                            "SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
-                            "SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
-                            "SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
-                            "STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
+                            "SET_BROWSER_TITLE" => "Y",    // Устанавливать заголовок окна браузера
+                            "SET_LAST_MODIFIED" => "N",    // Устанавливать в заголовках ответа время модификации страницы
+                            "SET_META_DESCRIPTION" => "Y",    // Устанавливать описание страницы
+                            "SET_META_KEYWORDS" => "Y",    // Устанавливать ключевые слова страницы
+                            "SET_STATUS_404" => "N",    // Устанавливать статус 404
+                            "SET_TITLE" => "Y",    // Устанавливать заголовок страницы
+                            "SHOW_404" => "N",    // Показ специальной страницы
+                            "SORT_BY1" => "SORT",    // Поле для первой сортировки новостей
+                            "SORT_BY2" => "SORT",    // Поле для второй сортировки новостей
+                            "SORT_ORDER1" => "DESC",    // Направление для первой сортировки новостей
+                            "SORT_ORDER2" => "DESC",    // Направление для второй сортировки новостей
+                            "STRICT_SECTION_CHECK" => "N",    // Строгая проверка раздела для показа списка
                             "COMPONENT_TEMPLATE" => ".default"
                         ),
                             false
-                        );?>
+                        ); ?>
                     </div>
                     <div class="article-section standart-block last-art-block">
                         <div class="article-header">
@@ -485,197 +485,105 @@ $APPLICATION->SetTitle("Title");
                                     Детские
                                 </h3>
                             </div>
-                            <div class="articles-hashtags">
-                                <a href="#">
-                                    Акварель
-                                </a>
-                                <a href="#">
-                                    Пастель
-                                </a>
-                                <a href="#">
-                                    Лепка
-                                </a>
-                            </div>
+                            <? $APPLICATION->IncludeComponent(
+                                "bitrix:catalog.section.list",
+                                "art-space-sections",
+                                array(
+                                    "ADD_SECTIONS_CHAIN" => "N",
+                                    "CACHE_FILTER" => "N",
+                                    "CACHE_GROUPS" => "Y",
+                                    "CACHE_TIME" => "36000000",
+                                    "CACHE_TYPE" => "A",
+                                    "COUNT_ELEMENTS" => "Y",
+                                    "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+                                    "FILTER_NAME" => "sectionsFilter",
+                                    "IBLOCK_ID" => "13",
+                                    "IBLOCK_TYPE" => "art_space",
+                                    "SECTION_CODE" => "kids",
+                                    "SECTION_FIELDS" => array(
+                                        0 => "",
+                                        1 => "",
+                                    ),
+                                    "SECTION_ID" => "",
+                                    "SECTION_URL" => "",
+                                    "SECTION_USER_FIELDS" => array(
+                                        0 => "",
+                                        1 => "",
+                                    ),
+                                    "SHOW_PARENT_NAME" => "Y",
+                                    "TOP_DEPTH" => "2",
+                                    "VIEW_MODE" => "LINE",
+                                    "DIV_CODE" => "permanentExpos",
+                                    "COMPONENT_TEMPLATE" => "art-space-sections",
+                                    "SECTION_TYPE" => "competitions"
+                                ),
+                                false
+                            ); ?>
                         </div>
-                        <div class="art-grid-block text-grid">
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
 
-                        </div>
-                        <div class="btn btn-orange art-btn">
-                            <a href="#" class="btn btn-more art-btn">
-                                Показать еще
-                            </a>
-                        </div>
+                        <? $APPLICATION->IncludeComponent("bitrix:news.list", "art-space-cources", array(
+                                "ACTIVE_DATE_FORMAT" => "d.m.Y",    // Формат показа даты
+                                "ADD_SECTIONS_CHAIN" => "Y",    // Включать раздел в цепочку навигации
+                                "AJAX_MODE" => "N",    // Включить режим AJAX
+                                "AJAX_OPTION_ADDITIONAL" => "",    // Дополнительный идентификатор
+                                "AJAX_OPTION_HISTORY" => "N",    // Включить эмуляцию навигации браузера
+                                "AJAX_OPTION_JUMP" => "N",    // Включить прокрутку к началу компонента
+                                "AJAX_OPTION_STYLE" => "Y",    // Включить подгрузку стилей
+                                "CACHE_FILTER" => "N",    // Кешировать при установленном фильтре
+                                "CACHE_GROUPS" => "Y",    // Учитывать права доступа
+                                "CACHE_TIME" => "36000000",    // Время кеширования (сек.)
+                                "CACHE_TYPE" => "A",    // Тип кеширования
+                                "CHECK_DATES" => "Y",    // Показывать только активные на данный момент элементы
+                                "DETAIL_URL" => "",    // URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+                                "DISPLAY_BOTTOM_PAGER" => "Y",    // Выводить под списком
+                                "DISPLAY_DATE" => "Y",    // Выводить дату элемента
+                                "DISPLAY_NAME" => "Y",    // Выводить название элемента
+                                "DISPLAY_PICTURE" => "Y",    // Выводить изображение для анонса
+                                "DISPLAY_PREVIEW_TEXT" => "Y",    // Выводить текст анонса
+                                "DISPLAY_TOP_PAGER" => "N",    // Выводить над списком
+                                "FIELD_CODE" => array(    // Поля
+                                    0 => "",
+                                    1 => "",
+                                ),
+                                "FILTER_NAME" => "",    // Фильтр
+                                "HIDE_LINK_WHEN_NO_DETAIL" => "N",    // Скрывать ссылку, если нет детального описания
+                                "IBLOCK_ID" => "13",    // Код информационного блока
+                                "IBLOCK_TYPE" => "art_space",    // Тип информационного блока (используется только для проверки)
+                                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",    // Включать инфоблок в цепочку навигации
+                                "INCLUDE_SUBSECTIONS" => "Y",    // Показывать элементы подразделов раздела
+                                "MESSAGE_404" => "",    // Сообщение для показа (по умолчанию из компонента)
+                                "NEWS_COUNT" => "9",    // Количество новостей на странице
+                                "PAGER_BASE_LINK_ENABLE" => "N",    // Включить обработку ссылок
+                                "PAGER_DESC_NUMBERING" => "N",    // Использовать обратную навигацию
+                                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",    // Время кеширования страниц для обратной навигации
+                                "PAGER_SHOW_ALL" => "N",    // Показывать ссылку "Все"
+                                "PAGER_SHOW_ALWAYS" => "N",    // Выводить всегда
+                                "PAGER_TEMPLATE" => ".default",    // Шаблон постраничной навигации
+                                "PAGER_TITLE" => "Новости",    // Название категорий
+                                "PARENT_SECTION" => "",    // ID раздела
+                                "PARENT_SECTION_CODE" => "kids",    // Код раздела
+                                "PREVIEW_TRUNCATE_LEN" => "",    // Максимальная длина анонса для вывода (только для типа текст)
+                                "PROPERTY_CODE" => array(    // Свойства
+                                    0 => "LINK",
+                                    1 => "DATE_START",
+                                ),
+                                "SET_BROWSER_TITLE" => "Y",    // Устанавливать заголовок окна браузера
+                                "SET_LAST_MODIFIED" => "N",    // Устанавливать в заголовках ответа время модификации страницы
+                                "SET_META_DESCRIPTION" => "Y",    // Устанавливать описание страницы
+                                "SET_META_KEYWORDS" => "Y",    // Устанавливать ключевые слова страницы
+                                "SET_STATUS_404" => "N",    // Устанавливать статус 404
+                                "SET_TITLE" => "Y",    // Устанавливать заголовок страницы
+                                "SHOW_404" => "N",    // Показ специальной страницы
+                                "SORT_BY1" => "SORT",    // Поле для первой сортировки новостей
+                                "SORT_BY2" => "SORT",    // Поле для второй сортировки новостей
+                                "SORT_ORDER1" => "DESC",    // Направление для первой сортировки новостей
+                                "SORT_ORDER2" => "DESC",    // Направление для второй сортировки новостей
+                                "STRICT_SECTION_CHECK" => "N",    // Строгая проверка раздела для показа списка
+                                "COMPONENT_TEMPLATE" => ".default"
+                            ),
+                                false
+                            ); ?>
+
                     </div>
                     <div class="article-section standart-block last-art-block">
                         <div class="article-header">
@@ -684,199 +592,106 @@ $APPLICATION->SetTitle("Title");
                                     Взрослые
                                 </h3>
                             </div>
-                            <div class="articles-hashtags">
-                                <a href="#">
-                                    Акварель
-                                </a>
-                                <a href="#">
-                                    Пастель
-                                </a>
-                                <a href="#">
-                                    Лепка
-                                </a>
-                            </div>
+                            <? $APPLICATION->IncludeComponent(
+                                "bitrix:catalog.section.list",
+                                "art-space-sections",
+                                array(
+                                    "ADD_SECTIONS_CHAIN" => "N",
+                                    "CACHE_FILTER" => "N",
+                                    "CACHE_GROUPS" => "Y",
+                                    "CACHE_TIME" => "36000000",
+                                    "CACHE_TYPE" => "A",
+                                    "COUNT_ELEMENTS" => "Y",
+                                    "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+                                    "FILTER_NAME" => "sectionsFilter",
+                                    "IBLOCK_ID" => "13",
+                                    "IBLOCK_TYPE" => "art_space",
+                                    "SECTION_CODE" => "adult",
+                                    "SECTION_FIELDS" => array(
+                                        0 => "",
+                                        1 => "",
+                                    ),
+                                    "SECTION_ID" => "",
+                                    "SECTION_URL" => "",
+                                    "SECTION_USER_FIELDS" => array(
+                                        0 => "",
+                                        1 => "",
+                                    ),
+                                    "SHOW_PARENT_NAME" => "Y",
+                                    "TOP_DEPTH" => "2",
+                                    "VIEW_MODE" => "LINE",
+                                    "DIV_CODE" => "permanentExpos",
+                                    "COMPONENT_TEMPLATE" => "art-space-sections",
+                                    "SECTION_TYPE" => "competitions"
+                                ),
+                                false
+                            ); ?>
                         </div>
-                        <div class="art-grid-block text-grid">
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-                            <div class="exposition">
-                                <div class="expos-header">
-                                    <p>
-                                        Обучение рисованию
-                                        в стиле «Графика»
-                                    </p>
-                                </div>
-                                <div class="exposition-bottom blog-section">
-                                    <p>
-                                        Стильные изображения, выполненные с помощью чётких линий, точек и черт. Чаще
-                                        всего
-                                        чёрно-белое
-                                    </p>
-                                </div>
-                                <div class="dates">
-                                    <p>Дата начала занятий</p>
-                                    <p>18.04.2022</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="btn btn-orange art-btn">
-                            <a href="#" class="btn btn-more art-btn">
-                                Показать еще
-                            </a>
-                        </div>
+                        <? $APPLICATION->IncludeComponent("bitrix:news.list", "art-space-cources", array(
+                            "ACTIVE_DATE_FORMAT" => "d.m.Y",    // Формат показа даты
+                            "ADD_SECTIONS_CHAIN" => "Y",    // Включать раздел в цепочку навигации
+                            "AJAX_MODE" => "N",    // Включить режим AJAX
+                            "AJAX_OPTION_ADDITIONAL" => "",    // Дополнительный идентификатор
+                            "AJAX_OPTION_HISTORY" => "N",    // Включить эмуляцию навигации браузера
+                            "AJAX_OPTION_JUMP" => "N",    // Включить прокрутку к началу компонента
+                            "AJAX_OPTION_STYLE" => "Y",    // Включить подгрузку стилей
+                            "CACHE_FILTER" => "N",    // Кешировать при установленном фильтре
+                            "CACHE_GROUPS" => "Y",    // Учитывать права доступа
+                            "CACHE_TIME" => "36000000",    // Время кеширования (сек.)
+                            "CACHE_TYPE" => "A",    // Тип кеширования
+                            "CHECK_DATES" => "Y",    // Показывать только активные на данный момент элементы
+                            "DETAIL_URL" => "",    // URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+                            "DISPLAY_BOTTOM_PAGER" => "Y",    // Выводить под списком
+                            "DISPLAY_DATE" => "Y",    // Выводить дату элемента
+                            "DISPLAY_NAME" => "Y",    // Выводить название элемента
+                            "DISPLAY_PICTURE" => "Y",    // Выводить изображение для анонса
+                            "DISPLAY_PREVIEW_TEXT" => "Y",    // Выводить текст анонса
+                            "DISPLAY_TOP_PAGER" => "N",    // Выводить над списком
+                            "FIELD_CODE" => array(    // Поля
+                                0 => "",
+                                1 => "",
+                            ),
+                            "FILTER_NAME" => "",    // Фильтр
+                            "HIDE_LINK_WHEN_NO_DETAIL" => "N",    // Скрывать ссылку, если нет детального описания
+                            "IBLOCK_ID" => "13",    // Код информационного блока
+                            "IBLOCK_TYPE" => "art_space",    // Тип информационного блока (используется только для проверки)
+                            "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",    // Включать инфоблок в цепочку навигации
+                            "INCLUDE_SUBSECTIONS" => "Y",    // Показывать элементы подразделов раздела
+                            "MESSAGE_404" => "",    // Сообщение для показа (по умолчанию из компонента)
+                            "NEWS_COUNT" => "9",    // Количество новостей на странице
+                            "PAGER_BASE_LINK_ENABLE" => "N",    // Включить обработку ссылок
+                            "PAGER_DESC_NUMBERING" => "N",    // Использовать обратную навигацию
+                            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",    // Время кеширования страниц для обратной навигации
+                            "PAGER_SHOW_ALL" => "N",    // Показывать ссылку "Все"
+                            "PAGER_SHOW_ALWAYS" => "N",    // Выводить всегда
+                            "PAGER_TEMPLATE" => ".default",    // Шаблон постраничной навигации
+                            "PAGER_TITLE" => "Новости",    // Название категорий
+                            "PARENT_SECTION" => "",    // ID раздела
+                            "PARENT_SECTION_CODE" => "adult",    // Код раздела
+                            "PREVIEW_TRUNCATE_LEN" => "",    // Максимальная длина анонса для вывода (только для типа текст)
+                            "PROPERTY_CODE" => array(    // Свойства
+                                0 => "LINK",
+                                1 => "DATE_START",
+                            ),
+                            "SET_BROWSER_TITLE" => "Y",    // Устанавливать заголовок окна браузера
+                            "SET_LAST_MODIFIED" => "N",    // Устанавливать в заголовках ответа время модификации страницы
+                            "SET_META_DESCRIPTION" => "Y",    // Устанавливать описание страницы
+                            "SET_META_KEYWORDS" => "Y",    // Устанавливать ключевые слова страницы
+                            "SET_STATUS_404" => "N",    // Устанавливать статус 404
+                            "SET_TITLE" => "Y",    // Устанавливать заголовок страницы
+                            "SHOW_404" => "N",    // Показ специальной страницы
+                            "SORT_BY1" => "SORT",    // Поле для первой сортировки новостей
+                            "SORT_BY2" => "SORT",    // Поле для второй сортировки новостей
+                            "SORT_ORDER1" => "DESC",    // Направление для первой сортировки новостей
+                            "SORT_ORDER2" => "DESC",    // Направление для второй сортировки новостей
+                            "STRICT_SECTION_CHECK" => "N",    // Строгая проверка раздела для показа списка
+                            "COMPONENT_TEMPLATE" => ".default"
+                        ),
+                            false
+                        ); ?>
                     </div>
-                    <div class="how-our-lessons-going" style="background: url('<?=SITE_TEMPLATE_PATH?>/img/muzhikBg.jpg')">
+                    <div class="how-our-lessons-going"
+                         style="background: url('<?= SITE_TEMPLATE_PATH ?>/img/muzhikBg.jpg')">
                         <img src="<?= SITE_TEMPLATE_PATH ?>/img/muzhik.png" alt="">
                         <div class="lessons-title">
                             <h2>

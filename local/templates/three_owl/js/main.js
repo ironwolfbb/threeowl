@@ -659,12 +659,12 @@ function create_article_div(likes, preview_image, author_name, author_image, vk_
    expos_author_div.appendChild(author_caption)
    catalog_item.appendChild(expos_author_div)
    bottom_div.appendChild(catalog_item)
-   
+
 
    header_div = document.createElement('div')
    header_div.classList = 'expos-header'
    header_div.style.backgroundImage = `url(${preview_image})`
-   
+
    likes_div = document.createElement('div')
    likes_div.classList = 'expos-likes'
    likes_a = document.createElement('a')
@@ -698,12 +698,47 @@ function create_article_div(likes, preview_image, author_name, author_image, vk_
    header_div.appendChild(social_links_div)
    exposion.appendChild(header_div)
    exposion.appendChild(bottom_div)
-   
+
    return exposion
 
 }
 
-function load_more(el){
+function create_course_div(course_name, description, date, link) {
+   let exposion = document.createElement('div')
+   exposion.classList = 'exposition'
+
+   let a = document.createElement('a')
+   a.href = link
+   header_div = document.createElement('div')
+   header_div.classList = 'expos-header'
+   header_p = document.createElement('p')
+   header_p.innerHTML = course_name
+   header_div.appendChild(header_p)
+
+   body_div = document.createElement('div')
+   body_div.classList = 'exposition-bottom blog-section'
+   body_p = document.createElement('p')
+   body_p.innerHTML = description
+   body_div.appendChild(body_p)
+
+   dates_div = document.createElement('div')
+   dates_div.classList = 'dates'
+   dates_p_desc = document.createElement('p')
+   dates_p_desc.innerHTML = 'Дата начала занятий'
+   dates_p_date = document.createElement('p')
+   dates_p_date.innerHTML = date
+   dates_div.appendChild(dates_p_desc)
+   dates_div.appendChild(dates_p_date)
+
+   exposion.appendChild(header_div)
+   exposion.appendChild(body_div)
+   exposion.appendChild(dates_div)
+
+   return exposion
+
+}
+
+function load_more(el) {
    console.log('pag')
 
    section_div = el.target.parentElement.parentElement
@@ -712,28 +747,45 @@ function load_more(el){
    iblock_code = el.target.dataset.iblockCode;
    articles_div = section_div.querySelectorAll('.art-grid-block')[0];
    div_count = articles_div.querySelectorAll('.exposition').length
-   page = div_count/9+1
-   url = `ajax.php?IBLOCK_CODE=${iblock_code}&SECTION_ID=${section_id}&iNumPage=${page}&nPageSize=9`
+   page = div_count / 9 + 1
+   if (iblock_code == 'competitions') {
+      url = `load_competitions.php?IBLOCK_CODE=${iblock_code}&SECTION_ID=${section_id}&iNumPage=${page}&nPageSize=9`
+   }
+   else if (iblock_code == 'cources') {
+      url = `load_cources.php?IBLOCK_CODE=${iblock_code}&SECTION_ID=${section_id}&iNumPage=${page}&nPageSize=9`
+
+   }
 
    $.ajax({
       url: url,         /* Куда пойдет запрос */
       method: 'get',             /* Метод передачи (post или get) */
       dataType: 'json',          /* Тип данных в ответе (xml, json, script, html). */
-      success: function(data){  
+      success: function (data) {
          data.LIST.forEach(element => {
-            
-            article_div = create_article_div(
-               element['LIKES'],
-               element['PREVIEW_IMAGE'],
-               element['AUTHOR'],
-               element['AUTHOR_IMAGE'],
-               element['VK_LINK'],
-               element['INST_LINK'],
-               element['FACEBOOK_LINK'],
-            )
-            articles_div.appendChild(article_div)
+            if (iblock_code == 'competitions') {
+               article_div = create_article_div(
+                  element['LIKES'],
+                  element['PREVIEW_IMAGE'],
+                  element['AUTHOR'],
+                  element['AUTHOR_IMAGE'],
+                  element['VK_LINK'],
+                  element['INST_LINK'],
+                  element['FACEBOOK_LINK'],
+               )
+               articles_div.appendChild(article_div)
+            }
+            else if (iblock_code == 'cources') {
+               article_div = create_course_div(
+                  course_name = element['NAME'],
+                  description = element['DESCRIPTION'],
+                  date = element['DATE'],
+                  link = element['LINK'],
+               )
+               articles_div.appendChild(article_div)
+            }
+
          });
-         if(data.LIST.length < data.TOTAL){
+         if (data.LIST.length < data.TOTAL) {
             load_more_div = document.createElement('div')
             load_more_div.classList = 'btn btn-orange art-btn'
             load_more_a = document.createElement('a')
@@ -747,7 +799,7 @@ function load_more(el){
             section_div.removeChild(section_div.querySelector('.btn.btn-orange.art-btn'))
             section_div.appendChild(load_more_div)
          }
-         else{
+         else {
             section_div.removeChild(section_div.querySelector('.btn.btn-orange.art-btn'))
          }
       }
@@ -760,7 +812,7 @@ function change_section(el) {
    section_div = el.target.parentElement.parentElement.parentElement
    sections = el.target.parentElement.querySelectorAll('a')
    sections.forEach(element => {
-      if(element.classList.contains('active')){
+      if (element.classList.contains('active')) {
          element.classList.remove('active')
       }
    });
@@ -768,28 +820,48 @@ function change_section(el) {
    section_id = el.target.dataset.sectionId;
    iblock_code = el.target.dataset.iblockCode;
    articles_div = section_div.querySelectorAll('.art-grid-block')[0];
-   url = `ajax.php?IBLOCK_CODE=${iblock_code}&SECTION_ID=${section_id}`
+   if (iblock_code == 'competitions') {
+      url = `load_competitions.php?IBLOCK_CODE=${iblock_code}&SECTION_ID=${section_id}`
+   }
+   else if (iblock_code == 'cources') {
+      url = `load_cources.php?IBLOCK_CODE=${iblock_code}&SECTION_ID=${section_id}`
+   }
 
    $.ajax({
       url: url,         /* Куда пойдет запрос */
       method: 'get',             /* Метод передачи (post или get) */
       dataType: 'json',          /* Тип данных в ответе (xml, json, script, html). */
-      success: function(data){  
+      success: function (data) {
          articles_div.innerHTML = '' /* функция которая будет выполнена после успешного запроса.  */
+         console.log(data)
+         data.LIST = Object.values(data.LIST)
+
          data.LIST.forEach(element => {
-            
-            article_div = create_article_div(
-               element['LIKES'],
-               element['PREVIEW_IMAGE'],
-               element['AUTHOR'],
-               element['AUTHOR_IMAGE'],
-               element['VK_LINK'],
-               element['INST_LINK'],
-               element['FACEBOOK_LINK'],
-            )
-            articles_div.appendChild(article_div)
+
+            if (iblock_code == 'competitions') {
+               article_div = create_article_div(
+                  element['LIKES'],
+                  element['PREVIEW_IMAGE'],
+                  element['AUTHOR'],
+                  element['AUTHOR_IMAGE'],
+                  element['VK_LINK'],
+                  element['INST_LINK'],
+                  element['FACEBOOK_LINK'],
+               )
+               articles_div.appendChild(article_div)
+            }
+            else if (iblock_code == 'cources') {
+               article_div = create_course_div(
+                  course_name = element['NAME'],
+                  description = element['DESCRIPTION'],
+                  date = element['DATE'],
+                  link = element['LINK'],
+               )
+               articles_div.appendChild(article_div)
+            }
          });
-         if(data.LIST.length < data.TOTAL){
+
+         if (data.LIST.length < data.TOTAL) {
             load_more_div = document.createElement('div')
             load_more_div.classList = 'btn btn-orange art-btn'
             load_more_a = document.createElement('a')
@@ -799,13 +871,13 @@ function change_section(el) {
             load_more_a.dataset.iblockCode = iblock_code
             load_more_a.addEventListener('click', load_more)
             load_more_div.appendChild(load_more_a)
-            if(section_div.getElementsByClassName('btn btn-orange art-btn').length>0){
+            if (section_div.getElementsByClassName('btn btn-orange art-btn').length > 0) {
                section_div.removeChild(section_div.querySelector('.btn.btn-orange.art-btn'))
             }
             section_div.appendChild(load_more_div)
          }
-         else{
-            if(section_div.getElementsByClassName('btn btn-orange art-btn').length>0){
+         else {
+            if (section_div.getElementsByClassName('btn btn-orange art-btn').length > 0) {
                section_div.removeChild(section_div.querySelector('.btn.btn-orange.art-btn'))
             }
          }
