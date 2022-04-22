@@ -517,6 +517,12 @@ document.addEventListener('click', function (e) {
       document.querySelector('.body').classList.toggle('noScroll')
    }
    if (e.target.closest('.exposition')) {
+      el = e.target.closest('.exposition');
+      image_src = el.querySelector('.expos-header').style.backgroundImage
+      image_src = image_src.substr(5, image_src.length)
+      image_src = image_src.substr(0, image_src.length-2)
+      console.log(image_src)
+      document.querySelector('.photo-modal-img').querySelector('img').src = image_src
       document.querySelector('.popup-detail-modal').classList.toggle('active')
       document.querySelector('.body').classList.toggle('noScroll')
    }
