@@ -432,7 +432,7 @@ use \wptt\HelpFunctions;
                             </div>
                             <? $APPLICATION->IncludeComponent("bitrix:news.list", "art-space-cources", array(
                                 "ACTIVE_DATE_FORMAT" => "d.m.Y",    // Формат показа даты
-                                "ADD_SECTIONS_CHAIN" => "Y",    // Включать раздел в цепочку навигации
+                                "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
                                 "AJAX_MODE" => "N",    // Включить режим AJAX
                                 "AJAX_OPTION_ADDITIONAL" => "",    // Дополнительный идентификатор
                                 "AJAX_OPTION_HISTORY" => "N",    // Включить эмуляцию навигации браузера
@@ -458,7 +458,7 @@ use \wptt\HelpFunctions;
                                 "HIDE_LINK_WHEN_NO_DETAIL" => "N",    // Скрывать ссылку, если нет детального описания
                                 "IBLOCK_ID" => "13",    // Код информационного блока
                                 "IBLOCK_TYPE" => "art_space",    // Тип информационного блока (используется только для проверки)
-                                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",    // Включать инфоблок в цепочку навигации
+                                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",    // Включать инфоблок в цепочку навигации
                                 "INCLUDE_SUBSECTIONS" => "Y",    // Показывать элементы подразделов раздела
                                 "MESSAGE_404" => "",    // Сообщение для показа (по умолчанию из компонента)
                                 "NEWS_COUNT" => "9",    // Количество новостей на странице
@@ -541,7 +541,7 @@ use \wptt\HelpFunctions;
 
                             <? $APPLICATION->IncludeComponent("bitrix:news.list", "art-space-cources", array(
                                 "ACTIVE_DATE_FORMAT" => "d.m.Y",    // Формат показа даты
-                                "ADD_SECTIONS_CHAIN" => "Y",    // Включать раздел в цепочку навигации
+                                "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
                                 "AJAX_MODE" => "N",    // Включить режим AJAX
                                 "AJAX_OPTION_ADDITIONAL" => "",    // Дополнительный идентификатор
                                 "AJAX_OPTION_HISTORY" => "N",    // Включить эмуляцию навигации браузера
@@ -567,7 +567,7 @@ use \wptt\HelpFunctions;
                                 "HIDE_LINK_WHEN_NO_DETAIL" => "N",    // Скрывать ссылку, если нет детального описания
                                 "IBLOCK_ID" => "13",    // Код информационного блока
                                 "IBLOCK_TYPE" => "art_space",    // Тип информационного блока (используется только для проверки)
-                                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",    // Включать инфоблок в цепочку навигации
+                                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",    // Включать инфоблок в цепочку навигации
                                 "INCLUDE_SUBSECTIONS" => "Y",    // Показывать элементы подразделов раздела
                                 "MESSAGE_404" => "",    // Сообщение для показа (по умолчанию из компонента)
                                 "NEWS_COUNT" => "9",    // Количество новостей на странице
@@ -650,7 +650,7 @@ use \wptt\HelpFunctions;
                             </div>
                             <? $APPLICATION->IncludeComponent("bitrix:news.list", "art-space-cources", array(
                                 "ACTIVE_DATE_FORMAT" => "d.m.Y",    // Формат показа даты
-                                "ADD_SECTIONS_CHAIN" => "Y",    // Включать раздел в цепочку навигации
+                                "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
                                 "AJAX_MODE" => "N",    // Включить режим AJAX
                                 "AJAX_OPTION_ADDITIONAL" => "",    // Дополнительный идентификатор
                                 "AJAX_OPTION_HISTORY" => "N",    // Включить эмуляцию навигации браузера
@@ -676,7 +676,7 @@ use \wptt\HelpFunctions;
                                 "HIDE_LINK_WHEN_NO_DETAIL" => "N",    // Скрывать ссылку, если нет детального описания
                                 "IBLOCK_ID" => "13",    // Код информационного блока
                                 "IBLOCK_TYPE" => "art_space",    // Тип информационного блока (используется только для проверки)
-                                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",    // Включать инфоблок в цепочку навигации
+                                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",    // Включать инфоблок в цепочку навигации
                                 "INCLUDE_SUBSECTIONS" => "Y",    // Показывать элементы подразделов раздела
                                 "MESSAGE_404" => "",    // Сообщение для показа (по умолчанию из компонента)
                                 "NEWS_COUNT" => "9",    // Количество новостей на странице
