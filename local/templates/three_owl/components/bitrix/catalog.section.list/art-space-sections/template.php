@@ -20,6 +20,7 @@ $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELET
 $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_CONFIRM'));
 
 ?>
+
 <div class="articles-hashtags">
     <?
     foreach ($arResult['SECTIONS'] as &$arSection) {

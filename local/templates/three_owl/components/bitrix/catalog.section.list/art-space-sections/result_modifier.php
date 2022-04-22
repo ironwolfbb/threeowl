@@ -8,6 +8,10 @@ foreach ($arResult['SECTIONS'] as $key=>$arSection) {
     }
 }
 $section = CIBlockSection::GetByID($arResult['SECTION']['ID'])->GetNext();
-$arResult['SECTION_COURSE'] = $section;
+$arResult['SECTION_'] = $section;
+$arResult['EMPTY'] = false;
+if(count($arResult['SECTIONS']) == 0){
+    $arResult['EMPTY'] = true;
+}
 ?>
 

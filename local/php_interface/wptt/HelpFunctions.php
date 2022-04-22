@@ -98,4 +98,17 @@ class HelpFunctions{
         }
     }
 
+    public static function isSectionEmpty($code){
+        if(Loader::includeModule('iblock') ) {
+            $res = \CIBlockSection::GetList(array(), array('CODE' => $code));
+            $id = $res->Fetch()['ID'];
+            $count = \CIBlockSection::GetSectionElementsCount($id);
+            if ($count == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
 }
