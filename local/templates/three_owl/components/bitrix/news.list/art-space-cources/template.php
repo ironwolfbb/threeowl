@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 
 
-<div class="art-grid-block text-grid">
+<div class="art-grid-block text-grid courses">
     <? if ($arParams["DISPLAY_TOP_PAGER"]): ?>
         <?= $arResult["NAV_STRING"] ?><br/>
     <? endif; ?>
