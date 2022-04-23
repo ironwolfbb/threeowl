@@ -516,8 +516,8 @@ document.addEventListener('click', function (e) {
       document.querySelector('.popup-detail-modal').classList.toggle('active')
       document.querySelector('.body').classList.toggle('noScroll')
    }
-   if (e.target.closest('.exposition')) {
-      el = e.target.closest('.exposition');
+   if (e.target.closest('.js-exposition')) {
+      el = e.target.closest('.js-exposition');
       image_src = el.querySelector('.expos-header').style.backgroundImage
       image_src = image_src.substr(5, image_src.length)
       image_src = image_src.substr(0, image_src.length-2)

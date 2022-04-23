@@ -1,4 +1,4 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -17,16 +17,17 @@ $this->setFrameMode(true);
     <div class="container">
         <div class="katalog-title">
             <h2>
-                <?=$arResult["NAME"]?>
+                Строительный набор Соломон, 60 элементов, 4 х 4 см, для детей
             </h2>
         </div>
     </div>
 </div>
-
 <div class="detail-sliders">
     <div class="container">
         <div class="detail-first-block">
             <div class="detail-two-slider">
+
+
                 <div class="smallest-slider">
                     <div class="smallest-slider-arrows small-prev">
                         <svg width="45" height="44" viewBox="0 0 45 44" fill="none"
@@ -39,6 +40,34 @@ $this->setFrameMode(true);
                     </div>
                     <div class="js-smallest-detail-slider swiper-container">
                         <div class="swiper-paginationn swiper-wrapper"></div>
+                        <!-- <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../../img/kubs.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../img/kubHouse.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../img/kubsHome.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../img/kubs.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../img/kubHouse.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../img/kubsHome.jpg" alt="">
+                    </div><div class="swiper-slide">
+                        <img src="../../img/kubs.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../img/kubHouse.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../img/kubsHome.jpg" alt="">
+                    </div>
+                </div> -->
                     </div>
                     <div class="smallest-slider-arrows small-next">
                         <svg width="45" height="44" viewBox="0 0 45 44" fill="none"
@@ -53,13 +82,9 @@ $this->setFrameMode(true);
                 </div>
                 <div class="bigest-detail-slider js-bigest-detail-slider swiper-container">
                     <div class="swiper-wrapper">
-                        <?foreach ($arResult['PROPERTIES']['PHOTOS']['VALUE'] as $photo):?>
-
-                            <div class="swiper-slide">
-                                <img src="<?echo $photo;?>" alt="">
-                            </div>
-                        <?endforeach;?>
-
+                        <div class="swiper-slide">
+                            <img src="../../img/kubeHouses.jpg" alt="">
+                        </div>
                         <div class="swiper-slide">
                             <img src="../../img/kubeHouses.jpg" alt="">
                         </div>
@@ -86,7 +111,7 @@ $this->setFrameMode(true);
                         </div>
                         <div class="swiper-slide">
                             <video src="" style="display: none;"></video>
-                            <img style="display: none" src="../../img/videoImg.jpg" alt="">
+                            <img src="../../img/videoImg.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -94,7 +119,7 @@ $this->setFrameMode(true);
             <div class="detail-product-info">
                 <div class="three-hundred-bucks">
                     <p>
-                        <?=$arResult['PROPERTIES']['PRICE']['VALUE']?>
+                        2 500 руб
                     </p>
                 </div>
                 <div class="buying-links">
@@ -102,13 +127,32 @@ $this->setFrameMode(true);
                         Купить онлайн
                     </a>
                     <div class="buying-links-item">
-                        <?foreach ($arResult['PROPERTIES']['SHOPS_LIST']['VALUE'] as $key=>$shop):?>
-                        <a href="<?=$shop['LINK']?>" target="_blank">
-                            <img src="<?=$shop['IMAGE']?>" alt="<?=$shop['NAME']?>">
+                        <a href="#">
+                            <img src="../../img/sonsDaughters.jpg" alt="">
                         </a>
-                        <?endforeach;?>
+                        <a href="#">
+                            <img src="../../img/childWorld.jpg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../../img/childSpace.jpg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../../img/sonsDaughters.jpg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../../img/sonsDaughters.jpg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../../img/childWorld.jpg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../../img/childSpace.jpg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../../img/sonsDaughters.jpg" alt="">
+                        </a>
                     </div>
-                    <a href="<?=$arResult['PROPERTIES']['BUY_SINGLE_LINK']['VALUE']?>" target="_blank">
+                    <a href="#">
                         Купить в рознице
                     </a>
                 </div>
@@ -240,7 +284,8 @@ $this->setFrameMode(true);
                                 Артикул
                             </p>
                             <p>
-                                <?=$arResult['PROPERTIES']['ARTIKUL']['VALUE']?>
+                                367509
+
                             </p>
                         </li>
                         <li>
@@ -248,7 +293,7 @@ $this->setFrameMode(true);
                                 Размер игрушки
                             </p>
                             <p>
-                                <?=$arResult['PROPERTIES']['SIZE_TOY']['VALUE']?>
+                                20х20х20 см
                             </p>
                         </li>
                         <li>
@@ -256,11 +301,11 @@ $this->setFrameMode(true);
                                 Размер упаковки
                             </p>
                             <p>
-                                <?=$arResult['PROPERTIES']['SIZE_PACKET']['VALUE']?>
+                                25х25х25 см
                             </p>
                         </li>
                     </ul>
-                    <a href="#chatacteristics">
+                    <a href="#">
                         Все характеристики
                     </a>
                 </div>
@@ -269,16 +314,12 @@ $this->setFrameMode(true);
     </div>
 </div>
 
-
-
-
 <div class="container">
     <div class="detail-small-title">
         <p>
             Фото и видео покупателей
         </p>
     </div>
-<!--    TODO: тут нужно сделать вывод свойства REVIEWS_PHOTOS, сделать проверку на тип файла(есть функция в битриксе) -->
     <div class="small-container">
         <div class="detail-photo-slider js-detail-photo-slider swiper-container">
             <div class="swiper-wrapper">
@@ -359,12 +400,32 @@ $this->setFrameMode(true);
                 </p>
             </div>
             <div class="detail-desc-text">
-                <?=$arResult['PREVIEW_TEXT']?>
+                <p>
+                    Многофункциональный кубик BabyGo понравится и ребенку, и родителям. Малыш увлечется им надолго и
+                    будет с интересом
+                    пробовать все возможности игрушки.
+
+                </p>
+                <p>
+                    Почти на каждой стороне кубика расположена уникальная развивающая панель.
+                    На крыше – разноцветные кнопочки, которые поют и светятся, если их нажать.
+                    Крутящийся диск, как на телефоне, дополнен разными цветами в «окошках».
+                    По «лабиринтам» разной формы можно двигать круглые фигурки.
+                    Книжку с пластиковыми страничками и красочными рисунками интересно листать.
+                    Еще на одной стороне расположились барабанчики-вращалки. Малыш сможет крутить их, наблюдать за
+                    сменой картинок и слушать
+                    шум шариков.
+                    Игрушка развивает моторику, мышление и понимание причинно-следственных связей, цветовосприятие,
+                    слух и тактильное
+                    восприятие.
+                    Подходит для детей с 6 месяцев.
+
+                </p>
             </div>
         </div>
 
         <div class="detail-small-title">
-            <p id="chatacteristics">
+            <p>
                 Характеристики
             </p>
         </div>
@@ -375,7 +436,8 @@ $this->setFrameMode(true);
                         Артикул
                     </p>
                     <p>
-                        <?=$arResult['PROPERTIES']['ARTIKUL']['VALUE']?>
+                        367509
+
                     </p>
                 </li>
                 <li>
@@ -383,7 +445,7 @@ $this->setFrameMode(true);
                         Размер игрушки
                     </p>
                     <p>
-                        <?=$arResult['PROPERTIES']['SIZE_TOY']['VALUE']?>
+                        20х20х20 см
                     </p>
                 </li>
                 <li>
@@ -391,7 +453,7 @@ $this->setFrameMode(true);
                         Размер упаковки
                     </p>
                     <p>
-                        <?=$arResult['PROPERTIES']['SIZE_PACKET']['VALUE']?>
+                        25х25х25 см
                     </p>
                 </li>
                 <li>
@@ -399,7 +461,7 @@ $this->setFrameMode(true);
                         Страна изготовитель
                     </p>
                     <p>
-                        <?=$arResult['PROPERTIES']['COUNTRY']['VALUE']?>
+                        Россия
                     </p>
                 </li>
                 <li>
@@ -407,7 +469,7 @@ $this->setFrameMode(true);
                         Пол ребенка
                     </p>
                     <p>
-                        <?=$arResult['PROPERTIES']['GENDER']['VALUE']?>
+                        Унисекс
                     </p>
                 </li>
                 <li>
@@ -415,7 +477,7 @@ $this->setFrameMode(true);
                         Развивающие функции
                     </p>
                     <p>
-                        <?=$arResult['PROPERTIES']['DEV_FUNCTIONS']['VALUE']?>
+                        Коммуникативные навыки, логика, мышление
                     </p>
                 </li>
                 <li>
@@ -423,7 +485,7 @@ $this->setFrameMode(true);
                         Возраст ребенка
                     </p>
                     <p>
-                        <?=$arResult['PROPERTIES']['AGE']['VALUE']?>
+                        От 1 года
                     </p>
                 </li>
                 <li>
@@ -431,7 +493,7 @@ $this->setFrameMode(true);
                         Развитие навыков
                     </p>
                     <p>
-                        <?=$arResult['PROPERTIES']['DEV_SKILLS']['VALUE']?>
+                        Логика, моторика
                     </p>
                 </li>
                 <li>
@@ -439,7 +501,7 @@ $this->setFrameMode(true);
                         Количество элементов, шт
                     </p>
                     <p>
-                        <?=$arResult['PROPERTIES']['PART_COUNT']['VALUE']?>
+                        60
                     </p>
                 </li>
                 <li>
@@ -447,35 +509,86 @@ $this->setFrameMode(true);
                         Материал
                     </p>
                     <p>
-                        <?=$arResult['PROPERTIES']['MATERIAL']['VALUE']?>
+                        Пластик
                     </p>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="important-sections standart-block ">
+    <div class="important-sections standart-block watch-also-det">
         <div class="container">
             <div class="detail-small-title watch-also">
                 <p>
                     Смотрите так же
                 </p>
             </div>
-            <div class="js-second-mini-slider smaller-slider swiper-container second-mini-slider detail">
+            <div class="js-second-mini-slider smaller-slider swiper-container second-mini-slider">
                 <div class="swiper-wrapper">
-                    <?foreach ($arResult['PROPERTIES']['WATCH_ALSO']['VALUE'] as $key=>$relProduct):?>
                     <div class="swiper-slide">
-                        <img src="<?=$relProduct['IMAGE']?>" alt="">
+                        <img src="../../img/game.jpg" alt="">
                         <span>
-                                Артикул: <?=$relProduct['ARTIKUL']?>
+                                Артикул: 256787
                             </span>
                         <p>
-                            <?=$relProduct['NAME']?>
+                            Набор развивающий Росигрушка Ассорти 21 кубик + пирамидка 6146
                         </p>
-                        <a href="<?=$relProduct['LINK']?>" target="_blank"></a>
                     </div>
-                    <?endforeach;?>
+                    <div class="swiper-slide">
+                        <img src="../../img/game.jpg" alt="">
+                        <span>
+                                Артикул: 256787
+                            </span>
+                        <p>
+                            Набор развивающий Росигрушка Ассорти 21 кубик + пирамидка 6146
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../img/game.jpg" alt="">
+                        <span>
+                                Артикул: 256787
+                            </span>
+                        <p>
+                            Набор развивающий Росигрушка Ассорти 21 кубик + пирамидка 6146
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../img/game.jpg" alt="">
+                        <span>
+                                Артикул: 256787
+                            </span>
+                        <p>
+                            Набор развивающий Росигрушка Ассорти 21 кубик + пирамидка 6146
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../img/game.jpg" alt="">
+                        <span>
+                                Артикул: 256787
+                            </span>
+                        <p>
+                            Набор развивающий Росигрушка Ассорти 21 кубик + пирамидка 6146
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../img/game.jpg" alt="">
+                        <span>
+                                Артикул: 256787
+                            </span>
+                        <p>
+                            Набор развивающий Росигрушка Ассорти 21 кубик + пирамидка 6146
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../img/game.jpg" alt="">
+                        <span>
+                                Артикул: 256787
+                            </span>
+                        <p>
+                            Набор развивающий Росигрушка Ассорти 21 кубик + пирамидка 6146
+                        </p>
+                    </div>
                 </div>
-                <div class="swiper-pagination detail-pag"></div>
+                <div class="swiper-pagination"></div>
                 <div class="slider-arrow prev-mini-slide prev-slide">
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="45" height="44.8462" rx="22.4231" fill="white" />
@@ -491,4 +604,406 @@ $this->setFrameMode(true);
             </div>
         </div>
     </div>
+</div>
+</div>
+
+
+
+
+<div class="feedback-block">
+    <div class="container">
+        <div class="detail-small-title">
+            <p>
+                Отзывы
+            </p>
+            <div class="number-of-feedbacks">160</div>
+            <div class="send-feedback-btn">
+                <a href="javascript:void(0)">
+                    Написать отзыв
+                </a>
+            </div>
+        </div>
+        <div class="feedback-section">
+            <div class="aside-about__info-stars review-item__right-stars rating rating_set big-rating">
+                <div class="rating-text">
+                    <p>
+                        Общая оценка
+                    </p>
+                </div>
+                <div class="rating__body rating_stars-body ">
+                    <div class="rating__active">
+
+                    </div>
+
+                    <div class="rating__items">
+                        <input type="radio" class='rating__item' value='1' name='rating'>
+                        <input type="radio" class='rating__item' value='2' name='rating'>
+                        <input type="radio" class='rating__item' value='3' name='rating'>
+                        <input type="radio" class='rating__item' value='4' name='rating'>
+                        <input type="radio" class='rating__item' value='5' name='rating'>
+                    </div>
+                    <div class="rating-items-value-for-stupi" style="display: none;">
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                        <p>5</p>
+                    </div>
+                </div>
+                <div class="rating__value" style="display: none;">3</div>
+            </div>
+            <form>
+                <div class="feedback-form">
+
+                    <label class="input-label">
+                        <input type="text" placeholder="Введите ваше имя*">
+                    </label>
+                    <label class="input-label">
+                        <input type="email" placeholder="Электронная почта*">
+                    </label>
+                    <label class="textarea-label">
+                        <textarea placeholder="Достоинства"></textarea>
+                    </label>
+                    <label class="textarea-label">
+                        <textarea placeholder="Недостатки"></textarea>
+                    </label>
+                    <label class="textarea-label last">
+                        <textarea placeholder="Введите ваше сообщение*"></textarea>
+                    </label>
+                    <div class="form-bottom">
+                        <div class="agreement">
+                            <label>
+                                <input type="checkbox">
+                            </label>
+                            <p>
+                                Я согласен на обработку персональных данных
+                            </p>
+                        </div>
+                        <div class="btn btn-orange">
+                            <button type="submit" class="btn btn-more">
+                                Отправить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="feedbacks">
+            <div class="feedback">
+                <div class="feedback-info">
+                    <div class="feedback-rating">
+                        <svg width="80" height="16" viewBox="0 0 80 16" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M8 0L10.0314 5.20404L15.6085 5.52786L11.2869 9.06796L12.7023 14.4721L8 11.456L3.29772 14.4721L4.71315 9.06796L0.391548 5.52786L5.96861 5.20404L8 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M24 0L26.0314 5.20404L31.6085 5.52786L27.2869 9.06796L28.7023 14.4721L24 11.456L19.2977 14.4721L20.7131 9.06796L16.3915 5.52786L21.9686 5.20404L24 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M40 0L42.0314 5.20404L47.6085 5.52786L43.2869 9.06796L44.7023 14.4721L40 11.456L35.2977 14.4721L36.7131 9.06796L32.3915 5.52786L37.9686 5.20404L40 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M56 0L58.0314 5.20404L63.6085 5.52786L59.2869 9.06796L60.7023 14.4721L56 11.456L51.2977 14.4721L52.7131 9.06796L48.3915 5.52786L53.9686 5.20404L56 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M72 0L74.0314 5.20404L79.6085 5.52786L75.2869 9.06796L76.7023 14.4721L72 11.456L67.2977 14.4721L68.7131 9.06796L64.3915 5.52786L69.9686 5.20404L72 0Z"
+                                    fill="#FFD521" />
+                            <g clip-path="url(#clip0_1292_38207)">
+                                <path
+                                        d="M72 0.687519L73.7985 5.29494L73.8568 5.44432L74.0169 5.45362L78.9546 5.74032L75.1284 8.87457L75.0044 8.97618L75.045 9.1313L76.2982 13.9159L72.135 11.2456L72 11.159L71.865 11.2456L67.7018 13.9159L68.955 9.1313L68.9956 8.97618L68.8716 8.87457L65.0454 5.74032L69.9831 5.45362L70.1432 5.44432L70.2015 5.29494L72 0.687519Z"
+                                        fill="white" stroke="#FFD521" stroke-width="0.5" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1292_38207">
+                                    <rect width="16" height="15" fill="white" transform="translate(64)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="feedback-author">
+                        <p>
+                            Алексей Рвачев
+                        </p>
+                    </div>
+                    <div class="feedback-date">
+                        <p>
+                            22.12.2021
+                        </p>
+                    </div>
+                    <div class="feedback-img">
+
+                    </div>
+                </div>
+                <div class="feedback-text">
+                    <p>Достоинства:</p>
+                    <span>Яркие, не сильно мягкие</span>
+                    <p>Недостатки:</p>
+                    <span>Не обнаружил</span>
+                    <p>Отзыв:</p>
+                    <span>Замечательные, небольшие, красочные лёгкие кубики. ребенку 1,5 годика, очень понравились,
+                            играет с удовольствием, удобно
+                            брать
+                            в ручки. высокую башню конечно не построить, а не большую вполне реально.</span>
+                </div>
+            </div>
+            <div class="feedback">
+                <div class="feedback-info">
+                    <div class="feedback-rating">
+                        <svg width="80" height="16" viewBox="0 0 80 16" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M8 0L10.0314 5.20404L15.6085 5.52786L11.2869 9.06796L12.7023 14.4721L8 11.456L3.29772 14.4721L4.71315 9.06796L0.391548 5.52786L5.96861 5.20404L8 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M24 0L26.0314 5.20404L31.6085 5.52786L27.2869 9.06796L28.7023 14.4721L24 11.456L19.2977 14.4721L20.7131 9.06796L16.3915 5.52786L21.9686 5.20404L24 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M40 0L42.0314 5.20404L47.6085 5.52786L43.2869 9.06796L44.7023 14.4721L40 11.456L35.2977 14.4721L36.7131 9.06796L32.3915 5.52786L37.9686 5.20404L40 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M56 0L58.0314 5.20404L63.6085 5.52786L59.2869 9.06796L60.7023 14.4721L56 11.456L51.2977 14.4721L52.7131 9.06796L48.3915 5.52786L53.9686 5.20404L56 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M72 0L74.0314 5.20404L79.6085 5.52786L75.2869 9.06796L76.7023 14.4721L72 11.456L67.2977 14.4721L68.7131 9.06796L64.3915 5.52786L69.9686 5.20404L72 0Z"
+                                    fill="#FFD521" />
+                            <g clip-path="url(#clip0_1292_38207)">
+                                <path
+                                        d="M72 0.687519L73.7985 5.29494L73.8568 5.44432L74.0169 5.45362L78.9546 5.74032L75.1284 8.87457L75.0044 8.97618L75.045 9.1313L76.2982 13.9159L72.135 11.2456L72 11.159L71.865 11.2456L67.7018 13.9159L68.955 9.1313L68.9956 8.97618L68.8716 8.87457L65.0454 5.74032L69.9831 5.45362L70.1432 5.44432L70.2015 5.29494L72 0.687519Z"
+                                        fill="white" stroke="#FFD521" stroke-width="0.5" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1292_38207">
+                                    <rect width="16" height="15" fill="white" transform="translate(64)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="feedback-author">
+                        <p>
+                            Алексей Рвачев
+                        </p>
+                    </div>
+                    <div class="feedback-date">
+                        <p>
+                            22.12.2021
+                        </p>
+                    </div>
+                    <div class="feedback-img">
+                        <svg width="112" height="30" viewBox="0 0 112 30" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <rect width="112" height="30" rx="5" fill="#005BFF" />
+                            <path
+                                    d="M38.5048 14.8C38.5048 13.576 38.9128 12.548 39.7288 11.716C40.5608 10.884 41.6088 10.468 42.8728 10.468C44.1368 10.468 45.1808 10.868 46.0048 11.668C46.8368 12.476 47.2528 13.52 47.2528 14.8C47.2528 16.056 46.8368 17.092 46.0048 17.908C45.1728 18.724 44.1288 19.132 42.8728 19.132C41.6088 19.132 40.5648 18.732 39.7408 17.932C38.9168 17.132 38.5048 16.088 38.5048 14.8ZM40.0648 14.8C40.0648 15.648 40.3328 16.352 40.8688 16.912C41.4048 17.472 42.0728 17.752 42.8728 17.752C43.7368 17.752 44.4208 17.472 44.9248 16.912C45.4368 16.352 45.6928 15.648 45.6928 14.8C45.6928 13.944 45.4208 13.236 44.8768 12.676C44.3328 12.124 43.6648 11.848 42.8728 11.848C42.0648 11.848 41.3928 12.124 40.8568 12.676C40.3288 13.228 40.0648 13.936 40.0648 14.8ZM52.5224 11.98H48.1184V10.6H54.5024V11.62L49.8464 17.62H54.6224V19H47.8784V17.992L52.5224 11.98ZM55.2392 14.8C55.2392 13.576 55.6472 12.548 56.4632 11.716C57.2952 10.884 58.3432 10.468 59.6072 10.468C60.8712 10.468 61.9152 10.868 62.7392 11.668C63.5712 12.476 63.9872 13.52 63.9872 14.8C63.9872 16.056 63.5712 17.092 62.7392 17.908C61.9072 18.724 60.8632 19.132 59.6072 19.132C58.3432 19.132 57.2992 18.732 56.4752 17.932C55.6512 17.132 55.2392 16.088 55.2392 14.8ZM56.7992 14.8C56.7992 15.648 57.0672 16.352 57.6032 16.912C58.1392 17.472 58.8072 17.752 59.6072 17.752C60.4712 17.752 61.1552 17.472 61.6592 16.912C62.1712 16.352 62.4272 15.648 62.4272 14.8C62.4272 13.944 62.1552 13.236 61.6112 12.676C61.0672 12.124 60.3992 11.848 59.6072 11.848C58.7992 11.848 58.1272 12.124 57.5912 12.676C57.0632 13.228 56.7992 13.936 56.7992 14.8ZM72.8713 10.6V19H71.6953L67.0753 13.18V19H65.6953V10.6H66.8713L71.4913 16.444V10.6H72.8713Z"
+                                    fill="white" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div class="feedback-text">
+                    <p>Достоинства:</p>
+                    <span>Яркие, не сильно мягкие</span>
+                    <p>Недостатки:</p>
+                    <span>Не обнаружил</span>
+                    <p>Отзыв:</p>
+                    <span>Замечательные, небольшие, красочные лёгкие кубики. ребенку 1,5 годика, очень понравились,
+                            играет с удовольствием, удобно
+                            брать
+                            в ручки. высокую башню конечно не построить, а не большую вполне реально.</span>
+                </div>
+            </div>
+            <div class="feedback">
+                <div class="feedback-info">
+                    <div class="feedback-rating">
+                        <svg width="80" height="16" viewBox="0 0 80 16" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M8 0L10.0314 5.20404L15.6085 5.52786L11.2869 9.06796L12.7023 14.4721L8 11.456L3.29772 14.4721L4.71315 9.06796L0.391548 5.52786L5.96861 5.20404L8 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M24 0L26.0314 5.20404L31.6085 5.52786L27.2869 9.06796L28.7023 14.4721L24 11.456L19.2977 14.4721L20.7131 9.06796L16.3915 5.52786L21.9686 5.20404L24 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M40 0L42.0314 5.20404L47.6085 5.52786L43.2869 9.06796L44.7023 14.4721L40 11.456L35.2977 14.4721L36.7131 9.06796L32.3915 5.52786L37.9686 5.20404L40 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M56 0L58.0314 5.20404L63.6085 5.52786L59.2869 9.06796L60.7023 14.4721L56 11.456L51.2977 14.4721L52.7131 9.06796L48.3915 5.52786L53.9686 5.20404L56 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M72 0L74.0314 5.20404L79.6085 5.52786L75.2869 9.06796L76.7023 14.4721L72 11.456L67.2977 14.4721L68.7131 9.06796L64.3915 5.52786L69.9686 5.20404L72 0Z"
+                                    fill="#FFD521" />
+                            <g clip-path="url(#clip0_1292_38207)">
+                                <path
+                                        d="M72 0.687519L73.7985 5.29494L73.8568 5.44432L74.0169 5.45362L78.9546 5.74032L75.1284 8.87457L75.0044 8.97618L75.045 9.1313L76.2982 13.9159L72.135 11.2456L72 11.159L71.865 11.2456L67.7018 13.9159L68.955 9.1313L68.9956 8.97618L68.8716 8.87457L65.0454 5.74032L69.9831 5.45362L70.1432 5.44432L70.2015 5.29494L72 0.687519Z"
+                                        fill="white" stroke="#FFD521" stroke-width="0.5" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1292_38207">
+                                    <rect width="16" height="15" fill="white" transform="translate(64)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="feedback-author">
+                        <p>
+                            Алексей Рвачев
+                        </p>
+                    </div>
+                    <div class="feedback-date">
+                        <p>
+                            22.12.2021
+                        </p>
+                    </div>
+                    <div class="feedback-img">
+                        <svg width="112" height="30" viewBox="0 0 112 30" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <rect width="112" height="30" rx="5" fill="url(#paint0_linear_1652_44561)" />
+                            <path
+                                    d="M26.7229 10.6H28.1389L25.7389 19H24.3589L22.3309 12.928L20.3389 19H18.9469L16.4389 10.6H18.0949L19.7869 16.588L21.6589 10.6H23.1229L25.0429 16.6L26.7229 10.6ZM31.0231 19H29.5471V10.6H31.0231V19ZM38.7833 19H33.5273V10.6H35.0033V17.62H38.7833V19ZM40.2578 19H40.0898V10.6H40.2458C40.5978 10.6 40.9698 10.596 41.3618 10.588C42.1458 10.572 42.5458 10.564 42.5618 10.564C44.1938 10.564 45.4018 10.98 46.1858 11.812C46.9138 12.588 47.2778 13.556 47.2778 14.716C47.2778 15.964 46.8578 16.996 46.0178 17.812C45.1858 18.62 44.0018 19.024 42.4658 19.024C42.1458 19.024 41.8098 19.02 41.4578 19.012C41.1138 19.004 40.7138 19 40.2578 19ZM42.5378 11.944C42.2258 11.944 41.9018 11.956 41.5658 11.98V17.62C41.9338 17.636 42.2498 17.644 42.5138 17.644C43.5138 17.644 44.2978 17.38 44.8658 16.852C45.4338 16.324 45.7178 15.612 45.7178 14.716C45.7178 13.86 45.4338 13.184 44.8658 12.688C44.3058 12.192 43.5298 11.944 42.5378 11.944ZM48.9843 18.988V10.624C49.8483 10.584 50.6563 10.564 51.4083 10.564C52.3363 10.564 53.0283 10.748 53.4843 11.116C53.9403 11.484 54.1683 11.992 54.1683 12.64C54.1683 13.544 53.7683 14.18 52.9683 14.548V14.572C53.4243 14.692 53.7843 14.92 54.0483 15.256C54.3123 15.584 54.4443 16.008 54.4443 16.528C54.4443 17.344 54.1643 17.968 53.6043 18.4C53.0443 18.832 52.2843 19.048 51.3243 19.048C50.3643 19.048 49.5843 19.028 48.9843 18.988ZM51.5043 15.388H50.4603V17.608C50.8363 17.648 51.1603 17.668 51.4323 17.668C52.4563 17.668 52.9683 17.264 52.9683 16.456C52.9683 16.104 52.8403 15.84 52.5843 15.664C52.3283 15.48 51.9683 15.388 51.5043 15.388ZM51.3843 11.944C51.0323 11.944 50.7243 11.956 50.4603 11.98V14.104H51.4563C51.8323 14.104 52.1323 14.008 52.3563 13.816C52.5883 13.624 52.7043 13.348 52.7043 12.988C52.7043 12.652 52.5883 12.396 52.3563 12.22C52.1243 12.036 51.8003 11.944 51.3843 11.944ZM61.3706 19H56.3906V10.6H61.2506V11.98H57.8666V14.068H60.8906V15.448H57.8666V17.62H61.3706V19ZM64.7689 15.856V19H63.2929V10.6C63.7089 10.6 64.1609 10.596 64.6489 10.588C65.1369 10.58 65.5369 10.576 65.8489 10.576C67.8809 10.576 68.8969 11.44 68.8969 13.168C68.8969 13.808 68.7329 14.336 68.4049 14.752C68.0769 15.152 67.7009 15.424 67.2769 15.568L69.9049 19H68.1169L65.8009 15.856H64.7689ZM65.7769 11.956C65.7369 11.956 65.6729 11.96 65.5849 11.968C65.4969 11.968 65.3729 11.972 65.2129 11.98C65.0529 11.98 64.9049 11.98 64.7689 11.98V14.476H65.7289C66.2009 14.476 66.5849 14.36 66.8809 14.128C67.1849 13.896 67.3369 13.58 67.3369 13.18C67.3369 12.364 66.8169 11.956 65.7769 11.956ZM72.6673 15.856V19H71.1913V10.6C71.6073 10.6 72.0593 10.596 72.5473 10.588C73.0353 10.58 73.4353 10.576 73.7473 10.576C75.7793 10.576 76.7953 11.44 76.7953 13.168C76.7953 13.808 76.6313 14.336 76.3033 14.752C75.9753 15.152 75.5993 15.424 75.1753 15.568L77.8033 19H76.0153L73.6993 15.856H72.6673ZM73.6753 11.956C73.6353 11.956 73.5713 11.96 73.4833 11.968C73.3953 11.968 73.2713 11.972 73.1113 11.98C72.9513 11.98 72.8033 11.98 72.6673 11.98V14.476H73.6273C74.0993 14.476 74.4833 14.36 74.7793 14.128C75.0833 13.896 75.2353 13.58 75.2353 13.18C75.2353 12.364 74.7153 11.956 73.6753 11.956ZM80.7458 19H79.2698V10.6H80.7458V19ZM88.2299 19H83.2499V10.6H88.1099V11.98H84.7259V14.068H87.7499V15.448H84.7259V17.62H88.2299V19ZM93.5243 16.768C93.5243 16.512 93.4283 16.288 93.2363 16.096C93.0523 15.896 92.8203 15.736 92.5403 15.616C92.2603 15.488 91.9523 15.344 91.6163 15.184C91.2883 15.016 90.9843 14.844 90.7043 14.668C90.4243 14.484 90.1883 14.232 89.9963 13.912C89.8123 13.584 89.7203 13.208 89.7203 12.784C89.7203 12.136 89.9563 11.588 90.4283 11.14C90.9163 10.692 91.5523 10.468 92.3363 10.468C93.4003 10.468 94.2003 10.768 94.7363 11.368L93.9443 12.472C93.5203 12.056 93.0243 11.848 92.4563 11.848C92.0963 11.848 91.8083 11.932 91.5923 12.1C91.3843 12.268 91.2803 12.492 91.2803 12.772C91.2803 12.916 91.3083 13.052 91.3643 13.18C91.4203 13.3 91.4803 13.4 91.5443 13.48C91.6163 13.56 91.7283 13.648 91.8803 13.744C92.0403 13.84 92.1643 13.912 92.2523 13.96C92.3483 14 92.5043 14.068 92.7203 14.164C92.9363 14.26 93.0883 14.328 93.1763 14.368C93.5283 14.528 93.8363 14.696 94.1003 14.872C94.3963 15.048 94.6323 15.3 94.8083 15.628C94.9923 15.956 95.0843 16.332 95.0843 16.756C95.0843 17.46 94.8163 18.032 94.2803 18.472C93.7443 18.912 93.0763 19.132 92.2763 19.132C91.7163 19.132 91.1603 19.016 90.6083 18.784C90.0803 18.544 89.7203 18.22 89.5283 17.812L90.3683 16.804C90.5923 17.1 90.8803 17.332 91.2323 17.5C91.5923 17.668 91.9483 17.752 92.3003 17.752C92.6683 17.752 92.9643 17.664 93.1883 17.488C93.4123 17.312 93.5243 17.072 93.5243 16.768Z"
+                                    fill="white" />
+                            <defs>
+                                <linearGradient id="paint0_linear_1652_44561" x1="1.52985e-07" y1="15" x2="112"
+                                                y2="15" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FB3197" />
+                                    <stop offset="1" stop-color="#350163" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="feedback-text">
+                    <p>Достоинства:</p>
+                    <span>Яркие, не сильно мягкие</span>
+                    <p>Недостатки:</p>
+                    <span>Не обнаружил</span>
+                    <p>Отзыв:</p>
+                    <span>Замечательные, небольшие, красочные лёгкие кубики. ребенку 1,5 годика, очень понравились,
+                            играет с удовольствием, удобно
+                            брать
+                            в ручки. высокую башню конечно не построить, а не большую вполне реально.</span>
+                </div>
+            </div>
+            <div class="feedback">
+                <div class="feedback-info">
+                    <div class="feedback-rating">
+                        <svg width="80" height="16" viewBox="0 0 80 16" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M8 0L10.0314 5.20404L15.6085 5.52786L11.2869 9.06796L12.7023 14.4721L8 11.456L3.29772 14.4721L4.71315 9.06796L0.391548 5.52786L5.96861 5.20404L8 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M24 0L26.0314 5.20404L31.6085 5.52786L27.2869 9.06796L28.7023 14.4721L24 11.456L19.2977 14.4721L20.7131 9.06796L16.3915 5.52786L21.9686 5.20404L24 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M40 0L42.0314 5.20404L47.6085 5.52786L43.2869 9.06796L44.7023 14.4721L40 11.456L35.2977 14.4721L36.7131 9.06796L32.3915 5.52786L37.9686 5.20404L40 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M56 0L58.0314 5.20404L63.6085 5.52786L59.2869 9.06796L60.7023 14.4721L56 11.456L51.2977 14.4721L52.7131 9.06796L48.3915 5.52786L53.9686 5.20404L56 0Z"
+                                    fill="#FFD521" />
+                            <path
+                                    d="M72 0L74.0314 5.20404L79.6085 5.52786L75.2869 9.06796L76.7023 14.4721L72 11.456L67.2977 14.4721L68.7131 9.06796L64.3915 5.52786L69.9686 5.20404L72 0Z"
+                                    fill="#FFD521" />
+                            <g clip-path="url(#clip0_1292_38207)">
+                                <path
+                                        d="M72 0.687519L73.7985 5.29494L73.8568 5.44432L74.0169 5.45362L78.9546 5.74032L75.1284 8.87457L75.0044 8.97618L75.045 9.1313L76.2982 13.9159L72.135 11.2456L72 11.159L71.865 11.2456L67.7018 13.9159L68.955 9.1313L68.9956 8.97618L68.8716 8.87457L65.0454 5.74032L69.9831 5.45362L70.1432 5.44432L70.2015 5.29494L72 0.687519Z"
+                                        fill="white" stroke="#FFD521" stroke-width="0.5" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1292_38207">
+                                    <rect width="16" height="15" fill="white" transform="translate(64)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="feedback-author">
+                        <p>
+                            Алексей Рвачев
+                        </p>
+                    </div>
+                    <div class="feedback-date">
+                        <p>
+                            22.12.2021
+                        </p>
+                    </div>
+                    <div class="feedback-img">
+                        <svg width="112" height="30" viewBox="0 0 112 30" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <rect width="112" height="30" rx="5" fill="#005BFF" />
+                            <path
+                                    d="M38.5048 14.8C38.5048 13.576 38.9128 12.548 39.7288 11.716C40.5608 10.884 41.6088 10.468 42.8728 10.468C44.1368 10.468 45.1808 10.868 46.0048 11.668C46.8368 12.476 47.2528 13.52 47.2528 14.8C47.2528 16.056 46.8368 17.092 46.0048 17.908C45.1728 18.724 44.1288 19.132 42.8728 19.132C41.6088 19.132 40.5648 18.732 39.7408 17.932C38.9168 17.132 38.5048 16.088 38.5048 14.8ZM40.0648 14.8C40.0648 15.648 40.3328 16.352 40.8688 16.912C41.4048 17.472 42.0728 17.752 42.8728 17.752C43.7368 17.752 44.4208 17.472 44.9248 16.912C45.4368 16.352 45.6928 15.648 45.6928 14.8C45.6928 13.944 45.4208 13.236 44.8768 12.676C44.3328 12.124 43.6648 11.848 42.8728 11.848C42.0648 11.848 41.3928 12.124 40.8568 12.676C40.3288 13.228 40.0648 13.936 40.0648 14.8ZM52.5224 11.98H48.1184V10.6H54.5024V11.62L49.8464 17.62H54.6224V19H47.8784V17.992L52.5224 11.98ZM55.2392 14.8C55.2392 13.576 55.6472 12.548 56.4632 11.716C57.2952 10.884 58.3432 10.468 59.6072 10.468C60.8712 10.468 61.9152 10.868 62.7392 11.668C63.5712 12.476 63.9872 13.52 63.9872 14.8C63.9872 16.056 63.5712 17.092 62.7392 17.908C61.9072 18.724 60.8632 19.132 59.6072 19.132C58.3432 19.132 57.2992 18.732 56.4752 17.932C55.6512 17.132 55.2392 16.088 55.2392 14.8ZM56.7992 14.8C56.7992 15.648 57.0672 16.352 57.6032 16.912C58.1392 17.472 58.8072 17.752 59.6072 17.752C60.4712 17.752 61.1552 17.472 61.6592 16.912C62.1712 16.352 62.4272 15.648 62.4272 14.8C62.4272 13.944 62.1552 13.236 61.6112 12.676C61.0672 12.124 60.3992 11.848 59.6072 11.848C58.7992 11.848 58.1272 12.124 57.5912 12.676C57.0632 13.228 56.7992 13.936 56.7992 14.8ZM72.8713 10.6V19H71.6953L67.0753 13.18V19H65.6953V10.6H66.8713L71.4913 16.444V10.6H72.8713Z"
+                                    fill="white" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="feedback-text">
+                    <p>Достоинства:</p>
+                    <span>Яркие, не сильно мягкие</span>
+                    <p>Недостатки:</p>
+                    <span>Не обнаружил</span>
+                    <p>Отзыв:</p>
+                    <span class="big-feedback">Замечательные, небольшие, красочные лёгкие кубики. ребенку 42 годика,
+                            очень понравились, играет с удовольствием, удобно
+                            брать
+                            в ручки. высокую башню конечно не построить, а не большую вполне реально. Замечательные,
+                            небольшие, красочные лёгкие кубики. ребенку 42 годика, очень понравились, играет с
+                            удовольствием, удобно
+                            брать
+                            в ручки. высокую башню конечно не построить, а не большую вполне реально.Замечательные,
+                            небольшие, красочные лёгкие кубики. ребенку 42 годика, очень понравились, играет с
+                            удовольствием, удобно
+                            брать
+                            в ручки. высокую башню конечно не построить, а не большую вполне реально.</span>
+                    <div class="big-feedback-el"> <a href="javascript:void(0)">Развернуть отзыв</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="btn btn-orange">
+            <a href="#" class="btn btn-more">
+                Показать больше отзывов
+            </a>
+        </div>
+    </div>
+</div>
+<div class="popup-detail-slider-block">
+    <div class="blur-shadow"></div>
+    <div class="container">
+        <div class="js-pop-slider swiper-container popup-detail-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../../img/detailSlideImg.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../../img/detailSlideImg.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../../img/detailSlideImg.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../../img/detailSlideImg.jpg" alt="">
+                </div>
+            </div>
+            <div class="popup-slider-close-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                            d="M11.7677 10.0001L19.6336 2.13384C20.1217 1.64571 20.1217 0.85415 19.6336 0.366338C19.1455 -0.121787 18.3542 -0.121787 17.8661 0.366338L9.99985 8.23227L2.13391 0.366338C1.64578 -0.121787 0.854219 -0.121787 0.366094 0.366338C-0.122031 0.854463 -0.122031 1.64602 0.366094 2.13384L8.23235 10.0001L0.366094 17.8663C-0.122031 18.3545 -0.122031 19.146 0.366094 19.6338C0.610156 19.8779 0.930156 20.0001 1.24984 20.0001C1.56953 20.0001 1.88984 19.8779 2.13391 19.6338L9.99985 11.7679L17.8661 19.6338C18.1102 19.8779 18.4302 20.0001 18.7498 20.0001C19.0695 20.0001 19.3898 19.8779 19.6336 19.6338C20.1217 19.1457 20.1217 18.3541 19.6336 17.8663L11.7677 10.0001Z"
+                            fill="#414141" />
+                </svg>
+
+            </div>
+        </div>
+        <div class="slider-arrow prev-main-slide prev-slide">
+            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="45" height="44.8462" rx="22.4231" fill="white" />
+                <path d="M25 14.9487L19 22.4231L25 29.8974" stroke="#FFCF32" stroke-width="2" />
+            </svg>
+        </div>
+        <div class="slider-arrow next-main-slide next-slide">
+            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="45" height="45" rx="22.5" fill="white" />
+                <path d="M20 15L26 22.5L20 30" stroke="#FFCF32" stroke-width="2" />
+            </svg>
+        </div>
+
+    </div>
+
 </div>
