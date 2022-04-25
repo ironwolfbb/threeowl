@@ -60,10 +60,18 @@ $this->setFrameMode(true);
                                 <img src="<? echo $photo; ?>" alt="">
                             </div>
                         <? endforeach; ?>
-                        <div class="swiper-slide">
-                            <video src="<?=SITE_TEMPLATE_PATH?>/video/farmer.mp4" controls></video>
-                            <img src="<?=SITE_TEMPLATE_PATH?>/img/videoImg.jpg" style="display: none" alt="">
-                        </div>
+
+                        <? foreach ($arResult['PROPERTIES']['VIDEOS']['VALUE'] as $key=>$video): ?>
+
+                            <div class="swiper-slide">
+                                <img src="<? echo $photo; ?>" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <video src="<?=$video?>" controls></video>
+                                <img src="<?=$arResult['PROPERTIES']['VIDEOS_PREVIEW'][$key]?>" style="display: none" alt="">
+                            </div>
+                        <? endforeach; ?>
+
                     </div>
                 </div>
             </div>

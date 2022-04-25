@@ -8,6 +8,14 @@ foreach ($arResult['PROPERTIES']['CUSTOMERS_PHOTOS']['VALUE'] as $key=>$photo){
     $arResult['PROPERTIES']['CUSTOMERS_PHOTOS']['VALUE'][$key] = CFile::GetPath($photo);
 }
 
+foreach ($arResult['PROPERTIES']['VIDEOS_PREVIEW']['VALUE'] as $key=>$photo){
+    $arResult['PROPERTIES']['VIDEOS_PREVIEW']['VALUE'][$key] = CFile::GetPath($photo);
+}
+
+foreach ($arResult['PROPERTIES']['VIDEOS']['VALUE'] as $key=>$photo){
+    $arResult['PROPERTIES']['VIDEOS']['VALUE'][$key] = CFile::GetPath($photo);
+}
+
 
 foreach ($arResult['PROPERTIES']['SHOPS_LIST']['VALUE'] as $key=>$shop){
     $arSelect = array("ID", "NAME", "PREVIEW_PICTURE", 'PROPERTY_LINK');
