@@ -2,7 +2,6 @@
 
 namespace Wptt;
 use Bitrix\Iblock\IblockTable;
-use Bitrix\Main;
 use Bitrix\Main\Loader;
 
 class HelpFunctions{
