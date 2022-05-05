@@ -10,6 +10,13 @@ class HelpFunctions{
      * @param $number - число
      * @param $after - массив слов в различных падежах, напр. ['товар', 'товара', 'товаров']
      */
+
+    function debug($text){
+        echo '<pre>';
+        print_r($text);
+        echo '</pre>';
+    }
+
     function plural_form($number, $after) {
         $cases = array (2, 0, 1, 1, 1, 2);
         return $number.' '.$after[ ($number%100>4 && $number%100<20)? 2: $cases[min($number%10, 5)] ];
@@ -107,6 +114,20 @@ class HelpFunctions{
             } else {
                 return false;
             }
+        }
+    }
+
+    public static function getSubSections($parentId, $iblockID, $filter=array(), $select=array()){
+        if(Loader::includeModule('iblock') ) {
+            $filter['SECTION_ID'] = $parentId;
+            $filter['IBLOCK_ID'] = $iblockID;
+            self::debug($filter);
+            $res = \CIBlockSection::GetList(array("SORT"=>"ASC"), $filter, false, $select, false);
+            $subSections = array();
+            while($arRes = $res->GetNext()){
+                self::debug($arRes);
+            }
+
         }
     }
 
