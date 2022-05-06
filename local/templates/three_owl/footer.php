@@ -42,17 +42,52 @@
     })
 </script>
 <script>
-    /*    window.on('scroll', function () {
-          if ($(this).scrollTop() > 1000) {
-             let upBtn = document.createElement('div');
-             upBtn.className = 'upBtn'
-       } else {
-          $('#upbutton').stop(true, false).fadeOut('fast');
-       }
-        }); */
-    /*    $('#upbutton').on('click', function () {
-          $('html, body').stop().animate({ scrollTop: 0 }, 300);
-       }); */
+
+    let upButton = document.createElement('div');
+    upButton.classList.add('scroll-top');
+    upButton.innerHTML = `<svg width="60" height="84" viewBox="0 0 60 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_di_1708_44780)">
+<circle cx="30" cy="30" r="30" fill="#FFCA1F"/>
+</g>
+<path d="M31.0607 16.9393C30.4749 16.3536 29.5251 16.3536 28.9393 16.9393L19.3934 26.4853C18.8076 27.0711 18.8076 28.0208 19.3934 28.6066C19.9792 29.1924 20.9289 29.1924 21.5147 28.6066L30 20.1213L38.4853 28.6066C39.0711 29.1924 40.0208 29.1924 40.6066 28.6066C41.1924 28.0208 41.1924 27.0711 40.6066 26.4853L31.0607 16.9393ZM31.5 42L31.5 18L28.5 18L28.5 42L31.5 42Z" fill="white"/>
+<defs>
+<filter id="filter0_di_1708_44780" x="0" y="-1" width="60" height="85" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="22" operator="erode" in="SourceAlpha" result="effect1_dropShadow_1708_44780"/>
+<feOffset dy="26"/>
+<feGaussianBlur stdDeviation="10"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1708_44780"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1708_44780" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-4"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.905882 0 0 0 0 0.658824 0 0 0 0 0.0941176 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_1708_44780"/>
+</filter>
+</defs>
+</svg>
+`
+    $('body').append(upButton);
+    // Кнопка наверх
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 500) {
+            $(".scroll-top").addClass('show');
+        } else {
+            $(".scroll-top").removeClass('show');
+        }
+    });
+
+    $(window).ready(function() {
+        $('.scroll-top').click(function() {
+            $('html, body').animate({scrollTop: 0},500);
+            return false;
+        });
+    });
+
 </script>
 <footer class="footer">
     <div class="container">
