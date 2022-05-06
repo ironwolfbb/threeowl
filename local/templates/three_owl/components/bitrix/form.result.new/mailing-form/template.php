@@ -3,7 +3,10 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 ?>
 
 <? if ($arResult["isFormNote"] === "Y"): ?>
-    Вы успешны
+    <script>
+        document.getElementsByClassName('order-popup contacts-page')[0].classList.add('active');
+        document.getElementsByClassName('afterSubmit')[0].style.display = '';
+    </script>
 <? else: ?>
     <?= $arResult['FORM_HEADER'] ?>
         <div class="form-content">
