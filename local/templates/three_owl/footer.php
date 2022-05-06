@@ -334,7 +334,8 @@
                     Призыв делиться своими фото, отзывами и работами в социальных сетях
                 </p>
                 <div class="social-link">
-                    <a href="#" class="facebook">
+                    <?if(sprint_options_get('FACEBOOK_CONTACTS_URL')!=null){?>
+                    <a href="<?=sprint_options_get('FACEBOOK_CONTACTS_URL')?>" class="facebook">
                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="17.5" cy="17.5" r="17" stroke="#686868"/>
                             <g clip-path="url(#clip0_1237_34518)">
@@ -362,7 +363,10 @@
                             </defs>
                         </svg>
                     </a>
-                    <a href="#" class="inst">
+                    <?}?>
+                    <?if(sprint_options_get('INSTAGRAM_CONTACTS_URL')!=null){?>
+
+                    <a href="<?=sprint_options_get('INSTAGRAM_CONTACTS_URL')?>" да class="inst">
                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="17.5" cy="17.5" r="17" stroke="#686868"/>
                             <g clip-path="url(#clip0_1237_34512)">
@@ -426,7 +430,10 @@
                             </defs>
                         </svg>
                     </a>
-                    <a href="#" class="vk">
+                    <?}?>
+                    <?if(sprint_options_get('VK_CONTACTS_URL')!=null){?>
+
+                    <a href="<?=sprint_options_get('VK_CONTACTS_URL')?>" class="vk">
                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="17.5" cy="17.5" r="17" stroke="#686868"/>
                             <path
@@ -440,6 +447,8 @@
                                     fill="white"/>
                         </svg>
                     </a>
+                    <?}?>
+
                 </div>
             </div>
         </div>
