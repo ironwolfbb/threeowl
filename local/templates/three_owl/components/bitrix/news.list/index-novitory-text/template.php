@@ -28,11 +28,14 @@ $this->setFrameMode(true);
                 <?echo $arItem["NAME"]?>
             </h3>
             <?echo $arItem["PREVIEW_TEXT"];?>
+            <?if($arItem["PROPERTIES"]['LINK']['VALUE']!=null){?>
             <div class="btn btn-orange">
-                <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="btn btn-more">
-                    Подробнее
-                </a>
+                    <a href="<?=$arItem["PROPERTIES"]['LINK']['VALUE']?>" class="btn btn-more">
+                        Подробнее
+                    </a>
             </div>
+            <?}?>
+
         </div>
         <?} else{?>
             <div class="flex-item-desc">
@@ -40,11 +43,13 @@ $this->setFrameMode(true);
                     <?echo $arItem["NAME"]?>
                 </h3>
                 <?echo $arItem["PREVIEW_TEXT"];?>
-                <div class="btn btn-orange">
-                    <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="btn btn-more">
-                        Подробнее
-                    </a>
-                </div>
+                <?if($arItem["PROPERTIES"]['LINK']['VALUE']!=null){?>
+                    <div class="btn btn-orange">
+                        <a href="<?=$arItem["PROPERTIES"]['LINK']['VALUE']?>" class="btn btn-more">
+                            Подробнее
+                        </a>
+                    </div>
+                <?}?>
             </div>
             <div class="flex-item-img">
                 <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="">
