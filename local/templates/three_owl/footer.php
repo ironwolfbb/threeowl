@@ -327,12 +327,18 @@
                 ); ?>
             </div>
             <div class="footer-last-col">
-                <a href="#">
-                    #трисовывремяспользой
-                </a>
-                <p>
-                    Призыв делиться своими фото, отзывами и работами в социальных сетях
-                </p>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    ".default",
+                    array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "COMPONENT_TEMPLATE" => ".default",
+                        "PATH" => "include/footer_last_column.php"
+                    ),
+                    false
+                );?>
                 <div class="social-link">
                     <?if(sprint_options_get('FACEBOOK_CONTACTS_URL')!=null){?>
                     <a href="<?=sprint_options_get('FACEBOOK_CONTACTS_URL')?>" class="facebook">
@@ -452,17 +458,18 @@
                 </div>
             </div>
         </div>
-        <div class="footer-sub-content">
-            <p>
-                © <?= date("Y") ?> ТриСовы
-            </p>
-            <a href="#">
-                Политика конфиденциальности
-            </a>
-            <a href="http://wptt.ru">
-                Разработчик — Вебпространство
-            </a>
-        </div>
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:main.include",
+            ".default",
+            array(
+                "AREA_FILE_SHOW" => "file",
+                "AREA_FILE_SUFFIX" => "inc",
+                "EDIT_TEMPLATE" => "",
+                "COMPONENT_TEMPLATE" => ".default",
+                "PATH" => "include/footer_sub_content.php"
+            ),
+            false
+        );?>
     </div>
 </footer>
 
