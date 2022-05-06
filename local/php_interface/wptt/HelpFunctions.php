@@ -120,13 +120,16 @@ class HelpFunctions{
     public static function getSubSections($parentId, $iblockID, $filter=array(), $select=array()){
         if(Loader::includeModule('iblock') ) {
             $filter['SECTION_ID'] = $parentId;
-            $filter['IBLOCK_ID'] = $iblockID;
-            self::debug($filter);
+//            $filter['IBLOCK_ID'] = $iblockID;
+            $filter['DEPTH_LEVEL'] = 2;
+//            self::debug($filter);
             $res = \CIBlockSection::GetList(array("SORT"=>"ASC"), $filter, false, $select, false);
             $subSections = array();
             while($arRes = $res->GetNext()){
-                self::debug($arRes);
+//                self::debug($arRes);
+                $subSections[] = $arRes;
             }
+            return $subSections;
 
         }
     }

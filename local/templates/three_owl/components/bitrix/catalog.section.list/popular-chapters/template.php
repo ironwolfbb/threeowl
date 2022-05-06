@@ -10,6 +10,7 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
+use \wptt\HelpFunctions;
 $this->setFrameMode(true);
 
 $arViewModeList = $arResult['VIEW_MODE_LIST'];
@@ -33,26 +34,18 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 //            print_r($arResult['SECTIONS']);
         if (false === $arSection['PICTURE']) $arSection['PICTURE'] = array('SRC' => $arCurView['EMPTY_IMG'], 'ALT' => ('' != $arSection["IPROPERTY_VALUES"]["SECTION_PICTURE_FILE_ALT"] ? $arSection["IPROPERTY_VALUES"]["SECTION_PICTURE_FILE_ALT"] : $arSection["NAME"]), 'TITLE' => ('' != $arSection["IPROPERTY_VALUES"]["SECTION_PICTURE_FILE_TITLE"] ? $arSection["IPROPERTY_VALUES"]["SECTION_PICTURE_FILE_TITLE"] : $arSection["NAME"]));
         ?>
-        <? if ($arSection['DEPTH_LEVEL'] == 1) { ?>
             <div class="popular-categories-item" style="background-image: url(<?=$arSection['POPULAR_IMAGE']?>);">
             <h3>
                 <? echo $arSection['NAME']; ?>
             </h3>
-        <? } else { ?>
-            <? $d1 = $arSection['DEPTH_LEVEL']; ?>
-            <? while ($d1 == 2) { ?>
-                <a href="<? echo $arSection['SECTION_PAGE_URL']; ?>">
-                    <? echo $arSection['NAME']; ?>
+            <?$subSections = HelpFunctions::getSubSections($arSection['ID'], 1, array('IBLOCK_ID'=>1,"UF_POPULAR" => 1), array('UF_POPULAR'));
+            foreach ($subSections as $key=>$subSection){
+            ?>
+                <a href="<? echo $subSection['SECTION_PAGE_URL']; ?>">
+                    <? echo $subSection['NAME']; ?>
                 </a>
-                <?
-                $i++;
-                $arSection = $arResult['SECTIONS'][$i];
-                $d1 = $arSection['DEPTH_LEVEL'];
-            } $i--;?>
-            </div>
-
-            <?
-        } ?>
+                <?}?>
+        </div>
         <?
     }
     unset($arSection); ?>
