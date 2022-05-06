@@ -11,10 +11,11 @@ while ($enum_fields = $property_enums->GetNext()) {
 //    echo $enum_fields["ID"]." - ".$enum_fields["VALUE"]."<br>";
     $typesFieldsAll[] = $enum_fields['VALUE'];
 }
-
+$tempTypes = array();
 foreach ($arResult['ITEMS'] as $key => $item) {
-    if (in_array($item['PROPERTIES']['TYPE']['VALUE'], $typesFieldsAll)) {
+    if (in_array($item['PROPERTIES']['TYPE']['VALUE'], $typesFieldsAll) && !in_array($item['PROPERTIES']['TYPE']['VALUE'], $tempTypes)) {
         $typesOutput[$key]['VALUE'] = $item['PROPERTIES']['TYPE']['VALUE'];
+        $tempTypes[] = $item['PROPERTIES']['TYPE']['VALUE'];
         if (in_array($item['PROPERTIES']['TYPE']['VALUE'], $selectedTypes)) {
             $typesOutput[$key]['SELECTED'] = 'TRUE';
         }

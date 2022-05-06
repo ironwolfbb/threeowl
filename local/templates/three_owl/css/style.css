@@ -5138,6 +5138,7 @@ h1 {
       .filter-block .sort p {
         width: 100%; } }
   .filter-block .sort a {
+    cursor: pointer;
     font-style: normal;
     font-weight: normal;
     font-size: 1rem;
