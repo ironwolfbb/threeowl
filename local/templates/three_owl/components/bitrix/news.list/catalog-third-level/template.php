@@ -53,9 +53,11 @@ $this->setFrameMode(true);
     </div>
     <div class="filtered-middle">
         <?
-        $GLOBALS['filterPostsThirdLevel'] = array('ID' =>$arParams['SECTION_POSTS'])
+        $GLOBALS['filterPostsThirdLevel'] = array('ID' =>$arParams['SECTION_POSTS']);
         ?>
-        <?$APPLICATION->IncludeComponent(
+        <?
+        if(count($arParams['SECTION_POSTS'])>0){
+            $APPLICATION->IncludeComponent(
             "bitrix:news.list",
             "catalog-third-level-posts",
             array(
@@ -119,7 +121,7 @@ $this->setFrameMode(true);
                 "MESSAGE_404" => ""
             ),
             false
-        );?>
+        );}?>
     </div>
     <div class="filtered-bottom">
         <div class="smaller-slider second-mini-slider flex-block our-block standart-block">
