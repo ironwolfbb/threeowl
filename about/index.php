@@ -19,9 +19,9 @@ $APPLICATION->SetTitle("Title");
 		"IBLOCK_ID" => "3",
 		"NEWS_COUNT" => "20",
 		"SORT_BY1" => "SORT",
-		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER1" => "ASC",
 		"SORT_BY2" => "SORT",
-		"SORT_ORDER2" => "DESC",
+		"SORT_ORDER2" => "ASC",
 		"FILTER_NAME" => "",
 		"FIELD_CODE" => array(
 			0 => "",
