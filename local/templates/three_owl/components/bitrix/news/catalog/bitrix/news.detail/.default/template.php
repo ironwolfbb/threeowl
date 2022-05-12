@@ -29,6 +29,7 @@ $this->setFrameMode(true);
 
 
                 <div class="smallest-slider">
+                    <?if(count($arResult['PROPERTIES']['PHOTOS']['VALUE'])>0){?>
                     <div class="smallest-slider-arrows small-prev">
                         <svg width="45" height="44" viewBox="0 0 45 44" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
@@ -51,6 +52,7 @@ $this->setFrameMode(true);
                         </svg>
 
                     </div>
+                    <?}?>
                 </div>
                 <div class="bigest-detail-slider js-bigest-detail-slider swiper-container">
                     <div class="swiper-wrapper">
