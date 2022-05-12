@@ -332,10 +332,11 @@
                     ".default",
                     array(
                         "AREA_FILE_SHOW" => "file",
-                        "AREA_FILE_SUFFIX" => "inc",
+                        "AREA_FILE_SUFFIX" => "",
                         "EDIT_TEMPLATE" => "",
+                        "AREA_FILE_RECURSIVE" => "Y",
                         "COMPONENT_TEMPLATE" => ".default",
-                        "PATH" => "include/footer_last_column.php"
+                        "PATH" => "/include/footer_last_column.php"
                     ),
                     false
                 );?>
@@ -463,10 +464,11 @@
             ".default",
             array(
                 "AREA_FILE_SHOW" => "file",
-                "AREA_FILE_SUFFIX" => "inc",
+                "AREA_FILE_SUFFIX" => "",
                 "EDIT_TEMPLATE" => "",
+                "AREA_FILE_RECURSIVE" => "Y",
                 "COMPONENT_TEMPLATE" => ".default",
-                "PATH" => "include/footer_sub_content.php"
+                "PATH" => "/include/footer_sub_content.php"
             ),
             false
         );?>
