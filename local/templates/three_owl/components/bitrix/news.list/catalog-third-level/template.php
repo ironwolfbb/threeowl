@@ -141,9 +141,11 @@ $this->setFrameMode(true);
             <? endforeach; ?>
 
         </div>
+        <?if($arResult['NAV_STRING']!=null){?>
         <div class="katalog-pagination">
             <?= $arResult["NAV_STRING"] ?>
         </div>
+        <?}?>
     </div>
 </div>
 
