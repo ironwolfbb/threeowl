@@ -27,6 +27,7 @@ const jsmainSlider = new Swiper('.js-mainSlider', {
 })
 const jsmainSlider54 = new Swiper('.js-pop-slider', {
    slidesToScroll: 1,
+   loop: true,
    slidesPerView: 1,
    navigation: {
       prevEl: '.prev-main-slide',
@@ -49,6 +50,7 @@ const jsmainSlider54 = new Swiper('.js-pop-slider', {
 
 const jsFirstMiniSlider = new Swiper('.js-first-mini-slider', {
    slidesToScroll: 1,
+   loop: true,
    slidesPerView: 4,
    navigation: {
       prevEl: '.js-first-mini-slider .prev-mini-slide',
@@ -84,13 +86,14 @@ const jsFirstMiniSlider = new Swiper('.js-first-mini-slider', {
 })
 const jsSecondMiniSlider = new Swiper('.js-second-mini-slider', {
    slidesToScroll: 1,
+   loop: true,
    slidesPerView: 4,
    navigation: {
       prevEl: '.js-second-mini-slider .prev-mini-slide',
       nextEl: '.js-second-mini-slider .next-mini-slide'
    },
    pagination: {
-      el: '.second-slider-pagination',
+      el: '.js-second-mini-slider .swiper-pagination',
       type: 'bullets',
       clickable: true,
    },
@@ -111,6 +114,7 @@ const jsSecondMiniSlider = new Swiper('.js-second-mini-slider', {
 })
 const jsRequestsSlider2 = new Swiper('.js-bigest-detail-slider', {
    slidesToScroll: 1,
+   loop: true,
    slidesPerView: 1,
    navigation: {
       prevEl: ".small-prev",
@@ -126,6 +130,7 @@ const jsRequestsSlider3 = new Swiper('.js-detail-photo-slider', {
    slidesToScroll: 1,
    slidesPerView: 5,
    spaceBetween: 30,
+   loop: true,
    breakpoints: {
       320: {
          spaceBetween: 10,
@@ -151,6 +156,7 @@ const jsRequestsSlider3 = new Swiper('.js-detail-photo-slider', {
 let jsNumberSlider = new Swiper('.js-number-slider', {
    slidesPerView: 'auto',
    slidesToScroll: 'auto',
+   loop: true,
    spaceBetween: 36,
 })
 let jsAllKasesLength = document.querySelector('.all-numbers-slides')
@@ -167,6 +173,7 @@ if (sliderBlock) {
    let jsWeHelpSlider = new Swiper('.js-we-help-slider', {
       slidesPerView: 3,
       slidesToScroll: 1,
+      loop: true,
       spaceBetween: 36,
       navigation: {
          prevEl: ".help-prev",
@@ -193,6 +200,7 @@ if (sliderBlock2) {
       slidesPerView: 5,
       slidesToScroll: 1,
       spaceBetween: 32,
+      loop: true,
       direction: 'vertical',
       navigation: {
          prevEl: ".small-prev",

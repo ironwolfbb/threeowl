@@ -99,11 +99,24 @@ $this->setFrameMode(true);
                     </a>
                 </div>
                 <div class="detail-social-links">
+                    <?
+                    if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+                        $url = "https://";
+                    else
+                        $url = "http://";
+                    // Append the host(domain name, ip) to the URL.
+                    $url.= $_SERVER['HTTP_HOST'];
+
+                    // Append the requested resource location to the URL
+                    $url.= $_SERVER['REQUEST_URI'];
+                    ?>
+                    <?if($arResult['PROPERTIES']['SHARE_VK']['VALUE'] == 1 || $arResult['PROPERTIES']['SHARE_INST']['VALUE']  == 1 || $arResult['PROPERTIES']['SHARE_FACEBOOK']['VALUE']  == 1){?>
                     <p>
                         Поделиться:
                     </p>
                     <div class="social-link">
-                        <a href="#" class="facebook">
+                        <?if($arResult['PROPERTIES']['SHARE_FACEBOOK']['VALUE']  == 1){?>
+                        <a href="http://www.facebook.com/share.php?u=<?=$url?>" class="facebook">
                             <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="17.5" cy="17.5" r="17" stroke="#686868"/>
@@ -135,7 +148,9 @@ $this->setFrameMode(true);
                                 </defs>
                             </svg>
                         </a>
-                        <a href="#" class="inst">
+                        <?}?>
+                        <?if($arResult['PROPERTIES']['SHARE_INST']['VALUE']  == 1){?>
+                        <a href="https://www.instagram.com/?url=<?=$url?>" class="inst">
                             <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="17.5" cy="17.5" r="17" stroke="#686868"/>
@@ -201,7 +216,9 @@ $this->setFrameMode(true);
                                 </defs>
                             </svg>
                         </a>
-                        <a href="#" class="vk">
+                        <?}?>
+                        <?if($arResult['PROPERTIES']['SHARE_VK']['VALUE']  == 1){?>
+                        <a href="https://vk.com/share.php?url=<?=$url?>" class="vk">
                             <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="17.5" cy="17.5" r="17" stroke="#686868"/>
@@ -217,7 +234,9 @@ $this->setFrameMode(true);
                                         fill="white"/>
                             </svg>
                         </a>
+                        <?}?>
                     </div>
+                    <?}?>
                 </div>
                 <div class="characteristic-demo">
                     <ul>

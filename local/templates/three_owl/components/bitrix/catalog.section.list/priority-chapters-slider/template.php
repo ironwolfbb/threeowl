@@ -40,7 +40,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
                     <? echo $arSection['NAME']; ?>
                 </h3>
                 <p>
-                    <?=$arSection['DESCRIPTION'];?>
+                    <?=$arSection['UF_PRIORITY_TEXT'];?>
                 </p>
             </div>
             <?

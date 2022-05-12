@@ -29,9 +29,10 @@ $APPLICATION->SetTitle("Каталог");
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "",
+			0 => "SHARE_VK",
 			1 => "PHOTOS",
-			2 => "",
+			2 => "SHARE_INST",
+			3 => "SHARE_FACEBOOK",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",

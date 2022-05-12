@@ -65,7 +65,7 @@ $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
                 </h2>
             </div>
             <? $GLOBALS['PriorityFilter'] = array("DEPTH_LEVEL" => 2, 'UF_IS_PRIORITY' => 1); ?>
-            <? $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "priority-chapters-slider", array("COMPONENT_TEMPLATE" => "priority-chapters-slider", "IBLOCK_TYPE" => "catalog", "IBLOCK_ID" => "1", "SECTION_ID" => "", "SECTION_CODE" => "", "COUNT_ELEMENTS" => "Y", "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE", "TOP_DEPTH" => "2", "SECTION_FIELDS" => array(1 => "UF_IS_PRIORITY", 2 => "UF_PRIORITY_IMAGE", 3 => "DESCRIPTION",), "SECTION_USER_FIELDS" => array(1 => "",), "USE_FILTER" => "Y", "FILTER_NAME" => "PriorityFilter", "VIEW_MODE" => "LIST", "SHOW_PARENT_NAME" => "Y", "SECTION_URL" => "", "CACHE_TYPE" => "A", "CACHE_TIME" => "36000000", "CACHE_GROUPS" => "Y", "CACHE_FILTER" => "N", "ADD_SECTIONS_CHAIN" => "Y"), false); ?>
+            <? $APPLICATION->IncludeComponent("bitrix:catalog.section.list", "priority-chapters-slider", array("COMPONENT_TEMPLATE" => "priority-chapters-slider", "IBLOCK_TYPE" => "catalog", "IBLOCK_ID" => "1", "SECTION_ID" => "", "SECTION_CODE" => "", "COUNT_ELEMENTS" => "Y", "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE", "TOP_DEPTH" => "2", "SECTION_FIELDS" => array(1 => "UF_IS_PRIORITY", 2 => "UF_PRIORITY_IMAGE", 3 => "DESCRIPTION", 4=>'UF_PRIORITY_TEXT'), "SECTION_USER_FIELDS" => array(1 => "",), "USE_FILTER" => "Y", "FILTER_NAME" => "PriorityFilter", "VIEW_MODE" => "LIST", "SHOW_PARENT_NAME" => "Y", "SECTION_URL" => "", "CACHE_TYPE" => "A", "CACHE_TIME" => "36000000", "CACHE_GROUPS" => "Y", "CACHE_FILTER" => "N", "ADD_SECTIONS_CHAIN" => "Y"), false); ?>
 
         </div>
     </div>
