@@ -105,8 +105,8 @@
     <div class="container">
 
             <? $APPLICATION->IncludeComponent(
-	"bitrix:form.result.new", 
-	"mailing-form", 
+	"bitrix:form.result.new",
+	"mailing-form",
 	array(
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",
@@ -342,7 +342,7 @@
                 );?>
                 <div class="social-link">
                     <?if(sprint_options_get('FACEBOOK_CONTACTS_URL')!=null){?>
-                    <a href="<?=sprint_options_get('FACEBOOK_CONTACTS_URL')?>" class="facebook">
+                    <a href="<?=sprint_options_get('FACEBOOK_CONTACTS_URL')?>" class="facebook" target="_blank">
                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="17.5" cy="17.5" r="17" stroke="#686868"/>
                             <g clip-path="url(#clip0_1237_34518)">
@@ -373,7 +373,7 @@
                     <?}?>
                     <?if(sprint_options_get('INSTAGRAM_CONTACTS_URL')!=null){?>
 
-                    <a href="<?=sprint_options_get('INSTAGRAM_CONTACTS_URL')?>" да class="inst">
+                    <a href="<?=sprint_options_get('INSTAGRAM_CONTACTS_URL')?>" да class="inst" target="_blank">
                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="17.5" cy="17.5" r="17" stroke="#686868"/>
                             <g clip-path="url(#clip0_1237_34512)">
@@ -440,7 +440,7 @@
                     <?}?>
                     <?if(sprint_options_get('VK_CONTACTS_URL')!=null){?>
 
-                    <a href="<?=sprint_options_get('VK_CONTACTS_URL')?>" class="vk">
+                    <a href="<?=sprint_options_get('VK_CONTACTS_URL')?>" class="vk" target="_blank">
                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="17.5" cy="17.5" r="17" stroke="#686868"/>
                             <path

@@ -4963,7 +4963,7 @@ h1 {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 10; }
+  z-index: 20; }
 @media screen and (max-width: 992px) {
   .katalog .katalog-content .grid-block .flex-item {
     width: 100%;
