@@ -23,17 +23,16 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
             </div>
         </div>
         <label>
-            <?
-           /*  echo "<pre>";
-print_r($arResult);
-echo "</pre>"; */
-             if ($arResult["isFormErrors"] == "Y") : ?><?= $arResult["FORM_ERRORS_TEXT"]; ?><? endif; ?>
 
-            <?= $arResult["QUESTIONS"]['email_field']['HTML_CODE'] ?>
+        <? if ($arResult["isFormErrors"] == "Y") {
+            echo str_replace("name", "class='error' name", $arResult["QUESTIONS"]['email_field']['HTML_CODE']);
+        } else {
+            echo $arResult["QUESTIONS"]['email_field']['HTML_CODE'];
+        }
+    endif; ?>
         </label>
         <div class="btn btn-orange subscribe">
             <input class="btn btn-more" type="submit" name="web_form_submit" value="<?= $arResult["arForm"]["BUTTON"] ?>">
         </div>
     </div>
     <?= $arResult["FORM_FOOTER"] ?>
-<? endif; ?>
