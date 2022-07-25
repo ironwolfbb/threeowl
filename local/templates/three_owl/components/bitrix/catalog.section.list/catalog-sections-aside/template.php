@@ -38,12 +38,19 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
     <? if ($arSection['DEPTH_LEVEL'] == 1) { ?>
     <div
         <? if ('/catalog/' . $arSection["CODE"] . '/' == $GLOBALS["APPLICATION"]->GetCurPage() || strpos($GLOBALS["APPLICATION"]->GetCurPage(), '/' . $arSection['CODE'] . '/') !== false): ?>class=" catalog-item active" <? else: ?>  class="catalog-item" <? endif ?>>
-        <a href="javascript:void(0)">
-            <p>
-                <? echo $arSection['NAME']; ?>
-            </p>
+        <div class="cat-main-link">
+            <a href="javascript:void(0)">
+                <p>
+                    <? echo $arSection['NAME']; ?>
+                </p>
+            </a>
+            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 4.29565L8.88906 0.583252L10 1.64372L5 6.41658L0 1.64372L1.11094 0.583252L5 4.29565Z" fill="black"/>
+            </svg>
+        </div>
 
-        </a>
+
+
         <? if ($arResult['SECTIONS'][$i + 1]['DEPTH_LEVEL'] == 1) { ?>
             </div>
         <? } ?>

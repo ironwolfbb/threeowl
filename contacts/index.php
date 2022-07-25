@@ -20,19 +20,19 @@ $APPLICATION->SetTitle("Title");
                             <p>
                                 Адрес
                             </p>
-                            <a href="#" target="_blank"><?=sprint_options_get('ADDRESS')?></a>
+                            <a href="<?=sprint_options_get('MAP')?>" target="_blank"><?=sprint_options_get('ADDRESS')?></a>
                         </div>
                         <div class="adress  contact">
                             <p>
                                 Телефон
                             </p>
-                            <a href="tel:+79179180909"><?=sprint_options_get('PHONE')?></a>
+                            <a href="tel:<?=sprint_options_get('PHONE')?>"><?=sprint_options_get('PHONE')?></a>
                         </div>
                         <div class="adress  contact">
                             <p>
                                 Почта
                             </p>
-                            <a href="mailto: addressmail@mail.ru"><?=sprint_options_get('MAIL')?></a>
+                            <a href="mailto: <?=sprint_options_get('MAIL')?>"><?=sprint_options_get('MAIL')?></a>
                         </div>
                         <div class="adress  contact">
                             <p>

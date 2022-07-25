@@ -44,4 +44,10 @@ return (new Builder)
         'TITLE'   => 'Почта',
         'DEFAULT' => '',
         'WIDTH'   => '1000',
-    ]);
+    ])
+    ->addOption('MAP', [
+        'TITLE'   => 'Ссылка на карте',
+        'DEFAULT' => '',
+        'WIDTH'   => '1000',
+    ])
+    ;

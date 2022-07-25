@@ -463,7 +463,7 @@ document.addEventListener('click', function (e) {
       }
    }
 
-   if (e.target.closest('.catalog-item')) {
+   if (e.target.closest('.catalog-item svg')) {
       e.target.closest('.catalog-item').classList.toggle('active')
    }
    if (e.target.closest('.big-feedback-el')) {
@@ -507,6 +507,19 @@ document.addEventListener('click', function (e) {
    if (e.target.closest('.btn-art')) {
       document.querySelector('.order-popup').classList.toggle('active')
       document.querySelector('.body').classList.toggle('noScroll')
+      let inputs = document.querySelectorAll('.contacts-form-content input');
+      inputs.forEach(function (item) {
+         item.addEventListener('keydown', function () {
+            item.classList.add('success')
+            console.log(123)
+               // setTimeout(function () {
+               //    if(item.value.length > 0){
+               //
+               //    }
+               // }, 1000)
+
+         })
+      })
    }
    if (e.target.closest('.order-close-popup-btn')) {
       document.querySelector('.order-popup').classList.toggle('active')
@@ -901,3 +914,6 @@ let mores = document.querySelectorAll('.btn.btn-more.art-btn')
 mores.forEach(element => {
    element.addEventListener('click', load_more)
 });
+
+$('.contacts-form-content input[type="tel"]').mask('+7 (999) 99 99 999')
+

@@ -21,6 +21,8 @@ $this->setFrameMode(true);
         ?>
         <div class="exposition js-exposition expos">
             <div class="expos-header" style="background-image: url(<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>);">
+
+            <?if(!empty($arItem['PROPERTIES']['LIKES']['VALUE'])):?>
                 <div class="expos-likes">
                     <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
@@ -36,8 +38,12 @@ $this->setFrameMode(true);
                         </p>
                     </a>
                 </div>
+            <?endif;?>
+            
+
                 <div class="social-link">
-                    <a href="<?= $arItem['PROPERTIES']['FACEBOOK_LINK']['VALUE'] ?>" class="facebook">
+                <?if(!empty($arItem['PROPERTIES']['FACEBOOK_LINK']['VALUE'])):?>
+                    <a href="<?= $arItem['PROPERTIES']['FACEBOOK_LINK']['VALUE'] ?>" class="facebook" target="_blank" rel="noopener">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_d_1743_16805)">
@@ -71,10 +77,12 @@ $this->setFrameMode(true);
                                 </clipPath>
                             </defs>
                         </svg>
-
-
                     </a>
-                    <a href="<?= $arItem['PROPERTIES']['INST_LINK']['VALUE'] ?>" class="inst">
+                <?endif;?>
+
+                <?if(!empty($arItem['PROPERTIES']['INST_LINK']['VALUE'])):?>
+
+                    <a href="<?= $arItem['PROPERTIES']['INST_LINK']['VALUE'] ?>" class="inst" target="_blank" rel="noopener">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_d_1743_16809)">
@@ -114,10 +122,11 @@ $this->setFrameMode(true);
                                 </clipPath>
                             </defs>
                         </svg>
-
-
                     </a>
-                    <a href="<?= $arItem['PROPERTIES']['VK_LINK']['VALUE'] ?>" class="vk">
+                <?endif;?>
+
+                <?if(!empty($arItem['PROPERTIES']['VK_LINK']['VALUE'])):?>
+                    <a href="<?= $arItem['PROPERTIES']['VK_LINK']['VALUE'] ?>" class="vk" target="_blank" rel="noopener">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_d_1743_16815)">
@@ -146,6 +155,7 @@ $this->setFrameMode(true);
                             </defs>
                         </svg>
                     </a>
+                <?endif;?>
                 </div>
             </div>
             <div class="exposition-bottom blog-section">
@@ -153,7 +163,7 @@ $this->setFrameMode(true);
                     <div class="expos-authorr">
                         <img src="<?= $arItem['PROPERTIES']['AUTHOR_IMAGE']['VALUE'] ?>" alt="">
                         <p>
-                            <?= $arItem['PROPERTIES']['AUTHOR']['VALUE'] ?>
+                            <?=$arItem['NAME']?>
                         </p>
                     </div>
                 </div>

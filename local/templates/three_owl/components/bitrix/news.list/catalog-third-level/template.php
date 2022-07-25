@@ -123,7 +123,9 @@ $this->setFrameMode(true);
             false
         );}?>
     </div>
+    
     <div class="filtered-bottom">
+        <?if (count($arResult["ITEMS"])>0) {?>
         <div class="smaller-slider second-mini-slider flex-block our-block standart-block">
             <? foreach ($arResult["ITEMS"] as $arItem): ?>
                 <?
@@ -148,6 +150,13 @@ $this->setFrameMode(true);
             <?= $arResult["NAV_STRING"] ?>
         </div>
         <?}?>
+        <?} else {?>
+            <div class="empty-filter">
+            <p>
+               По Вашим критериям товаров не найдено
+           </p>
+       </div>
+        <?}?>    
     </div>
 </div>
 

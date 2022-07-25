@@ -4,6 +4,16 @@ $APPLICATION->SetTitle("Title");
 
 use \wptt\HelpFunctions;
 
+/*Фильтр для раздела Курсы*/ 
+$thereisonecourse = false;
+$arSelect = Array("ID");
+$arFilter = Array("IBLOCK_ID"=>13, "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y");
+$res = CIblockElement::GetList(['ID' => 'ASC'], $arFilter, false, ['nTopCount' => 1], $arSelect);
+ while($ob = $res->GetNext()){
+   if($ob['ID']) {
+    $thereisonecourse = true;
+   }
+ }
 ?>
 
     <div class="art-space-content">
@@ -27,6 +37,7 @@ use \wptt\HelpFunctions;
                                     </p>
                                 </a>
                             </div>
+                        <?if ($thereisonecourse):?>
                             <div class="catalog-item">
 
                                 <a href="#courses">
@@ -36,6 +47,7 @@ use \wptt\HelpFunctions;
                                 </a>
 
                             </div>
+                        <?endif;?>
                             <div class="catalog-item">
                                 <a href="#exposWinners">
                                     <p>

@@ -28,7 +28,7 @@ $this->setFrameMode(true);
                 <? echo $arItem["NAME"] ?>
             </p>
             <span>
-                <?= $arItem['AUTHOR'] ?>
+                <?= $arItem['AUTHOR_NAME'] ?>
             </span>
         </div>
     <? endforeach; ?>

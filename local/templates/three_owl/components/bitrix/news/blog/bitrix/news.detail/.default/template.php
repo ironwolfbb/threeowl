@@ -13,7 +13,7 @@
 $this->setFrameMode(true);
 ?>
 <?// print_r($arResult);?>
-<?echo $_SERVER[HTTP_HOST] . $_SERVER[REQUEST_URI]?>
+<?//echo $_SERVER[HTTP_HOST] . $_SERVER[REQUEST_URI]?>
 <div class="article-section">
     <div class="container">
         <div class="standart-block article-stand-block">

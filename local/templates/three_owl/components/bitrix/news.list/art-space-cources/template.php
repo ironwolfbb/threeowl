@@ -24,10 +24,17 @@ $this->setFrameMode(true);
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
         <div class="exposition">
-            <a href="#"></a>
+            
             <div class="expos-header">
                 <p>
-                    <?= $arItem['NAME'] ?>
+                
+                <?if(empty($arItem['PROPERTIES']['LINK']['VALUE'])):?>
+                    <?=$arItem['NAME']?>
+                <?else:?>
+                    <a href=<?=$arItem['PROPERTIES']['LINK']['VALUE']?>>
+                        <?=$arItem['NAME']?>
+                    </a>
+                <?endif;?>
                 </p>
             </div>
             <div class="exposition-bottom blog-section">
