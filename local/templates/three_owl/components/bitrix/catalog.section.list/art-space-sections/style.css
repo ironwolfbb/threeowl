@@ -1,4 +1,8 @@
 /* line */
+.articles-hashtags a:hover {
+	cursor:pointer;
+	}
+
 .bx_catalog_line { margin-bottom: 30px; }
 
 .bx_catalog_line .bx_catalog_line_category_title {

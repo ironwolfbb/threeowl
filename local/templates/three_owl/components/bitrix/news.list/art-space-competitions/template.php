@@ -10,8 +10,7 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$this->setFrameMode(true);
-?>
+$this->setFrameMode(true);?>
 
 <div class="art-grid-block">
     <? foreach ($arResult["ITEMS"] as $arItem): ?>
@@ -22,7 +21,8 @@ $this->setFrameMode(true);
         <div class="exposition js-exposition expos">
             <div class="expos-header" style="background-image: url(<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>);">
 
-            <?if(!empty($arItem['PROPERTIES']['LIKES']['VALUE'])):?>
+            <?
+            if(!empty($arItem['PROPERTIES']['LIKES']['VALUE'])):?>
                 <div class="expos-likes">
                     <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
