@@ -15,6 +15,11 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                 Форма обратной связи
             </h4>
         </div>
+        <?
+       /*  echo '<pre>';
+        print_r($arResult);
+        echo '</pre>'; */
+        ?>
         <?= $arResult['FORM_HEADER'] ?>
             <?if ($arResult["isFormErrors"] == "Y"):?><?=$arResult["FORM_ERRORS_TEXT"];?><?endif;?>
             <label>

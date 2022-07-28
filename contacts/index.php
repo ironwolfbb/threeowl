@@ -199,7 +199,7 @@ $APPLICATION->SetTitle("Title");
 		"VARIABLE_ALIASES" => array(
 			"WEB_FORM_ID" => "WEB_FORM_ID",
 			"RESULT_ID" => "RESULT_ID",
-		)
+        )
 	),
 	false
 );?>
