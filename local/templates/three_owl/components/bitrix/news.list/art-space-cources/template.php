@@ -48,7 +48,6 @@ $this->setFrameMode(true);
                 <p><?= $arItem['PROPERTIES']['DATE_START']['VALUE'] ?></p>
             </div>
         </div>
-
     <? endforeach; ?>
 </div>
 <? if ($arResult["NAV_STRING"] != null) : ?>
