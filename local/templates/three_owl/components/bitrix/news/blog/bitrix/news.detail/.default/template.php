@@ -11,8 +11,12 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$APPLICATION->AddChainItem($arResult["SECTION"],$arResult["SECTION_URL"]);
+
+/* echo '<pre>';
+print_r($arResult );
+echo '</pre>'; */
 ?>
-<?// print_r($arResult);?>
 <?//echo $_SERVER[HTTP_HOST] . $_SERVER[REQUEST_URI]?>
 <div class="article-section">
     <div class="container">
