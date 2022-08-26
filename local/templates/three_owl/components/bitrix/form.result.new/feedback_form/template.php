@@ -28,6 +28,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                 <!--  $arResult["QUESTIONS"]['feedback_name']['HTML_CODE']  --> 
             </label>
             <label>
+            <? $arResult["QUESTIONS"]['feedback_phone']['HTML_CODE'] = str_replace('type="text"', 'type="tel"', $arResult["QUESTIONS"]['feedback_phone']['HTML_CODE'])
+?>
             <?if ($arResult["isFormErrors"] == "Y" && $arResult["arrVALUES"]['form_text_5'] == ''){
               echo str_replace("name", "class='error' name", $arResult["QUESTIONS"]['feedback_phone']['HTML_CODE']);
         } else{ 
@@ -35,6 +37,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
                 };?>
             </label>
             <label>
+            <? $arResult["QUESTIONS"]['feedback_mail']['HTML_CODE'] = str_replace('type="text"', 'type="email"', $arResult["QUESTIONS"]['feedback_mail']['HTML_CODE'])
+?>
            <? if ($arResult["isFormErrors"] == "Y" && $arResult["arrVALUES"]['form_email_6'] == ''){
             echo  str_replace("name", "class='error' name", $arResult["QUESTIONS"]['feedback_mail']['HTML_CODE']);
             } else{
