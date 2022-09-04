@@ -11,6 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+
 ?>
 <div class="our-block-items flex-block">
     <? foreach ($arResult["ITEMS"] as $arItem): ?>
@@ -18,7 +19,7 @@ $this->setFrameMode(true);
         $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
-        <div class="our-block-item">
+        <div id="<?=$this->GetEditAreaId($arItem['ID']);?>" class="our-block-item">
             <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"></a>
             <img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="">
             <span>
@@ -34,4 +35,9 @@ $this->setFrameMode(true);
     <? endforeach; ?>
 </div>
 <?=$arResult['NAV_STRING']?>
+<? 
+/* echo '<pre>';
+print_r($arResult);
+echo '</pre>'; */
+?>
 

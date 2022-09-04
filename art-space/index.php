@@ -442,7 +442,10 @@ $res = CIblockElement::GetList(['ID' => 'ASC'], $arFilter, false, ['nTopCount' =
                                     </h3>
                                 </div>
                             </div>
-                            <? $APPLICATION->IncludeComponent("bitrix:news.list", "art-space-cources", array(
+                            <?
+                             $arrFilter = ['ACTIVE' => 'Y'];?>
+                             <?
+                            $APPLICATION->IncludeComponent("bitrix:news.list", "art-space-cources", array(
                                 "ACTIVE_DATE_FORMAT" => "d.m.Y",    // Формат показа даты
                                 "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
                                 "AJAX_MODE" => "N",    // Включить режим AJAX
@@ -466,7 +469,7 @@ $res = CIblockElement::GetList(['ID' => 'ASC'], $arFilter, false, ['nTopCount' =
                                     0 => "",
                                     1 => "",
                                 ),
-                                "FILTER_NAME" => "",    // Фильтр
+                                "FILTER_NAME" => $arrFilter,    // Фильтр
                                 "HIDE_LINK_WHEN_NO_DETAIL" => "N",    // Скрывать ссылку, если нет детального описания
                                 "IBLOCK_ID" => "13",    // Код информационного блока
                                 "IBLOCK_TYPE" => "art_space",    // Тип информационного блока (используется только для проверки)
@@ -500,7 +503,8 @@ $res = CIblockElement::GetList(['ID' => 'ASC'], $arFilter, false, ['nTopCount' =
                                 "SORT_ORDER1" => "DESC",    // Направление для первой сортировки новостей
                                 "SORT_ORDER2" => "DESC",    // Направление для второй сортировки новостей
                                 "STRICT_SECTION_CHECK" => "N",    // Строгая проверка раздела для показа списка
-                                "COMPONENT_TEMPLATE" => ".default"
+                                "COMPONENT_TEMPLATE" => ".default",
+                                
                             ),
                                 false
                             ); ?>

@@ -12,11 +12,9 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<? /* global $arrfilter;
+<? global $arrfilter;
 $arrfilter = array("=PROPERTY_PRODUCT" => $arResult["ID"]); 
-echo "<pre>";
-print_r($arrfilter);
-echo "</pre>"; */
+
 ?>
 <div class="standart-block detail-block">
     <div class="container">
@@ -34,8 +32,6 @@ echo "</pre>"; */
 
 
                 <div class="smallest-slider">
-                    <? /* var_dump($arResult['PROPERTIES']['VIDEOS']['VALUE']); */ //  
-                    ?>
                     <? if (array_sum($arResult['PROPERTIES']['VIDEOS']['VALUE'])) { ?>
                         <div class="smallest-slider-arrows small-prev">
                             <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -441,7 +437,7 @@ echo "</pre>"; */
         </div>
         <div class="feedback-section">
             
-            <? $APPLICATION->IncludeComponent(
+            <?  $APPLICATION->IncludeComponent(
                 "bitrix:iblock.element.add.form",
                 "reviews",
                 array(
@@ -464,7 +460,9 @@ echo "</pre>"; */
                     "DEFAULT_INPUT_SIZE" => "30",
                     "DETAIL_TEXT_USE_HTML_EDITOR" => "N",
                     "ELEMENT_ASSOC" => "CREATED_BY",
-                    "GROUPS" => array(),
+                    "GROUPS" => array(
+                        0 => "2",
+                    ),
                     "IBLOCK_ID" => "15",
                     "IBLOCK_TYPE" => "content",
                     "LEVEL_LAST" => "Y",
@@ -483,9 +481,10 @@ echo "</pre>"; */
                     "USER_MESSAGE_ADD" => "",
                     "USER_MESSAGE_EDIT" => "",
                     "USE_CAPTCHA" => "N"
+
                 )
             );
-            ?>
+             ?>
 
         </div>
         <div class="feedbacks">
